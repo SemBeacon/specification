@@ -18,7 +18,7 @@ async function buildOntology(version = '1.0') {
 
     await executeWidoco(
         widocoJar, 
-        path.join(__dirname, `../../${version}/sembeacon.ttl`), 
+        path.join(__dirname, `../../terms/${version}/sembeacon.ttl`), 
         path.join(__dirname, `../_site/${version}`)
     );
     fse.copySync(path.join(__dirname, `../_site/${version}/doc`), path.join(__dirname, `../_site/${version}`));
