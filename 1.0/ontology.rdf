@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/sembeacon/"
+     xml:base="http://purl.org/sembeacon/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://purl.org/sembeacon/">
+        <owl:versionIRI rdf:resource="http://purl.org/sembeacon/1.0/"/>
+        <terms:abstract xml:lang="en">Indoor positioning using Bluetooth Low Energy~(BLE) beacons is a well-established technique to create low-cost positioning systems for indoor navigation, tracking and location awareness. While various specifications aim to provide a generic way to uniquely identify a beacon and optionally its location, they are either deployment specific or do not broadcast enough information to be used without an additional database. In this paper we present a novel BLE advertising specification and ontology for BLE beacons called SemBeacon. Our proposed specification is backwards compatible with existing specifications such as iBeacon, Eddystone and AltBeacon. We demonstrate how the protocol helps in creating real-time positioning systems that can describe their location as well as the environment in which they are located. Other than Eddystone-URL beacons which were originally used in the Physical Web project by Google and broadcast web pages of physical objects that these beacons are attached to, SemBeacon is a specification that broadcasts semantic data about the environment and positioning systems that are available within the beacon&apos;s proximity.</terms:abstract>
+        <terms:bibliographicCitation>Maxim Van de Wynckel and Beat Signer, SemBeacon: A Semantic BLE Proximity Beacon
+Specification for Interoperable Indoor Positioning</terms:bibliographicCitation>
+        <terms:contributor xml:lang="en">Beat Signer</terms:contributor>
+        <terms:creator xml:lang="en">Maxim Van de Wynckel</terms:creator>
+        <terms:description>This ontology provides the terminologies used for describing SemBeacons.</terms:description>
+        <terms:license rdf:resource="http://purl.org/NET/rdflicense/MIT1.0"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-23T00:00:00</terms:modified>
+        <terms:title xml:lang="en">SemBeacon: A Semantic BLE Proximity Beacon Specification for Interoperable Indoor Positioning</terms:title>
+        <vann:preferredNamespacePrefix>sembeacon</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/sembeacon/</vann:preferredNamespaceUri>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/sembeacon/namespace -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/sembeacon/namespace">
+        <rdfs:domain rdf:resource="http://purl.org/sembeacon/SemBeacon"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
+        <rdfs:comment xml:lang="en">The namespace property directs to the deployment containing all sensors deployed in this namespace.</rdfs:comment>
+        <rdfs:label xml:lang="en">Namespace</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/sembeacon/instanceId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/sembeacon/instanceId">
+        <rdfs:domain rdf:resource="http://purl.org/sembeacon/SemBeacon"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#hexBinary"/>
+        <rdfs:comment xml:lang="en">An instance identifier is the 32-bit UUID that defines the instance of a SemBeacon within a namespace.</rdfs:comment>
+        <rdfs:label xml:lang="en">Instance ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/sembeacon/namespaceId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/sembeacon/namespaceId">
+        <rdfs:domain rdf:resource="http://purl.org/sembeacon/SemBeacon"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#hexBinary"/>
+        <rdfs:comment xml:lang="en">A namespace identifier is the 128-bit UUID that defines the namespace of a SemBeacon.</rdfs:comment>
+        <rdfs:label xml:lang="en">Namespace ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/poso/BluetoothBeacon -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/BluetoothBeacon"/>
+    
+
+
+    <!-- http://purl.org/sembeacon/SemBeacon -->
+
+
+    <owl:Class rdf:about="http://purl.org/sembeacon/SemBeacon">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/BluetoothBeacon"/>
+        <rdfs:comment xml:lang="en">SemBeacon is a semantic beacon that broadcasts an URI describing its position and references its deployment.</rdfs:comment>
+        <rdfs:label xml:lang="en">SemBeacon</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://sembeacon.org/</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/Deployment -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/Deployment"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

@@ -1,0 +1,212 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/ns/ssn", "http://www.w3.org/2000/01/rdf-schema", "http://purl.org/poso", "http://www.w3.org/2001/XMLSchema", "http://purl.org/sembeacon" ],
+    "title" : {
+      "en" : "SemBeacon: A Semantic BLE Proximity Beacon Specification for Interoperable Indoor Positioning"
+    },
+    "iri" : "http://purl.org/sembeacon/",
+    "author" : [ "Maxim Van de Wynckel" ],
+    "description" : {
+      "undefined" : "This ontology provides the terminologies used for describing SemBeacons."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://purl.org/NET/rdflicense/MIT1.0",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Maxim Van de Wynckel",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "en",
+        "value" : "Beat Signer",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "sembeacon",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2023-01-23T00:00:00",
+        "type" : "label"
+      } ],
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "undefined",
+        "value" : "Maxim Van de Wynckel and Beat Signer, SemBeacon: A Semantic BLE Proximity Beacon\nSpecification for Interoperable Indoor Positioning",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "Indoor positioning using Bluetooth Low Energy~(BLE) beacons is a well-established technique to create low-cost positioning systems for indoor navigation, tracking and location awareness. While various specifications aim to provide a generic way to uniquely identify a beacon and optionally its location, they are either deployment specific or do not broadcast enough information to be used without an additional database. In this paper we present a novel BLE advertising specification and ontology for BLE beacons called SemBeacon. Our proposed specification is backwards compatible with existing specifications such as iBeacon, Eddystone and AltBeacon. We demonstrate how the protocol helps in creating real-time positioning systems that can describe their location as well as the environment in which they are located. Other than Eddystone-URL beacons which were originally used in the Physical Web project by Google and broadcast web pages of physical objects that these beacons are attached to, SemBeacon is a specification that broadcasts semantic data about the environment and positioning systems that are available within the beacon's proximity.",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://purl.org/sembeacon/",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "SemBeacon: A Semantic BLE Proximity Beacon Specification for Interoperable Indoor Positioning",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:Datatype"
+  } ],
+  "classAttribute" : [ {
+    "instances" : 0,
+    "union" : [ "1", "2" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/Deployment",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Deployment"
+    },
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://purl.org/poso/BluetoothBeacon",
+    "baseIri" : "http://purl.org/poso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BluetoothBeacon"
+    },
+    "subClasses" : [ "1" ],
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://purl.org/sembeacon/SemBeacon",
+    "baseIri" : "http://purl.org/sembeacon",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://sembeacon.org/",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SemBeacon",
+      "en" : "SemBeacon"
+    },
+    "comment" : {
+      "en" : "SemBeacon is a semantic beacon that broadcasts an URI describing its position and references its deployment."
+    },
+    "id" : "1",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#hexBinary",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "7",
+    "label" : {
+      "IRI-based" : "hexBinary"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#hexBinary",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "9",
+    "label" : {
+      "IRI-based" : "hexBinary"
+    }
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "4",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "6",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://purl.org/sembeacon/namespace",
+    "baseIri" : "http://purl.org/sembeacon",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "namespace",
+      "en" : "Namespace"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The namespace property directs to the deployment containing all sensors deployed in this namespace."
+    },
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "range" : "5",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://purl.org/sembeacon/instanceId",
+    "baseIri" : "http://purl.org/sembeacon",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "instanceId",
+      "en" : "Instance ID"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "An instance identifier is the 32-bit UUID that defines the instance of a SemBeacon within a namespace."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://purl.org/sembeacon/namespaceId",
+    "baseIri" : "http://purl.org/sembeacon",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "namespaceId",
+      "en" : "Namespace ID"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "A namespace identifier is the 128-bit UUID that defines the namespace of a SemBeacon."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "8"
+  } ]
+}
