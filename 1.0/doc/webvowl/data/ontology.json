@@ -178,7 +178,7 @@
   }, {
     "range" : "5",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "4"
   }, {
     "iri" : "http://purl.org/sembeacon/instanceId",
