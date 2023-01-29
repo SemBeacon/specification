@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+      "target": "esnext",
+      "module": "commonjs",
+      "strict": false,
+      "jsx": "preserve",
+      "experimentalDecorators": true,
+      "skipLibCheck": true,
+      "strictNullChecks": false,
+      "importHelpers": true,
+      "moduleResolution": "node",
+      "emitDecoratorMetadata": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "sourceMap": true,
+      "lib": [
+        "esnext",
+        "dom",
+        "dom.iterable",
+        "scripthost"
+      ]
+    },
+    "include": [
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "src/**/*.vue",
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+}
