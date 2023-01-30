@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node ./src/generate.ts"
   },
   "author": "",
   "license": "ISC",
@@ -12,7 +13,7 @@
     "@openhps/core": "^0.3.53",
     "@openhps/csv": "^0.1.8",
     "@openhps/geospatial": "^0.1.14",
-    "@openhps/rdf": "^0.1.32",
+    "@openhps/rdf": "^0.1.34",
     "@openhps/rf": "^0.1.17",
     "ts-node": "^10.9.1"
   }

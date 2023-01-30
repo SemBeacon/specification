@@ -1,8 +1,9 @@
-import { Absolute2DPosition, DataSerializerUtils } from '@openhps/core';
+import '@openhps/rdf';
+import { Absolute2DPosition, Absolute3DPosition, DataSerializerUtils } from '@openhps/core';
 import { CSVDataObjectService } from '@openhps/csv';
-import { SymbolicSpace } from '@openhps/geospatial';
+import { Building, SymbolicSpace } from '@openhps/geospatial';
 import { BLEObject, MACAddress } from '@openhps/rf';
-import { RDFSerializer } from '@openhps/rdf';
+import { RDFSerializer, Store } from '@openhps/rdf';
 
 import * as fs from 'fs';
 import * as path from 'path';
@@ -10,6 +11,11 @@ import * as path from 'path';
 const BASE_URI = "http://sembeacon.org/example/";
 
 async function loadData() {
+    const data = {
+        spaces: "",
+        beacons: ""
+    };
+
     console.log("Loading geospatial data ...");
     const geojsonStr = fs.readFileSync(
         path.join(__dirname, "../data/spaces.geo.json"), 
@@ -17,12 +23,9 @@ async function loadData() {
     );
     const geojson = JSON.parse(geojsonStr);
     const spaces = geojson.features.map(feature => SymbolicSpace.fromGeoJSON(feature));
-    Object.values(spaces).forEach(async space => {
-        console.log(DataSerializerUtils.getRootMetadata(space.constructor))
-        console.log(await RDFSerializer.stringify(space, {
-            baseUri: `https://test.com/`
-        }));
-    });
+    data.spaces = await RDFSerializer.stringify(
+        new Store(spaces.map(space => RDFSerializer.serializeToQuads(space, BASE_URI)).reduce((a, b) => [...a, ...b])),
+        { prettyPrint: true, baseUri: BASE_URI });
 
     console.log("Loading beacon data ...");
     const service = new CSVDataObjectService(BLEObject, {
@@ -31,20 +34,25 @@ async function loadData() {
             const object = new BLEObject(MACAddress.fromString("00:11:22:33:44"));
             object.uid = row.ID;
             object.displayName = row.ID;
-            object.setPosition(spaces[0].transform(new Absolute2DPosition(
+            const building = spaces.filter(space => space instanceof Building)[0];
+            object.setPosition(building.transform(new Absolute3DPosition(
                 parseFloat(row.X),
-                parseFloat(row.Y)
+                parseFloat(row.Y),
+                1.6
             )));
             return object;
         }
     });
     await service.emitAsync('build');
     const beacons: BLEObject[] = await service.findAll();
-    beacons.forEach(async beacon => {
-        console.log(await RDFSerializer.stringify(beacon, {
-            baseUri: `https://test.com/`
-        }));
-    });
+    data.beacons = await RDFSerializer.stringify(
+        new Store(beacons.map(beacon => RDFSerializer.serializeToQuads(beacon, BASE_URI)).reduce((a, b) => [...a, ...b])),
+        { prettyPrint: true, baseUri: BASE_URI });
+    
+    fs.writeFileSync(path.join(__dirname, "../dist/", "building.ttl"), data.spaces);
+    fs.writeFileSync(path.join(__dirname, "../dist/", "beacons.ttl"), data.beacons);
 }
 
-loadData();
+setTimeout(() => {
+    loadData();
+}, 100)
