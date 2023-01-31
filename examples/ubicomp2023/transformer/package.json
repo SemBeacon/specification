@@ -2,18 +2,16 @@
   "name": "sembeacon-example-transformer",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node ./src/generate.ts"
   },
   "author": "",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "dependencies": {
-    "@openhps/core": "^0.3.53",
+    "@openhps/core": "^0.3.55",
     "@openhps/csv": "^0.1.8",
-    "@openhps/geospatial": "^0.1.14",
-    "@openhps/rdf": "^0.1.34",
+    "@openhps/geospatial": "^0.1.16",
+    "@openhps/rdf": "^0.1.39",
     "@openhps/rf": "^0.1.17",
     "ts-node": "^10.9.1"
   }
