@@ -40,6 +40,7 @@ async function loadData() {
                 parseFloat(row.Y),
                 1.6
             )));
+            console.log(object.getPosition());
             return object;
         }
     });
@@ -49,8 +50,11 @@ async function loadData() {
         new Store(beacons.map(beacon => RDFSerializer.serializeToQuads(beacon, BASE_URI)).reduce((a, b) => [...a, ...b])),
         { prettyPrint: true, baseUri: BASE_URI });
     
-    fs.writeFileSync(path.join(__dirname, "../dist/", "building.ttl"), data.spaces);
-    fs.writeFileSync(path.join(__dirname, "../dist/", "beacons.ttl"), data.beacons);
+    const dir = path.join(__dirname, "../dist/");
+    if (!fs.existsSync(dir))
+        fs.mkdirSync(dir);
+    fs.writeFileSync(path.join(dir, "building.ttl"), data.spaces);
+    fs.writeFileSync(path.join(dir, "beacons.ttl"), data.beacons);
 }
 
 setTimeout(() => {
