@@ -6,6 +6,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://purl.org/sembeacon/">
@@ -107,6 +108,13 @@ Specification for Interoperable Indoor Positioning</terms:bibliographicCitation>
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -164,6 +172,19 @@ Specification for Interoperable Indoor Positioning</terms:bibliographicCitation>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#hexBinary"/>
         <rdfs:comment xml:lang="en">A namespace identifier is the 128-bit UUID that defines the namespace of a SemBeacon.</rdfs:comment>
         <rdfs:label xml:lang="en">Namespace ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/sembeacon/shortResourceURI -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/sembeacon/shortResourceURI">
+        <rdfs:domain rdf:resource="http://purl.org/sembeacon/SemBeacon"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">Shortened resource URI. The resource URI should resolve to the full resource URI of the resource that this predicate is used in.</rdfs:comment>
+        <rdfs:label xml:lang="en">Short resource URI</rdfs:label>
+        <skos:example xml:lang="en">https://tinyurl.com/5jxncuvy</skos:example>
     </owl:DatatypeProperty>
     
 

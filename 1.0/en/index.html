@@ -105,6 +105,9 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#namespaceId" title="http://purl.org/sembeacon/namespaceId">Namespace ID</a>
    </li>
+   <li>
+      <a href="#shortResourceURI" title="http://purl.org/sembeacon/shortResourceURI">Short resource URI</a>
+   </li>
 </ul><iframe align="center" width="100%" height ="500px" src="../webvowl/index.html"></iframe> 
 </div>
    
@@ -142,6 +145,7 @@ This section provides details for each class and property defined by SemBeacon: 
             <a href="#instanceId" title="http://purl.org/sembeacon/instanceId">Instance ID</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#namespace" title="http://purl.org/sembeacon/namespace">Namespace</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#namespaceId" title="http://purl.org/sembeacon/namespaceId">Namespace ID</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#shortResourceURI" title="http://purl.org/sembeacon/shortResourceURI">Short resource URI</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
@@ -188,6 +192,9 @@ This section provides details for each class and property defined by SemBeacon: 
       </li>
       <li>
          <a href="#namespaceId" title="http://purl.org/sembeacon/namespaceId">Namespace ID</a>
+      </li>
+      <li>
+         <a href="#shortResourceURI" title="http://purl.org/sembeacon/shortResourceURI">Short resource URI</a>
       </li>
    </ul>
    <div class="entity" id="instanceId">
@@ -244,6 +251,38 @@ This section provides details for each class and property defined by SemBeacon: 
                <a href="http://www.w3.org/2001/XMLSchema#hexBinary"
                   target="_blank"
                   title="http://www.w3.org/2001/XMLSchema#hexBinary">hex binary</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="shortResourceURI">
+      <h3>Short resource URI<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/sembeacon/shortResourceURI</p>
+      <div class="comment">
+         <span class="markdown">Shortened resource URI. The resource URI should resolve to the full resource URI of the resource that this predicate is used in.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>https://tinyurl.com/5jxncuvy</pre>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SemBeacon" title="http://purl.org/sembeacon/SemBeacon">SemBeacon</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</a>
             </dd>
          </dl>
       </div>

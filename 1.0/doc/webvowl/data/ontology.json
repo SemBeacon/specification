@@ -42,16 +42,16 @@
         "value" : "2023-01-23T00:00:00",
         "type" : "label"
       } ],
-      "bibliographicCitation" : [ {
-        "identifier" : "bibliographicCitation",
-        "language" : "undefined",
-        "value" : "Maxim Van de Wynckel and Beat Signer, SemBeacon: A Semantic BLE Proximity Beacon\nSpecification for Interoperable Indoor Positioning",
-        "type" : "label"
-      } ],
       "abstract" : [ {
         "identifier" : "abstract",
         "language" : "en",
         "value" : "Indoor positioning using Bluetooth Low Energy~(BLE) beacons is a well-established technique to create low-cost positioning systems for indoor navigation, tracking and location awareness. While various specifications aim to provide a generic way to uniquely identify a beacon and optionally its location, they are either deployment specific or do not broadcast enough information to be used without an additional database. In this paper we present a novel BLE advertising specification and ontology for BLE beacons called SemBeacon. Our proposed specification is backwards compatible with existing specifications such as iBeacon, Eddystone and AltBeacon. We demonstrate how the protocol helps in creating real-time positioning systems that can describe their location as well as the environment in which they are located. Other than Eddystone-URL beacons which were originally used in the Physical Web project by Google and broadcast web pages of physical objects that these beacons are attached to, SemBeacon is a specification that broadcasts semantic data about the environment and positioning systems that are available within the beacon's proximity.",
+        "type" : "label"
+      } ],
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "undefined",
+        "value" : "Maxim Van de Wynckel and Beat Signer, SemBeacon: A Semantic BLE Proximity Beacon\nSpecification for Interoperable Indoor Positioning",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
@@ -71,28 +71,38 @@
   "namespace" : [ ],
   "class" : [ {
     "id" : "3",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
     "type" : "owl:Class"
   }, {
     "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "5",
+    "id" : "6",
     "type" : "owl:Class"
   }, {
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "7",
+    "id" : "8",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "9",
+    "id" : "10",
     "type" : "rdfs:Datatype"
   } ],
   "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "3",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
     "instances" : 0,
     "union" : [ "1", "2" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "3"
+    "id" : "4"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/Deployment",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -111,7 +121,7 @@
     },
     "subClasses" : [ "1" ],
     "attributes" : [ "external" ],
-    "id" : "5"
+    "id" : "6"
   }, {
     "iri" : "http://purl.org/sembeacon/SemBeacon",
     "baseIri" : "http://purl.org/sembeacon",
@@ -132,18 +142,18 @@
       "en" : "SemBeacon is a semantic beacon that broadcasts an URI describing its position and references its deployment."
     },
     "id" : "1",
-    "superClasses" : [ "5" ]
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#hexBinary",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "7",
+    "id" : "8",
     "label" : {
       "IRI-based" : "hexBinary"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#hexBinary",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "9",
+    "id" : "10",
     "label" : {
       "IRI-based" : "hexBinary"
     }
@@ -152,13 +162,16 @@
     "id" : "0",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "4",
+    "id" : "5",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "6",
+    "id" : "7",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "8",
+    "id" : "9",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "11",
     "type" : "owl:datatypeProperty"
   } ],
   "propertyAttribute" : [ {
@@ -176,14 +189,14 @@
     "attributes" : [ "object" ],
     "id" : "0"
   }, {
-    "range" : "5",
+    "range" : "6",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "4"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "5"
   }, {
     "iri" : "http://purl.org/sembeacon/instanceId",
     "baseIri" : "http://purl.org/sembeacon",
-    "range" : "7",
+    "range" : "8",
     "label" : {
       "IRI-based" : "instanceId",
       "en" : "Instance ID"
@@ -193,20 +206,42 @@
       "en" : "An instance identifier is the 32-bit UUID that defines the instance of a SemBeacon within a namespace."
     },
     "attributes" : [ "datatype" ],
-    "id" : "6"
+    "id" : "7"
   }, {
     "iri" : "http://purl.org/sembeacon/namespaceId",
     "baseIri" : "http://purl.org/sembeacon",
-    "range" : "9",
+    "range" : "10",
     "label" : {
       "IRI-based" : "namespaceId",
       "en" : "Namespace ID"
     },
-    "domain" : "3",
+    "domain" : "4",
     "comment" : {
       "en" : "A namespace identifier is the 128-bit UUID that defines the namespace of a SemBeacon."
     },
     "attributes" : [ "datatype" ],
-    "id" : "8"
+    "id" : "9"
+  }, {
+    "iri" : "http://purl.org/sembeacon/shortResourceURI",
+    "baseIri" : "http://purl.org/sembeacon",
+    "range" : "3",
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "https://tinyurl.com/5jxncuvy",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "shortResourceURI",
+      "en" : "Short resource URI"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Shortened resource URI. The resource URI should resolve to the full resource URI of the resource that this predicate is used in."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "11"
   } ]
 }
