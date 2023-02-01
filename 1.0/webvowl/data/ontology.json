@@ -101,7 +101,7 @@
   }, {
     "instances" : 0,
     "union" : [ "1", "2" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "4"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/Deployment",
