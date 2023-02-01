@@ -9,20 +9,39 @@ A SemBeacon is a Bluetooth Low Energy transmitter that advertises a namespace an
 a Uniform Resource Indicator (URI) linking to a RDF resource on the web describing the beacon's location and
 other information relevant to this location.
 
-## Bluetooth 4.x Specification
+## Bluetooth Specification
+
+| **Bit**  | **Description** |
+|---|---|
+|   |   |
+|   |   |
+|   |   |
+
+## BLE 4.x Specification
 ![SemBeacon Bluetooth 4.x specification](./docs/images/sembeacon_specification_v4_2.svg)
 
-## Bluetooth 5.x Specification
+## BLE 5.x Specification
 ![SemBeacon Bluetooth 5.x specification](./docs/images/sembeacon_specification_v5_0.svg)
 
 ## Linked Data Vocabulary
 
+```turtle
+@prefix sembeacon : <http://purl.org/sembeacon/> .
+```
+
 ### Semantic Flags
 The semantic flags specified in the advertisement data need to indicate that data is available online.
 
-```turtle
-
-```
+| **Bit**  | **Condition** |
+|---|---|
+| 0 |   |
+| 1 |   |
+| 2 |   |
+| 3 |   |
+| 4 |   |
+| 5 |   |
+| 6 |   |
+| 7 |   |
 
 ## License and Usage
 Copyright (C) 2022-2023 Maxim Van de Wynckel & Vrije Universiteit Brussel

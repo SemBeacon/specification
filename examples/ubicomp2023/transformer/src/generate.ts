@@ -27,21 +27,69 @@ async function loadData1() {
         { encoding: 'utf-8' }
     );
     const roomData = JSON.parse(roomDataStr);
-    roomData['Landmarks'].map(landmark => {
+    const beacons = roomData['Landmarks'].map(landmark => {
         const beacon = new BLEiBeacon();
+        beacon.uid = landmark.Label;
         beacon.displayName = landmark.Label;
         beacon.setPosition(new Absolute3DPosition(
             landmark.XLoc,
             landmark.YLoc,
             1.6     // From documentation
-        ))
+        ));
+        return beacon;
     });
+    data.beacons = await RDFSerializer.stringify(
+        new Store(beacons.map(beacon => {
+            return RDFSerializer.serializeToQuads(beacon, BEACONS_URI);
+        }).reduce((a, b) => [...a, ...b])),
+        { prettyPrint: true, baseUri: BEACONS_URI });
 
     console.log("Saving RDF data ...");
     const dir = path.join(__dirname, "../dist/", DATASET);
     if (!fs.existsSync(dir))
         fs.mkdirSync(dir);
     fs.writeFileSync(path.join(dir, "beacons1.ttl"), data.beacons);
+}
+
+async function loadData2() {
+    const DATASET = "kennedy2019";
+    const DATASET_URI = `${BASE_URI}${DATASET}/` as IriString;
+    console.log("Loading data for dataset ", DATASET_URI);
+    const BEACONS_URI = DATASET_URI + "beacons2.ttl#" as IriString;
+
+    const data = {
+        beacons: ""
+    };
+
+    const room = new Room("");
+    console.log("Loading beacon data ...");
+    const roomDataStr = fs.readFileSync(
+        path.join(__dirname, `../data/${DATASET}/experiment2/room-data.json`), 
+        { encoding: 'utf-8' }
+    );
+    const roomData = JSON.parse(roomDataStr);
+    const beacons = roomData['Landmarks'].map(landmark => {
+        const beacon = new BLEiBeacon();
+        beacon.uid = landmark.Label;
+        beacon.displayName = landmark.Label;
+        beacon.setPosition(new Absolute3DPosition(
+            landmark.XLoc,
+            landmark.YLoc,
+            1.6     // From documentation
+        ));
+        return beacon;
+    });
+    data.beacons = await RDFSerializer.stringify(
+        new Store(beacons.map(beacon => {
+            return RDFSerializer.serializeToQuads(beacon, BEACONS_URI);
+        }).reduce((a, b) => [...a, ...b])),
+        { prettyPrint: true, baseUri: BEACONS_URI });
+
+    console.log("Saving RDF data ...");
+    const dir = path.join(__dirname, "../dist/", DATASET);
+    if (!fs.existsSync(dir))
+        fs.mkdirSync(dir);
+    fs.writeFileSync(path.join(dir, "beacons2.ttl"), data.beacons);
 }
 
 async function loadData3() {
@@ -117,5 +165,6 @@ async function loadData3() {
 
 setTimeout(() => {
     loadData1();
+    loadData2();
     loadData3();
 }, 100);
