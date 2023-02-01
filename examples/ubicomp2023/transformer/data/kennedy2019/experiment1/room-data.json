@@ -1,0 +1,557 @@
+{
+    "Landmarks": [
+        {
+            "Label": "B",
+            "XDisplayLoc": 1724.0,
+            "XLoc": 8.333,
+            "YDisplayLoc": 417.0,
+            "YLoc": 8.355
+        },
+        {
+            "Label": "A",
+            "XDisplayLoc": 1728.0,
+            "XLoc": 8.365,
+            "YDisplayLoc": 276.0,
+            "YLoc": 9.753
+        },
+        {
+            "Label": "D",
+            "XDisplayLoc": 1550.0,
+            "XLoc": 10.087,
+            "YDisplayLoc": 262.0,
+            "YLoc": 9.681
+        },
+        {
+            "Label": "C",
+            "XDisplayLoc": 1557.0,
+            "XLoc": 10.0,
+            "YDisplayLoc": 420.0,
+            "YLoc": 8.337
+        },
+        {
+            "Label": "E",
+            "XDisplayLoc": 1384.0,
+            "XLoc": 11.594,
+            "YDisplayLoc": 260.0,
+            "YLoc": 9.745
+        },
+        {
+            "Label": "F",
+            "XDisplayLoc": 1256.0,
+            "XLoc": 13.336,
+            "YDisplayLoc": 259.0,
+            "YLoc": 9.648
+        },
+        {
+            "Label": "K",
+            "XDisplayLoc": 1051.0,
+            "XLoc": 15.244,
+            "YDisplayLoc": 258.0,
+            "YLoc": 9.676
+        },
+        {
+            "Label": "G",
+            "XDisplayLoc": 1256.0,
+            "XLoc": 12.86,
+            "YDisplayLoc": 382.0,
+            "YLoc": 8.024
+        },
+        {
+            "Label": "J",
+            "XDisplayLoc": 1054.0,
+            "XLoc": 15.113,
+            "YDisplayLoc": 409.0,
+            "YLoc": 8.333
+        },
+        {
+            "Label": "M",
+            "XDisplayLoc": 914.0,
+            "XLoc": 16.604,
+            "YDisplayLoc": 259.0,
+            "YLoc": 9.864
+        },
+        {
+            "Label": "N",
+            "XDisplayLoc": 771.0,
+            "XLoc": 17.96,
+            "YDisplayLoc": 258.0,
+            "YLoc": 9.853
+        },
+        {
+            "Label": "P",
+            "XDisplayLoc": 848.0,
+            "XLoc": 17.312,
+            "YDisplayLoc": 387.0,
+            "YLoc": 8.351
+        },
+        {
+            "Label": "Q",
+            "XDisplayLoc": 718.0,
+            "XLoc": 18.655,
+            "YDisplayLoc": 389.0,
+            "YLoc": 8.471
+        },
+        {
+            "Label": "R",
+            "XDisplayLoc": 851.0,
+            "XLoc": 17.246,
+            "YDisplayLoc": 527.0,
+            "YLoc": 6.721
+        },
+        {
+            "Label": "S",
+            "XDisplayLoc": 714.0,
+            "XLoc": 18.622,
+            "YDisplayLoc": 528.0,
+            "YLoc": 6.809
+        },
+        {
+            "Label": "T",
+            "XDisplayLoc": 852.0,
+            "XLoc": 17.176,
+            "YDisplayLoc": 679.0,
+            "YLoc": 5.149
+        },
+        {
+            "Label": "V",
+            "XDisplayLoc": 713.0,
+            "XLoc": 18.465,
+            "YDisplayLoc": 675.0,
+            "YLoc": 5.087
+        },
+        {
+            "Label": "Z",
+            "XDisplayLoc": 727.0,
+            "XLoc": 19.099,
+            "YDisplayLoc": 844.0,
+            "YLoc": 3.333
+        },
+        {
+            "Label": "Y",
+            "XDisplayLoc": 774.0,
+            "XLoc": 18.528,
+            "YDisplayLoc": 1010.0,
+            "YLoc": 1.913
+        },
+        {
+            "Label": "AA",
+            "XDisplayLoc": 505.0,
+            "XLoc": 20.408,
+            "YDisplayLoc": 844.0,
+            "YLoc": 3.626
+        },
+        {
+            "Label": "AB",
+            "XDisplayLoc": 355.0,
+            "XLoc": 22.192,
+            "YDisplayLoc": 843.0,
+            "YLoc": 3.639
+        },
+        {
+            "Label": "AC",
+            "XDisplayLoc": 153.0,
+            "XLoc": 23.71,
+            "YDisplayLoc": 840.0,
+            "YLoc": 3.607
+        },
+        {
+            "Label": "AD",
+            "XDisplayLoc": 153.0,
+            "XLoc": 23.538,
+            "YDisplayLoc": 1001.0,
+            "YLoc": 1.955
+        },
+        {
+            "Label": "AE",
+            "XDisplayLoc": 354.0,
+            "XLoc": 21.92,
+            "YDisplayLoc": 997.0,
+            "YLoc": 1.959
+        },
+        {
+            "Label": "W",
+            "XDisplayLoc": 866.0,
+            "XLoc": 17.005,
+            "YDisplayLoc": 841.0,
+            "YLoc": 3.369
+        },
+        {
+            "Label": "X",
+            "XDisplayLoc": 939.0,
+            "XLoc": 16.943,
+            "YDisplayLoc": 1001.0,
+            "YLoc": 1.868
+        },
+        {
+            "Label": "AV",
+            "XDisplayLoc": 1074.0,
+            "XLoc": 15.0,
+            "YDisplayLoc": 652.0,
+            "YLoc": 5.797
+        },
+        {
+            "Label": "AT",
+            "XDisplayLoc": 1075.0,
+            "XLoc": 14.983,
+            "YDisplayLoc": 776.0,
+            "YLoc": 4.755
+        },
+        {
+            "Label": "AS",
+            "XDisplayLoc": 1075.0,
+            "XLoc": 15.113,
+            "YDisplayLoc": 862.0,
+            "YLoc": 3.5
+        },
+        {
+            "Label": "AW",
+            "XDisplayLoc": 1231.0,
+            "XLoc": 12.973,
+            "YDisplayLoc": 656.0,
+            "YLoc": 5.687
+        },
+        {
+            "Label": "AX",
+            "XDisplayLoc": 1229.0,
+            "XLoc": 12.788,
+            "YDisplayLoc": 782.0,
+            "YLoc": 4.21
+        },
+        {
+            "Label": "AY",
+            "XDisplayLoc": 1267.0,
+            "XLoc": 12.65,
+            "YDisplayLoc": 902.0,
+            "YLoc": 2.908
+        },
+        {
+            "Label": "AZ",
+            "XDisplayLoc": 1259.0,
+            "XLoc": 12.549,
+            "YDisplayLoc": 1024.0,
+            "YLoc": 1.565
+        },
+        {
+            "Label": "BA",
+            "XDisplayLoc": 1458.0,
+            "XLoc": 10.947,
+            "YDisplayLoc": 1030.0,
+            "YLoc": 1.721
+        },
+        {
+            "Label": "BB",
+            "XDisplayLoc": 1450.0,
+            "XLoc": 10.831,
+            "YDisplayLoc": 914.0,
+            "YLoc": 3.058
+        },
+        {
+            "Label": "BC",
+            "XDisplayLoc": 1441.0,
+            "XLoc": 10.942,
+            "YDisplayLoc": 817.0,
+            "YLoc": 4.084
+        },
+        {
+            "Label": "BD",
+            "XDisplayLoc": 1601.0,
+            "XLoc": 9.442,
+            "YDisplayLoc": 869.0,
+            "YLoc": 3.087
+        },
+        {
+            "Label": "BE",
+            "XDisplayLoc": 1601.0,
+            "XLoc": 9.451,
+            "YDisplayLoc": 775.0,
+            "YLoc": 4.302
+        },
+        {
+            "Label": "BF",
+            "XDisplayLoc": 1596.0,
+            "XLoc": 9.6,
+            "YDisplayLoc": 672.0,
+            "YLoc": 5.617
+        },
+        {
+            "Label": "BG",
+            "XDisplayLoc": 1741.0,
+            "XLoc": 8.01,
+            "YDisplayLoc": 671.0,
+            "YLoc": 5.538
+        },
+        {
+            "Label": "BH",
+            "XDisplayLoc": 1735.0,
+            "XLoc": 7.708,
+            "YDisplayLoc": 778.0,
+            "YLoc": 4.18
+        },
+        {
+            "Label": "BJ",
+            "XDisplayLoc": 1731.0,
+            "XLoc": 7.6,
+            "YDisplayLoc": 876.0,
+            "YLoc": 2.695
+        },
+        {
+            "Label": "BK",
+            "XDisplayLoc": 1727.0,
+            "XLoc": 7.471,
+            "YDisplayLoc": 998.0,
+            "YLoc": 1.475
+        },
+        {
+            "Label": "BM",
+            "XDisplayLoc": 1926.0,
+            "XLoc": 6.03,
+            "YDisplayLoc": 994.0,
+            "YLoc": 1.512
+        },
+        {
+            "Label": "BN",
+            "XDisplayLoc": 1922.0,
+            "XLoc": 5.928,
+            "YDisplayLoc": 913.0,
+            "YLoc": 2.498
+        },
+        {
+            "Label": "BP",
+            "XDisplayLoc": 1920.0,
+            "XLoc": 5.986,
+            "YDisplayLoc": 833.0,
+            "YLoc": 3.594
+        },
+        {
+            "Label": "BQ",
+            "XDisplayLoc": 2072.0,
+            "XLoc": 4.572,
+            "YDisplayLoc": 863.0,
+            "YLoc": 3.537
+        },
+        {
+            "Label": "BR",
+            "XDisplayLoc": 2065.0,
+            "XLoc": 4.789,
+            "YDisplayLoc": 727.0,
+            "YLoc": 4.872
+        },
+        {
+            "Label": "BS",
+            "XDisplayLoc": 2183.0,
+            "XLoc": 3.296,
+            "YDisplayLoc": 720.0,
+            "YLoc": 4.848
+        },
+        {
+            "Label": "BT",
+            "XDisplayLoc": 2194.0,
+            "XLoc": 3.014,
+            "YDisplayLoc": 854.0,
+            "YLoc": 3.564
+        },
+        {
+            "Label": "BU",
+            "XDisplayLoc": 2191.0,
+            "XLoc": 3.123,
+            "YDisplayLoc": 985.0,
+            "YLoc": 2.407
+        },
+        {
+            "Label": "BV",
+            "XDisplayLoc": 2351.0,
+            "XLoc": 1.81,
+            "YDisplayLoc": 987.0,
+            "YLoc": 1.671
+        },
+        {
+            "Label": "BW",
+            "XDisplayLoc": 2331.0,
+            "XLoc": 1.681,
+            "YDisplayLoc": 852.0,
+            "YLoc": 3.525
+        },
+        {
+            "Label": "BX",
+            "XDisplayLoc": 2449.0,
+            "XLoc": 0.541,
+            "YDisplayLoc": 852.0,
+            "YLoc": 3.526
+        },
+        {
+            "Label": "BY",
+            "XDisplayLoc": 2444.0,
+            "XLoc": 0.54,
+            "YDisplayLoc": 651.0,
+            "YLoc": 5.176
+        },
+        {
+            "Label": "BZ",
+            "XDisplayLoc": 2440.0,
+            "XLoc": 0.594,
+            "YDisplayLoc": 496.0,
+            "YLoc": 6.867
+        },
+        {
+            "Label": "CA",
+            "XDisplayLoc": 2440.0,
+            "XLoc": 0.623,
+            "YDisplayLoc": 336.0,
+            "YLoc": 8.834
+        },
+        {
+            "Label": "CB",
+            "XDisplayLoc": 2441.0,
+            "XLoc": 1.074,
+            "YDisplayLoc": 141.0,
+            "YLoc": 10.679
+        },
+        {
+            "Label": "CC",
+            "XDisplayLoc": 2225.0,
+            "XLoc": 2.416,
+            "YDisplayLoc": 141.0,
+            "YLoc": 10.71
+        },
+        {
+            "Label": "CD",
+            "XDisplayLoc": 2229.0,
+            "XLoc": 2.424,
+            "YDisplayLoc": 323.0,
+            "YLoc": 9.026
+        },
+        {
+            "Label": "CE",
+            "XDisplayLoc": 2233.0,
+            "XLoc": 2.342,
+            "YDisplayLoc": 452.0,
+            "YLoc": 7.737
+        },
+        {
+            "Label": "CF",
+            "XDisplayLoc": 2112.0,
+            "XLoc": 3.757,
+            "YDisplayLoc": 458.0,
+            "YLoc": 7.731
+        },
+        {
+            "Label": "CH",
+            "XDisplayLoc": 2112.0,
+            "XLoc": 3.733,
+            "YDisplayLoc": 324.0,
+            "YLoc": 9.073
+        },
+        {
+            "Label": "CJ",
+            "XDisplayLoc": 2102.0,
+            "XLoc": 3.839,
+            "YDisplayLoc": 139.0,
+            "YLoc": 10.645
+        },
+        {
+            "Label": "CM",
+            "XDisplayLoc": 1980.0,
+            "XLoc": 5.0,
+            "YDisplayLoc": 456.0,
+            "YLoc": 7.8
+        },
+        {
+            "Label": "CN",
+            "XDisplayLoc": 1982.0,
+            "XLoc": 5.094,
+            "YDisplayLoc": 325.0,
+            "YLoc": 9.084
+        },
+        {
+            "Label": "CP",
+            "XDisplayLoc": 1981.0,
+            "XLoc": 5.209,
+            "YDisplayLoc": 142.0,
+            "YLoc": 10.672
+        },
+        {
+            "Label": "CQ",
+            "XDisplayLoc": 1870.0,
+            "XLoc": 6.537,
+            "YDisplayLoc": 137.0,
+            "YLoc": 11.025
+        },
+        {
+            "Label": "CR",
+            "XDisplayLoc": 1867.0,
+            "XLoc": 6.562,
+            "YDisplayLoc": 267.0,
+            "YLoc": 9.675
+        },
+        {
+            "Label": "AF",
+            "XDisplayLoc": 502.0,
+            "XLoc": 20.346,
+            "YDisplayLoc": 710.0,
+            "YLoc": 5.267
+        },
+        {
+            "Label": "AG",
+            "XDisplayLoc": 508.0,
+            "XLoc": 20.792,
+            "YDisplayLoc": 513.0,
+            "YLoc": 6.852
+        },
+        {
+            "Label": "AH",
+            "XDisplayLoc": 508.0,
+            "XLoc": 20.873,
+            "YDisplayLoc": 369.0,
+            "YLoc": 8.468
+        },
+        {
+            "Label": "AJ",
+            "XDisplayLoc": 502.0,
+            "XLoc": 20.97,
+            "YDisplayLoc": 244.0,
+            "YLoc": 9.835
+        },
+        {
+            "Label": "AK",
+            "XDisplayLoc": 280.0,
+            "XLoc": 22.564,
+            "YDisplayLoc": 240.0,
+            "YLoc": 9.299
+        },
+        {
+            "Label": "AM",
+            "XDisplayLoc": 125.0,
+            "XLoc": 23.926,
+            "YDisplayLoc": 270.0,
+            "YLoc": 8.785
+        },
+        {
+            "Label": "AN",
+            "XDisplayLoc": 112.0,
+            "XLoc": 24.308,
+            "YDisplayLoc": 423.0,
+            "YLoc": 7.412
+        },
+        {
+            "Label": "AP",
+            "XDisplayLoc": 114.0,
+            "XLoc": 24.202,
+            "YDisplayLoc": 597.0,
+            "YLoc": 5.67
+        },
+        {
+            "Label": "AQ",
+            "XDisplayLoc": 270.0,
+            "XLoc": 23.127,
+            "YDisplayLoc": 697.0,
+            "YLoc": 4.765
+        },
+        {
+            "Label": "AR",
+            "XDisplayLoc": 429.0,
+            "XLoc": 20.88,
+            "YDisplayLoc": 692.0,
+            "YLoc": 4.874
+        }
+    ]
+}

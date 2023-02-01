@@ -1,18 +1,56 @@
 import '@openhps/rdf';
-import { Absolute3DPosition, MemoryDataService } from '@openhps/core';
+import { Absolute2DPosition, Absolute3DPosition, MemoryDataService } from '@openhps/core';
 import { CSVDataObjectService } from '@openhps/csv';
-import { Building, Floor, SymbolicSpace, SymbolicSpaceService } from '@openhps/geospatial';
-import { BLEObject, MACAddress } from '@openhps/rf';
+import { Building, Floor, Room, SymbolicSpace, SymbolicSpaceService } from '@openhps/geospatial';
+import { BLEiBeacon, BLEObject, MACAddress } from '@openhps/rf';
 import { IriString, NamedNode, ogc, Quad, RDFSerializer, Store, Term } from '@openhps/rdf';
 
 import * as fs from 'fs';
 import * as path from 'path';
 
-const BASE_URI = "http://sembeacon.org/example/";
-const BEACONS_URI = BASE_URI + "beacons.ttl#" as IriString;
-const BUILDING_URI = BASE_URI + "building.ttl#" as IriString;
+const BASE_URI = "https://sembeacon.org/examples/";
 
-async function loadData() {
+async function loadData1() {
+    const DATASET = "kennedy2019";
+    const DATASET_URI = `${BASE_URI}${DATASET}/` as IriString;
+    console.log("Loading data for dataset ", DATASET_URI);
+    const BEACONS_URI = DATASET_URI + "beacons1.ttl#" as IriString;
+
+    const data = {
+        beacons: ""
+    };
+
+    const room = new Room("");
+    console.log("Loading beacon data ...");
+    const roomDataStr = fs.readFileSync(
+        path.join(__dirname, `../data/${DATASET}/experiment1/room-data.json`), 
+        { encoding: 'utf-8' }
+    );
+    const roomData = JSON.parse(roomDataStr);
+    roomData['Landmarks'].map(landmark => {
+        const beacon = new BLEiBeacon();
+        beacon.displayName = landmark.Label;
+        beacon.setPosition(new Absolute3DPosition(
+            landmark.XLoc,
+            landmark.YLoc,
+            1.6     // From documentation
+        ))
+    });
+
+    console.log("Saving RDF data ...");
+    const dir = path.join(__dirname, "../dist/", DATASET);
+    if (!fs.existsSync(dir))
+        fs.mkdirSync(dir);
+    fs.writeFileSync(path.join(dir, "beacons1.ttl"), data.beacons);
+}
+
+async function loadData3() {
+    const DATASET = "openhps2021";
+    const DATASET_URI = `${BASE_URI}${DATASET}/` as IriString;
+    console.log("Loading data for dataset ", DATASET_URI);
+    const BEACONS_URI = DATASET_URI + "beacons.ttl#" as IriString;
+    const BUILDING_URI = DATASET_URI + "building.ttl#" as IriString;
+
     const data = {
         spaces: "",
         beacons: ""
@@ -20,7 +58,7 @@ async function loadData() {
 
     console.log("Loading geospatial data ...");
     const geojsonStr = fs.readFileSync(
-        path.join(__dirname, "../data/spaces.geo.json"), 
+        path.join(__dirname, `../data/${DATASET}/spaces.geo.json`), 
         { encoding: 'utf-8' }
     );
     const geojson = JSON.parse(geojsonStr);
@@ -36,7 +74,7 @@ async function loadData() {
     const building = spaces.filter(space => space instanceof Building)[0];
     const floor = spaces.filter(space => space instanceof Floor)[0];
     const beaconService = new CSVDataObjectService(BLEObject, {
-        file: path.join(__dirname, "../data/ble_devices.csv"),
+        file: path.join(__dirname, `../data/${DATASET}/ble_devices.csv`),
         rowCallback: (row: any) => {
             const object = new BLEObject(MACAddress.fromString("00:11:22:33:44"));
             object.uid = row.ID;
@@ -70,7 +108,7 @@ async function loadData() {
         { prettyPrint: true, baseUri: BEACONS_URI });
     
     console.log("Saving RDF data ...");
-    const dir = path.join(__dirname, "../dist/");
+    const dir = path.join(__dirname, "../dist/", DATASET);
     if (!fs.existsSync(dir))
         fs.mkdirSync(dir);
     fs.writeFileSync(path.join(dir, "building.ttl"), data.spaces);
@@ -78,5 +116,6 @@ async function loadData() {
 }
 
 setTimeout(() => {
-    loadData();
-}, 100)
+    loadData1();
+    loadData3();
+}, 100);

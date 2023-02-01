@@ -17,6 +17,9 @@ other information relevant to this location.
 
 ## Linked Data Vocabulary
 
+### Semantic Flags
+The semantic flags specified in the advertisement data need to indicate that data is available online.
+
 ```turtle
 
 ```
