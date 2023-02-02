@@ -1,6 +1,8 @@
 <http://purl.org/sembeacon/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://purl.org/sembeacon/> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/sembeacon/1.0/> .
-<http://purl.org/sembeacon/> <http://purl.org/dc/terms/abstract> "Indoor positioning using Bluetooth Low Energy~(BLE) beacons is a well-established technique to create low-cost positioning systems for indoor navigation, tracking and location awareness. While various specifications aim to provide a generic way to uniquely identify a beacon and optionally its location, they are either deployment specific or do not broadcast enough information to be used without an additional database. In this paper we present a novel BLE advertising specification and ontology for BLE beacons called SemBeacon. Our proposed specification is backwards compatible with existing specifications such as iBeacon, Eddystone and AltBeacon. We demonstrate how the protocol helps in creating real-time positioning systems that can describe their location as well as the environment in which they are located. Other than Eddystone-URL beacons which were originally used in the Physical Web project by Google and broadcast web pages of physical objects that these beacons are attached to, SemBeacon is a specification that broadcasts semantic data about the environment and positioning systems that are available within the beacon's proximity."@en .
+<http://purl.org/sembeacon/> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/poso/1.0/> .
+<http://purl.org/sembeacon/> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/poso/1.0/common/> .
+<http://purl.org/sembeacon/> <http://purl.org/dc/terms/abstract> "Indoor positioning using Bluetooth Low Energy (BLE) beacons is a well-established technique to create low-cost positioning systems for indoor navigation, tracking and location awareness. While various specifications aim to provide a generic way to uniquely identify a beacon and optionally its location, they are either deployment specific or do not broadcast enough information to be used without an additional database. In this paper we present a novel BLE advertising specification and ontology for BLE beacons called SemBeacon. Our proposed specification is backwards compatible with existing specifications such as iBeacon, Eddystone and AltBeacon. We demonstrate how the protocol helps in creating real-time positioning systems that can describe their location as well as the environment in which they are located. Other than Eddystone-URL beacons which were originally used in the Physical Web project by Google and broadcast web pages of physical objects that these beacons are attached to, SemBeacon is a specification that broadcasts semantic data about the environment and positioning systems that are available within the beacon's proximity."@en .
 <http://purl.org/sembeacon/> <http://purl.org/dc/terms/bibliographicCitation> "Maxim Van de Wynckel and Beat Signer, SemBeacon: A Semantic BLE Proximity Beacon\nSpecification for Interoperable Indoor Positioning" .
 <http://purl.org/sembeacon/> <http://purl.org/dc/terms/contributor> "Beat Signer"@en .
 <http://purl.org/sembeacon/> <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en .
@@ -66,7 +68,7 @@
 <http://purl.org/sembeacon/namespace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/sembeacon/SemBeacon> .
 <http://purl.org/sembeacon/namespace> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/Deployment> .
 <http://purl.org/sembeacon/namespace> <http://www.w3.org/2000/01/rdf-schema#comment> "The namespace property directs to the deployment containing all sensors deployed in this namespace."@en .
-<http://purl.org/sembeacon/namespace> <http://www.w3.org/2000/01/rdf-schema#label> "Namespace"@en .
+<http://purl.org/sembeacon/namespace> <http://www.w3.org/2000/01/rdf-schema#label> "namespace"@en .
 # 
 # 
 # 
@@ -81,24 +83,47 @@
 <http://purl.org/sembeacon/instanceId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://purl.org/sembeacon/instanceId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/sembeacon/SemBeacon> .
 <http://purl.org/sembeacon/instanceId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#hexBinary> .
+<http://purl.org/sembeacon/instanceId> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
+_:genid3 <http://www.w3.org/2001/XMLSchema#maxLength> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#hexBinary> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 <http://purl.org/sembeacon/instanceId> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance identifier is the 32-bit UUID that defines the instance of a SemBeacon within a namespace."@en .
-<http://purl.org/sembeacon/instanceId> <http://www.w3.org/2000/01/rdf-schema#label> "Instance ID"@en .
+<http://purl.org/sembeacon/instanceId> <http://www.w3.org/2000/01/rdf-schema#label> "instance ID"@en .
 # 
 # http://purl.org/sembeacon/namespaceId
 <http://purl.org/sembeacon/namespaceId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://purl.org/sembeacon/namespaceId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/sembeacon/SemBeacon> .
 <http://purl.org/sembeacon/namespaceId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/ssn/Deployment> .
-<http://purl.org/sembeacon/namespaceId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#hexBinary> .
+<http://purl.org/sembeacon/namespaceId> <http://www.w3.org/2000/01/rdf-schema#range> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid6 .
+_:genid6 <http://www.w3.org/2001/XMLSchema#maxLength> "32"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#hexBinary> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 <http://purl.org/sembeacon/namespaceId> <http://www.w3.org/2000/01/rdf-schema#comment> "A namespace identifier is the 128-bit UUID that defines the namespace of a SemBeacon."@en .
-<http://purl.org/sembeacon/namespaceId> <http://www.w3.org/2000/01/rdf-schema#label> "Namespace ID"@en .
+<http://purl.org/sembeacon/namespaceId> <http://www.w3.org/2000/01/rdf-schema#label> "namespace ID"@en .
 # 
 # http://purl.org/sembeacon/shortResourceURI
 <http://purl.org/sembeacon/shortResourceURI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://purl.org/sembeacon/shortResourceURI> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/sembeacon/SemBeacon> .
 <http://purl.org/sembeacon/shortResourceURI> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/sembeacon/shortResourceURI> <http://www.w3.org/2000/01/rdf-schema#comment> "Shortened resource URI. The resource URI should resolve to the full resource URI of the resource that this predicate is used in."@en .
-<http://purl.org/sembeacon/shortResourceURI> <http://www.w3.org/2000/01/rdf-schema#label> "Short resource URI"@en .
+<http://purl.org/sembeacon/shortResourceURI> <http://www.w3.org/2000/01/rdf-schema#label> "short resource URI"@en .
 <http://purl.org/sembeacon/shortResourceURI> <http://www.w3.org/2004/02/skos/core#example> "https://tinyurl.com/5jxncuvy"@en .
+# 
+# http://purl.org/sembeacon/version
+<http://purl.org/sembeacon/version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/sembeacon/version> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/sembeacon/SemBeacon> .
+<http://purl.org/sembeacon/version> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/sembeacon/version> <http://www.w3.org/2000/01/rdf-schema#comment> "SemBeacon version"@en .
+<http://purl.org/sembeacon/version> <http://www.w3.org/2000/01/rdf-schema#label> "version"@en .
+<http://purl.org/sembeacon/version> <http://www.w3.org/2004/02/skos/core#example> "1.0"@en .
 # 
 # 
 # 
