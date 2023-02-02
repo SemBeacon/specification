@@ -11,11 +11,13 @@ other information relevant to this location.
 
 ## Bluetooth Specification
 
-| **Bit**  | **Description** |
-|---|---|
-|   |   |
-|   |   |
-|   |   |
+| **Bit**  | **Description** | **Example** |
+|---|---|---|
+| 0 | Indicates if the beacon has a position. | 0 = Unsure, 1 = Yes |
+| 1 | Indicates if the beacon is private. | 0 = Public, 1 = Private |
+| 2 | Indicates if the beacon is attached to a moving object. | 0 = No, 1 = Yes |
+| 3 | Indicates if the beacon has a positioning system. | 0 = No, 1 = Yes |
+| 4 - 7 | *Reserved for future use.* ||
 
 ## BLE 4.x Specification
 ![SemBeacon Bluetooth 4.x specification](./docs/images/sembeacon_specification_v4_2.svg)
@@ -24,6 +26,7 @@ other information relevant to this location.
 ![SemBeacon Bluetooth 5.x specification](./docs/images/sembeacon_specification_v5_0.svg)
 
 ## Linked Data Vocabulary
+The full documentation can be found [here](https://sembeacon.org/terms/1.0/).
 
 ```turtle
 @prefix sembeacon : <http://purl.org/sembeacon/> .
@@ -32,16 +35,13 @@ other information relevant to this location.
 ### Semantic Flags
 The semantic flags specified in the advertisement data need to indicate that data is available online.
 
-| **Bit**  | **Condition** |
+| **Bit**  | **Axiom** |
 |---|---|
-| 0 |   |
-| 1 |   |
-| 2 |   |
-| 3 |   |
-| 4 |   |
-| 5 |   |
-| 6 |   |
-| 7 |   |
+| 0 | `poso:hasPosition` **min** 1 `poso:AbsolutePosition` |
+| 1 | N.a. |
+| 2 | N.a. |
+| 3 | `poso:inDeployment` **min** 1 `ssn:Deployment` |
+| 4 - 7 | *Reserved for future use.* |
 
 ## License and Usage
 Copyright (C) 2022-2023 Maxim Van de Wynckel & Vrije Universiteit Brussel

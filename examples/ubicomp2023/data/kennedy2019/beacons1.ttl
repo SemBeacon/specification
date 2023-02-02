@@ -1,0 +1,1846 @@
+@prefix : <https://sembeacon.org/examples/kennedy2019/beacons1.ttl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix poso: <http://purl.org/poso/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+@prefix ogc: <http://www.opengis.net/ont/geosparql#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcmi: <http://purl.org/dc/terms/>.
+@prefix hardware: <http://w3id.org/devops-infra/hardware#>.
+@prefix qudt: <http://qudt.org/schema/qudt/>.
+@prefix unit: <http://qudt.org/vocab/unit/>.
+@prefix schema: <http://schema.org/>.
+@prefix seas: <https://w3id.org/seas/>.
+@prefix ssn: <http://www.w3.org/ns/ssn/>.
+
+:B a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "B";
+    dcmi:created "2023-02-02T15:26:18.683Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.683Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "8.333"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "8.355"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:A a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "A";
+    dcmi:created "2023-02-02T15:26:18.683Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.683Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "8.365"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "9.753"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:D a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "D";
+    dcmi:created "2023-02-02T15:26:18.683Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.683Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "10.087"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "9.681"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:C a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "C";
+    dcmi:created "2023-02-02T15:26:18.683Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.683Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "10"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "8.337"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:E a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "E";
+    dcmi:created "2023-02-02T15:26:18.683Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.683Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "11.594"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "9.745"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:F a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "F";
+    dcmi:created "2023-02-02T15:26:18.683Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.683Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "13.336"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "9.648"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:K a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "K";
+    dcmi:created "2023-02-02T15:26:18.683Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.683Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "15.244"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "9.676"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:G a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "G";
+    dcmi:created "2023-02-02T15:26:18.683Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.683Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "12.86"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "8.024"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:J a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "J";
+    dcmi:created "2023-02-02T15:26:18.683Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.683Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "15.113"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "8.333"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:M a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "M";
+    dcmi:created "2023-02-02T15:26:18.683Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "16.604"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "9.864"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:N a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "N";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "17.96"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "9.853"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:P a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "P";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "17.312"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "8.351"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:Q a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "Q";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "18.655"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "8.471"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:R a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "R";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "17.246"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "6.721"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:S a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "S";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "18.622"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "6.809"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:T a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "T";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "17.176"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "5.149"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:V a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "V";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "18.465"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "5.087"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:Z a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "Z";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "19.099"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "3.333"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:Y a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "Y";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "18.528"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.913"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:AA a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "AA";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "20.408"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "3.626"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:AB a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "AB";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "22.192"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "3.639"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:AC a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "AC";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "23.71"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "3.607"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:AD a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "AD";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "23.538"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.955"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:AE a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "AE";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "21.92"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.959"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:W a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "W";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "17.005"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "3.369"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:X a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "X";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "16.943"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.868"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:AV a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "AV";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "15"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "5.797"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:AT a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "AT";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "14.983"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "4.755"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:AS a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "AS";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "15.113"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "3.5"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:AW a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "AW";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "12.973"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "5.687"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:AX a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "AX";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "12.788"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "4.21"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:AY a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "AY";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "12.65"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "2.908"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:AZ a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "AZ";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "12.549"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.565"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BA a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BA";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "10.947"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.721"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BB a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BB";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "10.831"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "3.058"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BC a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BC";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "10.942"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "4.084"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BD a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BD";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "9.442"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "3.087"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BE a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BE";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "9.451"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "4.302"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BF a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BF";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "9.6"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "5.617"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BG a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BG";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "8.01"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "5.538"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BH a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BH";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "7.708"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "4.18"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BJ a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BJ";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "7.6"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "2.695"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BK a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BK";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "7.471"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.475"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BM a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BM";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "6.03"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.512"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BN a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BN";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "5.928"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "2.498"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BP a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BP";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "5.986"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "3.594"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BQ a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BQ";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "4.572"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "3.537"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BR a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BR";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "4.789"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "4.872"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BS a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BS";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "3.296"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "4.848"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BT a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BT";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "3.014"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "3.564"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BU a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BU";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "3.123"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "2.407"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BV a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BV";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.81"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.671"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BW a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BW";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.681"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "3.525"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BX a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BX";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "0.541"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "3.526"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BY a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BY";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "0.54"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "5.176"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:BZ a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "BZ";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "0.594"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "6.867"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:CA a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "CA";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "0.623"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "8.834"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:CB a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "CB";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.074"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "10.679"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:CC a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "CC";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "2.416"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "10.71"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:CD a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "CD";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "2.424"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "9.026"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:CE a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "CE";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "2.342"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "7.737"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:CF a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "CF";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "3.757"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "7.731"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:CH a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "CH";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "3.733"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "9.073"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:CJ a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "CJ";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "3.839"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "10.645"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:CM a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "CM";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "5"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "7.8"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:CN a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "CN";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "5.094"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "9.084"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:CP a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "CP";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "5.209"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "10.672"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:CQ a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "CQ";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "6.537"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "11.025"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:CR a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "CR";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "6.562"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "9.675"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:AF a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "AF";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "20.346"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "5.267"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:AG a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "AG";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "20.792"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "6.852"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:AH a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "AH";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "20.873"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "8.468"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:AJ a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "AJ";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "20.97"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "9.835"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:AK a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "AK";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "22.564"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "9.299"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:AM a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "AM";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "23.926"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "8.785"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:AN a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "AN";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "24.308"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "7.412"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:AP a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "AP";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "24.202"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "5.67"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:AQ a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "AQ";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "23.127"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "4.765"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:AR a poso:RFLandmark, sosa:FeatureOfInterest, ogc:SpatialObject, poso:BluetoothBeacon;
+    rdfs:label "AR";
+    dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+    poso:hasPosition [
+  a poso:AbsolutePosition;
+  dcmi:created "2023-02-02T15:26:18.684Z"^^xsd:dateTime;
+  poso:xAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "20.88"^^xsd:double
+];
+  poso:yAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "4.874"^^xsd:double
+];
+  poso:zAxisValue [
+  a qudt:QuantityValue;
+  qudt:unit unit:M;
+  qudt:numericValue "1.6"^^xsd:double
+]
+];
+    hardware:macAddress [].
+:bc7985a4-70a2-4e3d-98b0-904691d0dd97 a sosa:FeatureOfInterest, ogc:SpatialObject, schema:Room, seas:Room, ssn:Deployment;
+    rdfs:label "Office";
+    dcmi:created "2023-02-02T15:26:18.680Z"^^xsd:dateTime;
+    ogc:hasGeometry [
+  a ogc:Geometry;
+  ogc:asWKT "POLYGON Z((undefined undefined undefined, undefined undefined undefined, undefined undefined undefined, undefined undefined undefined))"^^ogc:wktLiteral;
+  ogc:coordinateDimension 3;
+  ogc:spatialDimension 3;
+  ogc:dimension 3
+];
+    schema:accommodationFloorPlan [
+  a schema:FloorPlan;
+  schema:layoutImage "https://github.com/co60ca/BBIL/blob/master/assets/room.png?raw=true"^^xsd:anyURI
+].

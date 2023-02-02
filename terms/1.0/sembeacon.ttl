@@ -8,7 +8,9 @@
 
 <http://purl.org/sembeacon/> rdf:type owl:Ontology ;
                               owl:versionIRI <http://purl.org/sembeacon/1.0/> ;
-                              <http://purl.org/dc/terms/abstract> "Indoor positioning using Bluetooth Low Energy~(BLE) beacons is a well-established technique to create low-cost positioning systems for indoor navigation, tracking and location awareness. While various specifications aim to provide a generic way to uniquely identify a beacon and optionally its location, they are either deployment specific or do not broadcast enough information to be used without an additional database. In this paper we present a novel BLE advertising specification and ontology for BLE beacons called SemBeacon. Our proposed specification is backwards compatible with existing specifications such as iBeacon, Eddystone and AltBeacon. We demonstrate how the protocol helps in creating real-time positioning systems that can describe their location as well as the environment in which they are located. Other than Eddystone-URL beacons which were originally used in the Physical Web project by Google and broadcast web pages of physical objects that these beacons are attached to, SemBeacon is a specification that broadcasts semantic data about the environment and positioning systems that are available within the beacon's proximity."@en ;
+                              owl:imports <http://purl.org/poso/1.0/> ,
+                                          <http://purl.org/poso/1.0/common/> ;
+                              <http://purl.org/dc/terms/abstract> "Indoor positioning using Bluetooth Low Energy (BLE) beacons is a well-established technique to create low-cost positioning systems for indoor navigation, tracking and location awareness. While various specifications aim to provide a generic way to uniquely identify a beacon and optionally its location, they are either deployment specific or do not broadcast enough information to be used without an additional database. In this paper we present a novel BLE advertising specification and ontology for BLE beacons called SemBeacon. Our proposed specification is backwards compatible with existing specifications such as iBeacon, Eddystone and AltBeacon. We demonstrate how the protocol helps in creating real-time positioning systems that can describe their location as well as the environment in which they are located. Other than Eddystone-URL beacons which were originally used in the Physical Web project by Google and broadcast web pages of physical objects that these beacons are attached to, SemBeacon is a specification that broadcasts semantic data about the environment and positioning systems that are available within the beacon's proximity."@en ;
                               <http://purl.org/dc/terms/bibliographicCitation> """Maxim Van de Wynckel and Beat Signer, SemBeacon: A Semantic BLE Proximity Beacon
 Specification for Interoperable Indoor Positioning"""^^xsd:string ;
                               <http://purl.org/dc/terms/contributor> "Beat Signer"@en ;
@@ -77,7 +79,7 @@ Specification for Interoperable Indoor Positioning"""^^xsd:string ;
            rdfs:domain :SemBeacon ;
            rdfs:range <http://www.w3.org/ns/ssn/Deployment> ;
            rdfs:comment "The namespace property directs to the deployment containing all sensors deployed in this namespace."@en ;
-           rdfs:label "Namespace"@en .
+           rdfs:label "namespace"@en .
 
 
 #################################################################
@@ -87,18 +89,29 @@ Specification for Interoperable Indoor Positioning"""^^xsd:string ;
 ###  http://purl.org/sembeacon/instanceId
 :instanceId rdf:type owl:DatatypeProperty ;
             rdfs:domain :SemBeacon ;
-            rdfs:range xsd:hexBinary ;
+            rdfs:range xsd:hexBinary ,
+                       [ rdf:type rdfs:Datatype ;
+                         owl:onDatatype xsd:hexBinary ;
+                         owl:withRestrictions ( [ xsd:maxLength "8"^^xsd:int
+                                                ]
+                                              )
+                       ] ;
             rdfs:comment "An instance identifier is the 32-bit UUID that defines the instance of a SemBeacon within a namespace."@en ;
-            rdfs:label "Instance ID"@en .
+            rdfs:label "instance ID"@en .
 
 
 ###  http://purl.org/sembeacon/namespaceId
 :namespaceId rdf:type owl:DatatypeProperty ;
              rdfs:domain :SemBeacon ,
                          <http://www.w3.org/ns/ssn/Deployment> ;
-             rdfs:range xsd:hexBinary ;
+             rdfs:range [ rdf:type rdfs:Datatype ;
+                          owl:onDatatype xsd:hexBinary ;
+                          owl:withRestrictions ( [ xsd:maxLength "32"^^xsd:int
+                                                 ]
+                                               )
+                        ] ;
              rdfs:comment "A namespace identifier is the 128-bit UUID that defines the namespace of a SemBeacon."@en ;
-             rdfs:label "Namespace ID"@en .
+             rdfs:label "namespace ID"@en .
 
 
 ###  http://purl.org/sembeacon/shortResourceURI
@@ -106,8 +119,17 @@ Specification for Interoperable Indoor Positioning"""^^xsd:string ;
                   rdfs:domain :SemBeacon ;
                   rdfs:range xsd:anyURI ;
                   rdfs:comment "Shortened resource URI. The resource URI should resolve to the full resource URI of the resource that this predicate is used in."@en ;
-                  rdfs:label "Short resource URI"@en ;
+                  rdfs:label "short resource URI"@en ;
                   <http://www.w3.org/2004/02/skos/core#example> "https://tinyurl.com/5jxncuvy"@en .
+
+
+###  http://purl.org/sembeacon/version
+:version rdf:type owl:DatatypeProperty ;
+         rdfs:domain :SemBeacon ;
+         rdfs:range xsd:string ;
+         rdfs:comment "SemBeacon version"@en ;
+         rdfs:label "version"@en ;
+         <http://www.w3.org/2004/02/skos/core#example> "1.0"@en .
 
 
 #################################################################
