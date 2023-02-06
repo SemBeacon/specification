@@ -253,6 +253,12 @@ Specification for Interoperable Indoor Positioning</terms:bibliographicCitation>
 
     <owl:Class rdf:about="http://purl.org/sembeacon/SemBeacon">
         <rdfs:subClassOf rdf:resource="http://purl.org/poso/BluetoothBeacon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/poso/common/hasReferenceRSSI"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">SemBeacon is a semantic beacon that broadcasts an URI describing its position and references its deployment.</rdfs:comment>
         <rdfs:label xml:lang="en">SemBeacon</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://sembeacon.org/</rdfs:seeAlso>

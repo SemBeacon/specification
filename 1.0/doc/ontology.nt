@@ -140,6 +140,10 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://purl.org/sembeacon/SemBeacon
 <http://purl.org/sembeacon/SemBeacon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/sembeacon/SemBeacon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/BluetoothBeacon> .
+<http://purl.org/sembeacon/SemBeacon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/common/hasReferenceRSSI> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/sembeacon/SemBeacon> <http://www.w3.org/2000/01/rdf-schema#comment> "SemBeacon is a semantic beacon that broadcasts an URI describing its position and references its deployment."@en .
 <http://purl.org/sembeacon/SemBeacon> <http://www.w3.org/2000/01/rdf-schema#label> "SemBeacon"@en .
 <http://purl.org/sembeacon/SemBeacon> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://sembeacon.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
