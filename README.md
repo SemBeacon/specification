@@ -26,7 +26,7 @@ other information relevant to this location.
 ![SemBeacon Bluetooth 5.x specification](./docs/images/sembeacon_specification_v5_0.svg)
 
 ## Linked Data Vocabulary
-The full documentation can be found [here](https://sembeacon.org/terms/1.0/).
+The full documentation can be found [here](https://sembeacon.org/terms/1.0/). The preferred prefix is `sembeacon` and the preferred URI is `http://purl.org/sembeacon/`.
 
 ```turtle
 @prefix sembeacon : <http://purl.org/sembeacon/> .

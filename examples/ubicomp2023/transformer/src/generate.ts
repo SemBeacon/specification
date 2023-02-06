@@ -4,6 +4,7 @@ import { CSVDataObjectService } from '@openhps/csv';
 import { Building, Floor, Room, SymbolicSpace, SymbolicSpaceService } from '@openhps/geospatial';
 import { BLEiBeacon, BLEObject, MACAddress } from '@openhps/rf';
 import { IriString, NamedNode, ogc, Quad, rdf, RDFBuilder, RDFSerializer, schema, Store, Term, xsd } from '@openhps/rdf';
+import { SemBeacon } from './SemBeacon';
 
 import * as crypto from 'crypto';
 import * as fs from 'fs';
@@ -15,7 +16,9 @@ async function loadData1() {
     const DATASET = "kennedy2019";
     const DATASET_URI = `${BASE_URI}${DATASET}/` as IriString;
     const BEACONS_URI = DATASET_URI + "beacons1.ttl#" as IriString;
-    console.log("Loading data for dataset ", DATASET_URI, " with namespace ", crypto.createHash('md5').update(BEACONS_URI).digest("hex"));
+    const namespace = crypto.createHash('md5').update(BEACONS_URI).digest("hex");
+    console.log("Loading data for dataset ", DATASET_URI, " with namespace ", namespace);
+    const REPLACE_BEACONS = [];
 
     const data = {
         beacons: ""
@@ -125,7 +128,9 @@ async function loadData3() {
     const DATASET = "openhps2021";
     const DATASET_URI = `${BASE_URI}${DATASET}/` as IriString;
     const BEACONS_URI = DATASET_URI + "beacons.ttl#" as IriString;
-    console.log("Loading data for dataset ", DATASET_URI, " with namespace ", crypto.createHash('md5').update(BEACONS_URI).digest("hex"));
+    const namespace = crypto.createHash('md5').update(BEACONS_URI).digest("hex");
+    console.log("Loading data for dataset ", DATASET_URI, " with namespace ", namespace);
+    const REPLACE_BEACONS = [ 'BEACON_07', 'BEACON_08' ];
 
     const data = {
         beacons: ""
@@ -149,7 +154,8 @@ async function loadData3() {
     const beaconService = new CSVDataObjectService(BLEObject, {
         file: path.join(__dirname, `../data/${DATASET}/ble_devices.csv`),
         rowCallback: (row: any) => {
-            const object = new BLEObject(MACAddress.fromString("00:11:22:33:44"));
+            const address = MACAddress.fromString("00:11:22:33:44");
+            const object = REPLACE_BEACONS.includes(row.ID) ? new SemBeacon(address) : new BLEObject(address);
             object.uid = row.ID;
             object.displayName = row.ID;
             object.setPosition(
@@ -160,6 +166,10 @@ async function loadData3() {
                         1.6
                     ))
                 ));
+            if (object instanceof SemBeacon) {
+                // Set sembeacon information
+                object.instanceId = crypto.randomBytes(4).readUInt32BE(0);
+            }
             return object;
         }
     });
