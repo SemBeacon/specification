@@ -37,7 +37,8 @@ async function loadData1() {
             .add(schema.layoutImage, "https://github.com/co60ca/BBIL/blob/master/assets/room.png?raw=true", xsd.anyURI)
             .build())
         .build();
-
+    
+    // Room landmarks
     const roomDataStr = fs.readFileSync(
         path.join(__dirname, `../data/${DATASET}/experiment1/room-data.json`), 
         { encoding: 'utf-8' }
@@ -47,21 +48,24 @@ async function loadData1() {
         const marker = new DataObject();
         marker.uid = landmark.Label;
         marker.displayName = landmark.Label;
-        marker.setPosition(new Absolute3DPosition(
+        marker.setPosition(new Absolute2DPosition(
             landmark.XLoc,
             landmark.YLoc,
-            1.6     // From documentation
+            LengthUnit.METER
         ));
         return marker;
     });
     const quads = landmarks.map(landmark => {
         const serialized = RDFBuilder.fromSerialized(RDFSerializer.serialize(landmark, BEACONS_URI))
             .add(rdf.type, poso.Landmark)
-            .add(rdfs.comment, "", "en")
+            .add(rdfs.comment, `This is a room landmark with label ${landmark.displayName}`, "en")
             .build();
         return RDFSerializer.serializeToQuads(serialized, BEACONS_URI);
     }).reduce((a, b) => [...a, ...b]);
     quads.push(...RDFSerializer.serializeToQuads(roomRDF, BEACONS_URI));
+
+    // Beacons
+
     data.beacons = await RDFSerializer.stringify(
         new Store(quads),
         { prettyPrint: true, baseUri: BEACONS_URI, format: 'text/turtle' });
