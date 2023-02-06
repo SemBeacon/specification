@@ -1,9 +1,9 @@
 import '@openhps/rdf';
-import { Absolute2DPosition, Absolute3DPosition, LengthUnit, MemoryDataService } from '@openhps/core';
+import { Absolute2DPosition, Absolute3DPosition, DataObject, LengthUnit, MemoryDataService } from '@openhps/core';
 import { CSVDataObjectService } from '@openhps/csv';
 import { Building, Floor, Room, SymbolicSpace, SymbolicSpaceService } from '@openhps/geospatial';
 import { BLEiBeacon, BLEObject, MACAddress } from '@openhps/rf';
-import { IriString, NamedNode, ogc, Quad, rdf, RDFBuilder, RDFSerializer, schema, Store, Term, xsd } from '@openhps/rdf';
+import { IriString, NamedNode, ogc, poso, Quad, rdf, RDFBuilder, rdfs, RDFSerializer, schema, Store, Term, xsd } from '@openhps/rdf';
 import { SemBeacon } from './SemBeacon';
 
 import * as crypto from 'crypto';
@@ -43,19 +43,23 @@ async function loadData1() {
         { encoding: 'utf-8' }
     );
     const roomData = JSON.parse(roomDataStr);
-    const beacons = roomData['Landmarks'].map(landmark => {
-        const beacon = new BLEiBeacon();
-        beacon.uid = landmark.Label;
-        beacon.displayName = landmark.Label;
-        beacon.setPosition(new Absolute3DPosition(
+    const landmarks = roomData['Landmarks'].map(landmark => {
+        const marker = new DataObject();
+        marker.uid = landmark.Label;
+        marker.displayName = landmark.Label;
+        marker.setPosition(new Absolute3DPosition(
             landmark.XLoc,
             landmark.YLoc,
             1.6     // From documentation
         ));
-        return beacon;
+        return marker;
     });
-    const quads = beacons.map(beacon => {
-        return RDFSerializer.serializeToQuads(beacon, BEACONS_URI);
+    const quads = landmarks.map(landmark => {
+        const serialized = RDFBuilder.fromSerialized(RDFSerializer.serialize(landmark, BEACONS_URI))
+            .add(rdf.type, poso.Landmark)
+            .add(rdfs.comment, "", "en")
+            .build();
+        return RDFSerializer.serializeToQuads(serialized, BEACONS_URI);
     }).reduce((a, b) => [...a, ...b]);
     quads.push(...RDFSerializer.serializeToQuads(roomRDF, BEACONS_URI));
     data.beacons = await RDFSerializer.stringify(
