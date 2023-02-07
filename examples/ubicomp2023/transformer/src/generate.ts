@@ -12,13 +12,14 @@ import * as path from 'path';
 
 const BASE_URI = "https://sembeacon.org/examples/";
 
-async function loadData1() {
+async function loadData1(experiment: number = 1) {
     const DATASET = "kennedy2019";
+
     const DATASET_URI = `${BASE_URI}${DATASET}/` as IriString;
-    const BEACONS_URI = DATASET_URI + "beacons1.ttl#" as IriString;
+    const BEACONS_URI = DATASET_URI + `beacons${experiment}.ttl#` as IriString;
     const namespace = crypto.createHash('md5').update(BEACONS_URI).digest("hex");
     console.log("Loading data for dataset ", DATASET_URI, " with namespace ", namespace);
-    const REPLACE_BEACONS = [];
+    const REPLACE_BEACONS = experiment === 1 ? ["1", "13"] : ["50", "54"];
 
     const data = {
         beacons: ""
@@ -34,13 +35,13 @@ async function loadData1() {
     const roomRDF = RDFBuilder.fromSerialized(RDFSerializer.serialize(room, BEACONS_URI))
         .add(schema.accommodationFloorPlan, RDFBuilder.blankNode()
             .add(rdf.type, schema.FloorPlan)
-            .add(schema.layoutImage, "https://github.com/co60ca/BBIL/blob/master/assets/room.png?raw=true", xsd.anyURI)
+            .add(schema.layoutImage, `https://github.com/co60ca/BBIL/blob/master/assets/room${experiment === 1 ? "" : "-2"}.png?raw=true`, xsd.anyURI)
             .build())
         .build();
     
     // Room landmarks
     const roomDataStr = fs.readFileSync(
-        path.join(__dirname, `../data/${DATASET}/experiment1/room-data.json`), 
+        path.join(__dirname, `../data/${DATASET}/experiment${experiment}/room-data.json`), 
         { encoding: 'utf-8' }
     );
     const roomData = JSON.parse(roomDataStr);
@@ -65,74 +66,51 @@ async function loadData1() {
     quads.push(...RDFSerializer.serializeToQuads(roomRDF, BEACONS_URI));
 
     // Beacons
-
+    const beaconService = new CSVDataObjectService(BLEObject, {
+        file: path.join(__dirname, `../data/${DATASET}/experiment${experiment}/edges.csv`),
+        rowCallback: (row: any) => {
+            const address = MACAddress.fromString("00:11:22:33:44");
+            const object = REPLACE_BEACONS.includes(row.edgenodeid) ? new SemBeacon(address) : new BLEObject(address);
+            if (object instanceof SemBeacon) {
+                // Set sembeacon information
+                object.instanceId = crypto.randomBytes(4).readUInt32BE(0);
+            }
+            object.uid = `edge_${row.edgenodeid}`;
+            object.displayName = `Edge ${row.edgenodeid}`;
+            object.setPosition(
+                new Absolute3DPosition(
+                    parseFloat(row.edge_x),
+                    parseFloat(row.edge_y),
+                    parseFloat(row.edge_z)
+                ));
+            return object;
+        }
+    });
+    await beaconService.emitAsync('build');
+    const beacons: BLEObject[] = await beaconService.findAll();
     data.beacons = await RDFSerializer.stringify(
-        new Store(quads),
+        new Store([...quads, ...await beacons.map(async beacon => {
+            let serialized = undefined;
+            if (beacon instanceof SemBeacon) {
+                serialized = RDFSerializer.serialize(beacon, BEACONS_URI);
+            } else {
+                serialized = RDFBuilder.fromSerialized(RDFSerializer.serialize(beacon, BEACONS_URI))
+                    .add(rdf.type, poso.BluetoothReceiver)
+                    .build();
+            }
+            const quads = RDFSerializer.serializeToQuads(serialized, BEACONS_URI);
+            return quads;
+        }).reduce(async (a, b) => [...await a, ...await b])]),
         { prettyPrint: true, baseUri: BEACONS_URI, format: 'text/turtle' });
 
     console.log("Saving RDF data ...");
     let dir = path.join(__dirname, "../dist/", DATASET);
     if (!fs.existsSync(dir))
         fs.mkdirSync(dir);
-    fs.writeFileSync(path.join(dir, "beacons1.ttl"), data.beacons);
+    fs.writeFileSync(path.join(dir, `beacons${experiment}.ttl`), data.beacons);
 }
 
 async function loadData2() {
-    const DATASET = "kennedy2019";
-    const DATASET_URI = `${BASE_URI}${DATASET}/` as IriString;
-    const BEACONS_URI = DATASET_URI + "beacons2.ttl#" as IriString;
-    console.log("Loading data for dataset ", DATASET_URI, " with namespace ", crypto.createHash('md5').update(BEACONS_URI).digest("hex"));
-
-    const data = {
-        beacons: ""
-    };
-
-    const room = new Room("Lab")
-        .setBounds([
-            new Absolute2DPosition(0, 0, LengthUnit.METER),
-            new Absolute2DPosition(0, 7, LengthUnit.METER),
-            new Absolute2DPosition(11, 7, LengthUnit.METER),
-            new Absolute2DPosition(11, 0, LengthUnit.METER)
-        ]);
-    const roomRDF = RDFBuilder.fromSerialized(RDFSerializer.serialize(room, BEACONS_URI))
-        .add(schema.accommodationFloorPlan, RDFBuilder.blankNode()
-            .add(rdf.type, schema.FloorPlan)
-            .add(schema.layoutImage, "https://github.com/co60ca/BBIL/blob/master/assets/room-2.png?raw=true", xsd.anyURI)
-            .build())
-        .build();
-
-    const roomDataStr = fs.readFileSync(
-        path.join(__dirname, `../data/${DATASET}/experiment2/room-data.json`), 
-        { encoding: 'utf-8' }
-    );
-    const roomData = JSON.parse(roomDataStr);
-    const beacons = roomData['Landmarks'].map(landmark => {
-        const beacon = new BLEiBeacon();
-        beacon.uid = landmark.Label;
-        beacon.displayName = landmark.Label;
-        beacon.setPosition(new Absolute3DPosition(
-            landmark.XLoc,
-            landmark.YLoc,
-            1.6     // From documentation
-        ));
-        return beacon;
-    });
-    const quads = beacons.map(beacon => {
-        return RDFSerializer.serializeToQuads(beacon, BEACONS_URI);
-    }).reduce((a, b) => [...a, ...b]);
-    quads.push(...RDFSerializer.serializeToQuads(roomRDF, BEACONS_URI));
-    data.beacons = await RDFSerializer.stringify(
-        new Store(quads),
-        { prettyPrint: true, baseUri: BEACONS_URI, format: 'text/turtle' });
-
-    console.log("Saving RDF data ...");
-    const dir = path.join(__dirname, "../dist/", DATASET);
-    if (!fs.existsSync(dir))
-        fs.mkdirSync(dir);
-    fs.writeFileSync(path.join(dir, "beacons2.ttl"), data.beacons);
-}
-
-async function loadData3() {
     const DATASET = "openhps2021";
     const DATASET_URI = `${BASE_URI}${DATASET}/` as IriString;
     const BEACONS_URI = DATASET_URI + "beacons.ttl#" as IriString;
@@ -210,7 +188,7 @@ setTimeout(() => {
     if (!fs.existsSync(dir))
         fs.mkdirSync(dir);
 
-    loadData1();
+    loadData1(1);
+    loadData1(2);
     loadData2();
-    loadData3();
 }, 100);
