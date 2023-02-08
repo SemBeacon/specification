@@ -2,7 +2,7 @@ import '@openhps/rdf';
 import { Absolute2DPosition, Absolute3DPosition, DataObject, LengthUnit, MemoryDataService } from '@openhps/core';
 import { CSVDataObjectService } from '@openhps/csv';
 import { Building, Floor, Room, SymbolicSpace, SymbolicSpaceService } from '@openhps/geospatial';
-import { BLEiBeacon, BLEObject, MACAddress } from '@openhps/rf';
+import { BLEiBeacon, BLEObject, BLEUUID, MACAddress } from '@openhps/rf';
 import { IriString, NamedNode, ogc, poso, Quad, rdf, RDFBuilder, rdfs, RDFSerializer, schema, Store, Term, xsd } from '@openhps/rdf';
 import { SemBeacon } from './SemBeacon';
 
@@ -141,7 +141,7 @@ async function loadData2() {
         file: path.join(__dirname, `../data/${DATASET}/ble_devices.csv`),
         rowCallback: (row: any) => {
             const address = MACAddress.fromString("00:11:22:33:44");
-            const object = REPLACE_BEACONS.includes(row.ID) ? new SemBeacon(address) : new BLEObject(address);
+            const object = REPLACE_BEACONS.includes(row.ID) ? new SemBeacon(address) : new BLEiBeacon(address);
             object.uid = row.ID;
             object.displayName = row.ID;
             object.setPosition(
@@ -155,6 +155,10 @@ async function loadData2() {
             if (object instanceof SemBeacon) {
                 // Set sembeacon information
                 object.instanceId = crypto.randomBytes(4).readUInt32BE(0);
+            } else {
+                object.major = crypto.randomBytes(2).readUInt16BE(0);
+                object.minor = crypto.randomBytes(2).readUInt16BE(0);
+                object.proximityUUID = BLEUUID.fromString(namespace);
             }
             return object;
         }
@@ -174,7 +178,9 @@ async function loadData2() {
 
             return quads;
         }).reduce(async (a, b) => [...await a, ...await b])]),
-        { prettyPrint: true, baseUri: BEACONS_URI, format: 'text/turtle' });
+        { prettyPrint: true, baseUri: BEACONS_URI, format: 'text/turtle', prefixes: {
+            sembeacon: 'http://purl.org/sembeacon/'
+        } });
     
     console.log("Saving RDF data ...");
     const dir = path.join(__dirname, "../dist/", DATASET);
