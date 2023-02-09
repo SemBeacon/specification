@@ -129,14 +129,23 @@ async function loadData2() {
     );
     const geojson = JSON.parse(geojsonStr);
     const spaces = geojson.features.map(feature => SymbolicSpace.fromGeoJSON(feature));
+    const building = spaces.filter(space => space instanceof Building)[0];
+    const floor = spaces.filter(space => space instanceof Floor)[0];
     const spaceService = new SymbolicSpaceService(new MemoryDataService(SymbolicSpace));
     await spaceService.emitAsync('build');
     await Promise.all(spaces.map(space => spaceService.insertObject(space)));
-    const quads = spaces.map(space => RDFSerializer.serializeToQuads(space, BEACONS_URI)).reduce((a, b) => [...a, ...b]);
+    const quads = spaces.map(space => {
+        if (space.uid === floor.uid) {
+            const serialized = RDFBuilder.fromSerialized(RDFSerializer.serialize(space, BEACONS_URI))
+                .add("http://purl.org/sembeacon/namespaceId", namespace, xsd.hexBinary)
+                .build();
+            return RDFSerializer.serializeToQuads(serialized);
+        } else {
+            return RDFSerializer.serializeToQuads(space, BEACONS_URI);
+        }
+    }).reduce((a, b) => [...a, ...b]);
 
     console.log("Loading beacon data ...");
-    const building = spaces.filter(space => space instanceof Building)[0];
-    const floor = spaces.filter(space => space instanceof Floor)[0];
     const beaconService = new CSVDataObjectService(BLEObject, {
         file: path.join(__dirname, `../data/${DATASET}/ble_devices.csv`),
         rowCallback: (row: any) => {
@@ -167,16 +176,15 @@ async function loadData2() {
     const beacons: BLEObject[] = await beaconService.findAll();
     data.beacons = await RDFSerializer.stringify(
         new Store([...quads, ...await beacons.map(async beacon => {
-            const quads = RDFSerializer.serializeToQuads(beacon, BEACONS_URI);
+            const builder = RDFBuilder.fromSerialized(RDFSerializer.serialize(beacon, BEACONS_URI));
 
             // Add information on where a beacon is placed
             const candidates = await spaceService.findSymbolicSpaces(beacon.getPosition());
             if (candidates.length > 0) {
-                const deployment = RDFSerializer.serializeToQuads(candidates[0][0], BEACONS_URI)[0];
-                quads.push(new Quad(quads[0].subject, new NamedNode(ogc.sfWithin), deployment.subject))
+                builder.add(ogc.sfWithin, candidates[0][0]);
             }
-
-            return quads;
+            builder.add("http://purl.org/sembeacon/namespace", floor);
+            return RDFSerializer.serializeToQuads(builder.build());
         }).reduce(async (a, b) => [...await a, ...await b])]),
         { prettyPrint: true, baseUri: BEACONS_URI, format: 'text/turtle', prefixes: {
             sembeacon: 'http://purl.org/sembeacon/'
