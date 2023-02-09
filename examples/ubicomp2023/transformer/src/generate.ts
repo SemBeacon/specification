@@ -181,9 +181,9 @@ async function loadData2() {
             // Add information on where a beacon is placed
             const candidates = await spaceService.findSymbolicSpaces(beacon.getPosition());
             if (candidates.length > 0) {
-                builder.add(ogc.sfWithin, candidates[0][0]);
+                builder.add(ogc.sfWithin, RDFSerializer.serializeToUri(candidates[0][0], BEACONS_URI));
             }
-            builder.add("http://purl.org/sembeacon/namespace", floor);
+            builder.add("http://purl.org/sembeacon/namespace", RDFSerializer.serializeToUri(floor, BEACONS_URI));
             return RDFSerializer.serializeToQuads(builder.build());
         }).reduce(async (a, b) => [...await a, ...await b])]),
         { prettyPrint: true, baseUri: BEACONS_URI, format: 'text/turtle', prefixes: {

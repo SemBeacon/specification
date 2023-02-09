@@ -27,6 +27,10 @@ so applications scanning for a beacon can decide wether or not they want to retr
 The resource URI should resolve to a semantic description of the beacon. Depending on the BLE version this resource URI
 needs to be shortened to fit in the advertisement data.
 
+#### URI Shorteners
+- tinyurl.com
+- bitly.com
+
 ## BLE 4.x Specification
 ![SemBeacon Bluetooth 4.x specification](./docs/images/sembeacon_specification_v4_2.svg)
 
@@ -39,6 +43,29 @@ The full documentation can be found [here](https://sembeacon.org/terms/1.0/). Th
 ```turtle
 @prefix sembeacon : <http://purl.org/sembeacon/> .
 ```
+
+### Classes
+
+#### `sembeacon:SemBeacon`
+A SemBeacon `sosa:FeatureOfInterest` that is a subclass of `poso:BluetoothBeacon`.
+
+### Data Properties
+
+#### `sembeacon:instanceId`
+The 4-byte instance ID as hexadecimal representation using `xsd:hexBinary`. This property should be added
+to a `sembeacon:SemBeacon`.
+
+#### `sembeacon:namespaceId`
+The 16-byte namespace ID as hexadecimal representation using `xsd:hexBinary`. This property should be added
+to a `sembeacon:SemBeacon` or a `ssn:Deployment` if linked using the object property `sembeacon:namespace`.
+
+#### `sembeacon:shortResourceURI`
+The short resource URI as `xsd:anyURI`. This is the shortened resource URI if available.
+
+### Object Properties
+
+#### `sembeacon:namespace`
+An optional namespace link to a deployment that has a `sembeacon:namespaceId`.
 
 ### Semantic Flags
 The semantic flags specified in the advertisement data need to indicate that data is available online.
