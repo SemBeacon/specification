@@ -11,8 +11,11 @@
     "@openhps/core": "^0.3.55",
     "@openhps/csv": "^0.1.8",
     "@openhps/geospatial": "^0.1.16",
-    "@openhps/rdf": "^0.1.47",
+    "@openhps/rdf": "^0.1.48",
     "@openhps/rf": "^0.1.17",
     "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5"
   }
 }

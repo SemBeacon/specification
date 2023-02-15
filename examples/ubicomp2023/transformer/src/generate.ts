@@ -3,7 +3,7 @@ import { Absolute2DPosition, Absolute3DPosition, DataObject, LengthUnit, MemoryD
 import { CSVDataObjectService } from '@openhps/csv';
 import { Building, Floor, Room, SymbolicSpace, SymbolicSpaceService } from '@openhps/geospatial';
 import { BLEiBeacon, BLEObject, BLEUUID, MACAddress } from '@openhps/rf';
-import { IriString, NamedNode, ogc, poso, Quad, rdf, RDFBuilder, rdfs, RDFSerializer, schema, Store, Term, xsd } from '@openhps/rdf';
+import { IriString, ogc, poso, rdf, RDFBuilder, rdfs, RDFSerializer, schema, Store, xsd } from '@openhps/rdf';
 import { SemBeacon } from './SemBeacon';
 
 import * as crypto from 'crypto';
@@ -11,6 +11,12 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 const BASE_URI = "https://sembeacon.org/examples/";
+
+function randomMAC(): string {
+    return "XX:XX:XX:XX:XX:XX".replace(/X/g, function() {
+        return "0123456789ABCDEF".charAt(Math.floor(Math.random() * 16))
+    });
+}
 
 async function loadData1(experiment: number = 1) {
     const DATASET = "kennedy2019";
@@ -69,7 +75,7 @@ async function loadData1(experiment: number = 1) {
     const beaconService = new CSVDataObjectService(BLEObject, {
         file: path.join(__dirname, `../data/${DATASET}/experiment${experiment}/edges.csv`),
         rowCallback: (row: any) => {
-            const address = MACAddress.fromString("00:11:22:33:44");
+            const address = MACAddress.fromString(randomMAC());
             const object = REPLACE_BEACONS.includes(row.edgenodeid) ? new SemBeacon(address) : new BLEObject(address);
             if (object instanceof SemBeacon) {
                 // Set sembeacon information
@@ -149,10 +155,11 @@ async function loadData2() {
     const beaconService = new CSVDataObjectService(BLEObject, {
         file: path.join(__dirname, `../data/${DATASET}/ble_devices.csv`),
         rowCallback: (row: any) => {
-            const address = MACAddress.fromString("00:11:22:33:44");
+            const address = MACAddress.fromString(randomMAC());
             const object = REPLACE_BEACONS.includes(row.ID) ? new SemBeacon(address) : new BLEiBeacon(address);
             object.uid = row.ID;
             object.displayName = row.ID;
+            object.calibratedRSSI = -56;
             object.setPosition(
                 building.transform(
                     floor.transform(new Absolute3DPosition(
