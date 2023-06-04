@@ -79,7 +79,7 @@ async function loadData1(experiment: number = 1) {
             const object = REPLACE_BEACONS.includes(row.edgenodeid) ? new SemBeacon(address) : new BLEObject(address);
             if (object instanceof SemBeacon) {
                 // Set sembeacon information
-                object.instanceId = crypto.randomBytes(4).readUInt32BE(0);
+                object.instanceId = crypto.randomBytes(4).readUInt32BE(0).toString(16);
             }
             object.uid = `edge_${row.edgenodeid}`;
             object.displayName = `Edge ${row.edgenodeid}`;
@@ -170,7 +170,7 @@ async function loadData2() {
                 ));
             if (object instanceof SemBeacon) {
                 // Set sembeacon information
-                object.instanceId = crypto.randomBytes(4).readUInt32BE(0);
+                object.instanceId = crypto.randomBytes(4).readUInt32BE(0).toString(16);
             } else {
                 object.major = crypto.randomBytes(2).readUInt16BE(0);
                 object.minor = crypto.randomBytes(2).readUInt16BE(0);

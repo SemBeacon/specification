@@ -29,5 +29,5 @@ export class SemBeacon extends BLEBeaconObject {
             datatype: xsd.hexBinary
         }
     })
-    instanceId: number;
+    instanceId: string;
 }
