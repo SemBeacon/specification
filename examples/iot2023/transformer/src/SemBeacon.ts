@@ -30,4 +30,8 @@ export class SemBeacon extends BLEBeaconObject {
         }
     })
     instanceId: string;
+
+    isValid(): boolean {
+        throw new Error("Method not implemented.");
+    }
 }

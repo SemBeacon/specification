@@ -38,7 +38,9 @@ async function loadData1(experiment: number = 1) {
             new Absolute2DPosition(11, 25, LengthUnit.METER),
             new Absolute2DPosition(11, 0, LengthUnit.METER)
         ]);
-    const roomRDF = RDFBuilder.fromSerialized(RDFSerializer.serialize(room, BEACONS_URI))
+    const roomRDF = RDFBuilder.fromSerialized(RDFSerializer.serialize(room, {
+        baseUri: BEACONS_URI
+    }))
         .add(schema.accommodationFloorPlan, RDFBuilder.blankNode()
             .add(rdf.type, schema.FloorPlan)
             .add(schema.layoutImage, `https://github.com/co60ca/BBIL/blob/master/assets/room${experiment === 1 ? "" : "-2"}.png?raw=true`, xsd.anyURI)
@@ -63,7 +65,9 @@ async function loadData1(experiment: number = 1) {
         return marker;
     });
     const quads = landmarks.map(landmark => {
-        const serialized = RDFBuilder.fromSerialized(RDFSerializer.serialize(landmark, BEACONS_URI))
+        const serialized = RDFBuilder.fromSerialized(RDFSerializer.serialize(landmark, {
+            baseUri: BEACONS_URI
+        }))
             .add(rdf.type, poso.Landmark)
             .add(rdfs.comment, `This is a room landmark with label ${landmark.displayName}`, "en")
             .build();
@@ -98,9 +102,13 @@ async function loadData1(experiment: number = 1) {
         new Store([...quads, ...await beacons.map(async beacon => {
             let serialized = undefined;
             if (beacon instanceof SemBeacon) {
-                serialized = RDFSerializer.serialize(beacon, BEACONS_URI);
+                serialized = RDFSerializer.serialize(beacon, {
+                    baseUri: BEACONS_URI
+                });
             } else {
-                serialized = RDFBuilder.fromSerialized(RDFSerializer.serialize(beacon, BEACONS_URI))
+                serialized = RDFBuilder.fromSerialized(RDFSerializer.serialize(beacon, {
+                    baseUri: BEACONS_URI
+                }))
                     .add(rdf.type, poso.BluetoothReceiver)
                     .build();
             }
@@ -142,7 +150,9 @@ async function loadData2() {
     await Promise.all(spaces.map(space => spaceService.insertObject(space)));
     const quads = spaces.map(space => {
         if (space.uid === floor.uid) {
-            const serialized = RDFBuilder.fromSerialized(RDFSerializer.serialize(space, BEACONS_URI))
+            const serialized = RDFBuilder.fromSerialized(RDFSerializer.serialize(space, {
+                baseUri: BEACONS_URI
+            }))
                 .add("http://purl.org/sembeacon/namespaceId", namespace, xsd.hexBinary)
                 .build();
             return RDFSerializer.serializeToQuads(serialized);
@@ -183,7 +193,9 @@ async function loadData2() {
     const beacons: BLEObject[] = await beaconService.findAll();
     data.beacons = await RDFSerializer.stringify(
         new Store([...quads, ...await beacons.map(async beacon => {
-            const builder = RDFBuilder.fromSerialized(RDFSerializer.serialize(beacon, BEACONS_URI));
+            const builder = RDFBuilder.fromSerialized(RDFSerializer.serialize(beacon, {
+                baseUri: BEACONS_URI
+            }));
 
             // Add information on where a beacon is placed
             const candidates = await spaceService.findSymbolicSpaces(beacon.getPosition());
