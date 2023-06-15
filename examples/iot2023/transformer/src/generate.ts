@@ -12,6 +12,9 @@ import * as path from 'path';
 
 const BASE_URI = "https://sembeacon.org/examples/";
 
+RDFSerializer.initialize("rf");
+RDFSerializer.initialize("geospatial");
+
 function randomMAC(): string {
     return "XX:XX:XX:XX:XX:XX".replace(/X/g, function() {
         return "0123456789ABCDEF".charAt(Math.floor(Math.random() * 16))
