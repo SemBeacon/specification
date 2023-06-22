@@ -5,6 +5,7 @@ import { Building, Floor, Room, SymbolicSpace, SymbolicSpaceService } from '@ope
 import { BLEiBeacon, BLEObject, BLEUUID, MACAddress } from '@openhps/rf';
 import { IriString, ogc, poso, rdf, RDFBuilder, rdfs, RDFSerializer, schema, Store, xsd } from '@openhps/rdf';
 import { SemBeacon } from './SemBeacon';
+import axios from 'axios';
 
 import * as crypto from 'crypto';
 import * as fs from 'fs';
@@ -18,6 +19,22 @@ RDFSerializer.initialize("geospatial");
 function randomMAC(): string {
     return "XX:XX:XX:XX:XX:XX".replace(/X/g, function() {
         return "0123456789ABCDEF".charAt(Math.floor(Math.random() * 16))
+    });
+}
+
+function shortenURL(url: string): Promise<string> {
+    return new Promise((resolve, reject) => {
+        const accessToken = "2cd7bc12126759042bfb3ebe1160aafda0bc65df";
+        axios.post("https://api-ssl.bitly.com/v4/shorten", {
+            "domain": "bit.ly",
+            "long_url": url
+        }, {
+            headers: {
+                "Authorization": `Bearer ${accessToken}`
+            }
+        }).then(response => {
+            resolve(response.data.link);
+        }).catch(reject);
     });
 }
 
@@ -168,28 +185,31 @@ async function loadData2() {
     const beaconService = new CSVDataObjectService(BLEObject, {
         file: path.join(__dirname, `../data/${DATASET}/ble_devices.csv`),
         rowCallback: (row: any) => {
-            const address = MACAddress.fromString(randomMAC());
-            const object = REPLACE_BEACONS.includes(row.ID) ? new SemBeacon(address) : new BLEiBeacon(address);
-            object.uid = row.ID;
-            object.displayName = row.ID;
-            object.calibratedRSSI = -56;
-            object.setPosition(
-                building.transform(
-                    floor.transform(new Absolute3DPosition(
-                        parseFloat(row.X),
-                        parseFloat(row.Y),
-                        1.6
-                    ))
-                ));
-            if (object instanceof SemBeacon) {
-                // Set sembeacon information
-                object.instanceId = crypto.randomBytes(4).readUInt32BE(0).toString(16).padStart(8, "0");;
-            } else {
-                object.major = crypto.randomBytes(2).readUInt16BE(0);
-                object.minor = crypto.randomBytes(2).readUInt16BE(0);
-                object.proximityUUID = BLEUUID.fromString(namespace);
-            }
-            return object;
+            return new Promise(async (resolve) => {
+                const address = MACAddress.fromString(randomMAC());
+                const object = REPLACE_BEACONS.includes(row.ID) ? new SemBeacon(address) : new BLEiBeacon(address);
+                object.uid = row.ID;
+                object.displayName = row.ID;
+                object.calibratedRSSI = -56;
+                object.setPosition(
+                    building.transform(
+                        floor.transform(new Absolute3DPosition(
+                            parseFloat(row.X),
+                            parseFloat(row.Y),
+                            1.6
+                        ))
+                    ));
+                if (object instanceof SemBeacon) {
+                    // Set sembeacon information
+                    object.instanceId = crypto.randomBytes(4).readUInt32BE(0).toString(16).padStart(8, "0");
+                    object.shortResourceURI = await shortenURL(`${BEACONS_URI}${object.uid}`);
+                } else {
+                    object.major = crypto.randomBytes(2).readUInt16BE(0);
+                    object.minor = crypto.randomBytes(2).readUInt16BE(0);
+                    object.proximityUUID = BLEUUID.fromString(namespace);
+                }
+                resolve(object);
+            });
         }
     });
     await beaconService.emitAsync('build');

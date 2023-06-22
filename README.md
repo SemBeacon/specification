@@ -80,6 +80,11 @@ The semantic flags specified in the advertisement data need to indicate that dat
 | 4 | N.a. |
 | 5 - 7 | *Reserved for future use.* |
 
+### Vocabulary Uses
+
+#### Hardware MAC-address should be used when possible
+A hardware MAC address should be stored if possible.
+
 ## License and Usage
 Copyright (C) 2022-2023 Maxim Van de Wynckel & Vrije Universiteit Brussel
 

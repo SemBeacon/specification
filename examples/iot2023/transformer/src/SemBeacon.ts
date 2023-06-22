@@ -17,6 +17,14 @@ export class SemBeacon extends BLEBeaconObject {
 
     @SerializableMember({
         rdf: {
+            predicate: "http://purl.org/sembeacon/shortResourceURI",
+            datatype: xsd.anyURI
+        }
+    })
+    shortResourceURI: string;
+
+    @SerializableMember({
+        rdf: {
             predicate: "http://purl.org/sembeacon/namespaceId",
             datatype: xsd.hexBinary
         }
