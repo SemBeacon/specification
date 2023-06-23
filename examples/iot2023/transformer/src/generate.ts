@@ -3,14 +3,40 @@ import { Absolute2DPosition, Absolute3DPosition, DataObject, LengthUnit, MemoryD
 import { CSVDataObjectService } from '@openhps/csv';
 import { Building, Floor, Room, SymbolicSpace, SymbolicSpaceService } from '@openhps/geospatial';
 import { BLEiBeacon, BLEObject, BLEUUID, MACAddress } from '@openhps/rf';
-import { IriString, NamedNode, ogc, poso, Quad, rdf, RDFBuilder, rdfs, RDFSerializer, schema, Store, Term, xsd } from '@openhps/rdf';
+import { IriString, ogc, poso, rdf, RDFBuilder, rdfs, RDFSerializer, schema, Store, xsd } from '@openhps/rdf';
 import { SemBeacon } from './SemBeacon';
+import axios from 'axios';
 
 import * as crypto from 'crypto';
 import * as fs from 'fs';
 import * as path from 'path';
 
 const BASE_URI = "https://sembeacon.org/examples/";
+
+RDFSerializer.initialize("rf");
+RDFSerializer.initialize("geospatial");
+
+function randomMAC(): string {
+    return "XX:XX:XX:XX:XX:XX".replace(/X/g, function() {
+        return "0123456789ABCDEF".charAt(Math.floor(Math.random() * 16))
+    });
+}
+
+function shortenURL(url: string): Promise<string> {
+    return new Promise((resolve, reject) => {
+        const accessToken = "2cd7bc12126759042bfb3ebe1160aafda0bc65df";
+        axios.post("https://api-ssl.bitly.com/v4/shorten", {
+            "domain": "bit.ly",
+            "long_url": url
+        }, {
+            headers: {
+                "Authorization": `Bearer ${accessToken}`
+            }
+        }).then(response => {
+            resolve(response.data.link);
+        }).catch(reject);
+    });
+}
 
 async function loadData1(experiment: number = 1) {
     const DATASET = "kennedy2019";
@@ -32,7 +58,9 @@ async function loadData1(experiment: number = 1) {
             new Absolute2DPosition(11, 25, LengthUnit.METER),
             new Absolute2DPosition(11, 0, LengthUnit.METER)
         ]);
-    const roomRDF = RDFBuilder.fromSerialized(RDFSerializer.serialize(room, BEACONS_URI))
+    const roomRDF = RDFBuilder.fromSerialized(RDFSerializer.serialize(room, {
+        baseUri: BEACONS_URI
+    }))
         .add(schema.accommodationFloorPlan, RDFBuilder.blankNode()
             .add(rdf.type, schema.FloorPlan)
             .add(schema.layoutImage, `https://github.com/co60ca/BBIL/blob/master/assets/room${experiment === 1 ? "" : "-2"}.png?raw=true`, xsd.anyURI)
@@ -57,7 +85,9 @@ async function loadData1(experiment: number = 1) {
         return marker;
     });
     const quads = landmarks.map(landmark => {
-        const serialized = RDFBuilder.fromSerialized(RDFSerializer.serialize(landmark, BEACONS_URI))
+        const serialized = RDFBuilder.fromSerialized(RDFSerializer.serialize(landmark, {
+            baseUri: BEACONS_URI
+        }))
             .add(rdf.type, poso.Landmark)
             .add(rdfs.comment, `This is a room landmark with label ${landmark.displayName}`, "en")
             .build();
@@ -69,11 +99,11 @@ async function loadData1(experiment: number = 1) {
     const beaconService = new CSVDataObjectService(BLEObject, {
         file: path.join(__dirname, `../data/${DATASET}/experiment${experiment}/edges.csv`),
         rowCallback: (row: any) => {
-            const address = MACAddress.fromString("00:11:22:33:44");
+            const address = MACAddress.fromString(randomMAC());
             const object = REPLACE_BEACONS.includes(row.edgenodeid) ? new SemBeacon(address) : new BLEObject(address);
             if (object instanceof SemBeacon) {
                 // Set sembeacon information
-                object.instanceId = crypto.randomBytes(4).readUInt32BE(0);
+                object.instanceId = crypto.randomBytes(4).readUInt32BE(0).toString(16).padStart(8, "0");
             }
             object.uid = `edge_${row.edgenodeid}`;
             object.displayName = `Edge ${row.edgenodeid}`;
@@ -92,9 +122,13 @@ async function loadData1(experiment: number = 1) {
         new Store([...quads, ...await beacons.map(async beacon => {
             let serialized = undefined;
             if (beacon instanceof SemBeacon) {
-                serialized = RDFSerializer.serialize(beacon, BEACONS_URI);
+                serialized = RDFSerializer.serialize(beacon, {
+                    baseUri: BEACONS_URI
+                });
             } else {
-                serialized = RDFBuilder.fromSerialized(RDFSerializer.serialize(beacon, BEACONS_URI))
+                serialized = RDFBuilder.fromSerialized(RDFSerializer.serialize(beacon, {
+                    baseUri: BEACONS_URI
+                }))
                     .add(rdf.type, poso.BluetoothReceiver)
                     .build();
             }
@@ -136,7 +170,9 @@ async function loadData2() {
     await Promise.all(spaces.map(space => spaceService.insertObject(space)));
     const quads = spaces.map(space => {
         if (space.uid === floor.uid) {
-            const serialized = RDFBuilder.fromSerialized(RDFSerializer.serialize(space, BEACONS_URI))
+            const serialized = RDFBuilder.fromSerialized(RDFSerializer.serialize(space, {
+                baseUri: BEACONS_URI
+            }))
                 .add("http://purl.org/sembeacon/namespaceId", namespace, xsd.hexBinary)
                 .build();
             return RDFSerializer.serializeToQuads(serialized);
@@ -149,34 +185,40 @@ async function loadData2() {
     const beaconService = new CSVDataObjectService(BLEObject, {
         file: path.join(__dirname, `../data/${DATASET}/ble_devices.csv`),
         rowCallback: (row: any) => {
-            const address = MACAddress.fromString("00:11:22:33:44");
-            const object = REPLACE_BEACONS.includes(row.ID) ? new SemBeacon(address) : new BLEiBeacon(address);
-            object.uid = row.ID;
-            object.displayName = row.ID;
-            object.setPosition(
-                building.transform(
-                    floor.transform(new Absolute3DPosition(
-                        parseFloat(row.X),
-                        parseFloat(row.Y),
-                        1.6
-                    ))
-                ));
-            if (object instanceof SemBeacon) {
-                // Set sembeacon information
-                object.instanceId = crypto.randomBytes(4).readUInt32BE(0);
-            } else {
-                object.major = crypto.randomBytes(2).readUInt16BE(0);
-                object.minor = crypto.randomBytes(2).readUInt16BE(0);
-                object.proximityUUID = BLEUUID.fromString(namespace);
-            }
-            return object;
+            return new Promise(async (resolve) => {
+                const address = MACAddress.fromString(randomMAC());
+                const object = REPLACE_BEACONS.includes(row.ID) ? new SemBeacon(address) : new BLEiBeacon(address);
+                object.uid = row.ID;
+                object.displayName = row.ID;
+                object.calibratedRSSI = -56;
+                object.setPosition(
+                    building.transform(
+                        floor.transform(new Absolute3DPosition(
+                            parseFloat(row.X),
+                            parseFloat(row.Y),
+                            1.6
+                        ))
+                    ));
+                if (object instanceof SemBeacon) {
+                    // Set sembeacon information
+                    object.instanceId = crypto.randomBytes(4).readUInt32BE(0).toString(16).padStart(8, "0");
+                    object.shortResourceURI = await shortenURL(`${BEACONS_URI}${object.uid}`);
+                } else {
+                    object.major = crypto.randomBytes(2).readUInt16BE(0);
+                    object.minor = crypto.randomBytes(2).readUInt16BE(0);
+                    object.proximityUUID = BLEUUID.fromString(namespace);
+                }
+                resolve(object);
+            });
         }
     });
     await beaconService.emitAsync('build');
     const beacons: BLEObject[] = await beaconService.findAll();
     data.beacons = await RDFSerializer.stringify(
         new Store([...quads, ...await beacons.map(async beacon => {
-            const builder = RDFBuilder.fromSerialized(RDFSerializer.serialize(beacon, BEACONS_URI));
+            const builder = RDFBuilder.fromSerialized(RDFSerializer.serialize(beacon, {
+                baseUri: BEACONS_URI
+            }));
 
             // Add information on where a beacon is placed
             const candidates = await spaceService.findSymbolicSpaces(beacon.getPosition());

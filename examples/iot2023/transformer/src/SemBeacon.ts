@@ -17,16 +17,29 @@ export class SemBeacon extends BLEBeaconObject {
 
     @SerializableMember({
         rdf: {
+            predicate: "http://purl.org/sembeacon/shortResourceURI",
+            datatype: xsd.anyURI
+        }
+    })
+    shortResourceURI: string;
+
+    @SerializableMember({
+        rdf: {
             predicate: "http://purl.org/sembeacon/namespaceId",
-         //   datatype: xsd.hexBinary
+            datatype: xsd.hexBinary
         }
     })
     namespaceId: string;
 
     @SerializableMember({
         rdf: {
-            predicate: "http://purl.org/sembeacon/instanceId"
+            predicate: "http://purl.org/sembeacon/instanceId",
+            datatype: xsd.hexBinary
         }
     })
-    instanceId: number;
+    instanceId: string;
+
+    isValid(): boolean {
+        throw new Error("Method not implemented.");
+    }
 }
