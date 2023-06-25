@@ -3,11 +3,11 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
 <http://purl.org/sembeacon/1.0/> a prov:Entity;
-	 dc:title "SemBeacon: A Semantic BLE Proximity Beacon Specification for Interoperable Indoor Positioning";
+	 dc:title "SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things";
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo :agent1;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
-	 prov:wasGeneratedAt "2023-01-23T00:00:00";
+	 prov:wasGeneratedAt "2023-06-23T00:00:00";
 .
 :agent0 a prov:Agent; foaf:name "Maxim Van de Wynckel".
 :agent1 a prov:Agent; foaf:name "Beat Signer".

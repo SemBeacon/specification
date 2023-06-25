@@ -74,10 +74,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/abstract" : [ {
     "@language" : "en",
-    "@value" : "Indoor positioning using Bluetooth Low Energy (BLE) beacons is a well-established technique to create low-cost positioning systems for indoor navigation, tracking and location awareness. While various specifications aim to provide a generic way to uniquely identify a beacon and optionally its location, they are either deployment specific or do not broadcast enough information to be used without an additional database. In this paper we present a novel BLE advertising specification and ontology for BLE beacons called SemBeacon. Our proposed specification is backwards compatible with existing specifications such as iBeacon, Eddystone and AltBeacon. We demonstrate how the protocol helps in creating real-time positioning systems that can describe their location as well as the environment in which they are located. Other than Eddystone-URL beacons which were originally used in the Physical Web project by Google and broadcast web pages of physical objects that these beacons are attached to, SemBeacon is a specification that broadcasts semantic data about the environment and positioning systems that are available within the beacon's proximity."
+    "@value" : "Discovering smart devices in the physical world often requires some type of indoor positioning system. Bluetooth Low Energy~(BLE) beacons are a well-established technique to create scalable low-cost positioning systems for indoor navigation, tracking and location awareness. While various BLE~specifications aim to provide a generic way to uniquely identify a beacon and optionally detect its location, they are either deployment specific or do not broadcast enough information to be used without an additional database containing the locations of installed beacons. In this paper, we present a novel BLE~advertising solution and semantic ontology called SemBeacon. Our proposed specification is backwards compatible with existing specifications such as iBeacon, Eddystone and AltBeacon. With the help of a prototype application, we demonstrate how SemBeacon enables the creation of real-time positioning systems that can describe their location as well as the environment in which they are located. Other than Eddystone-URL beacons, which were originally used in the Physical Web project by Google and broadcast web pages of physical objects these beacons are attached to, SemBeacon is a specification that broadcasts semantic data about the environment and positioning systems that are available within a beacon's proximity."
   } ],
   "http://purl.org/dc/terms/bibliographicCitation" : [ {
-    "@value" : "Maxim Van de Wynckel and Beat Signer, SemBeacon: A Semantic BLE Proximity Beacon\nSpecification for Interoperable Indoor Positioning"
+    "@value" : "Maxim Van de Wynckel and Beat Signer, SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things"
   } ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@language" : "en",
@@ -95,11 +95,11 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2023-01-23T00:00:00"
+    "@value" : "2023-06-23T00:00:00"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
-    "@value" : "SemBeacon: A Semantic BLE Proximity Beacon Specification for Interoperable Indoor Positioning"
+    "@value" : "SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things"
   } ],
   "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
     "@value" : "sembeacon"
