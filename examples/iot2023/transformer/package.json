@@ -8,12 +8,12 @@
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
-    "@openhps/core": "^0.4.27",
+    "@openhps/core": "^0.5.12",
     "@openhps/csv": "^0.1.11",
     "@openhps/geospatial": "^0.1.27",
-    "@openhps/rdf": "^0.4.8",
-    "@openhps/rf": "^0.1.39",
-    "axios": "^1.4.0",
+    "@openhps/rdf": "^0.4.14",
+    "@openhps/rf": "^0.1.40",
+    "axios": "^1.5.1",
     "ts-node": "^10.9.1"
   },
   "devDependencies": {

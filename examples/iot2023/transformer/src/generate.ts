@@ -1,9 +1,9 @@
 import '@openhps/rdf';
-import { Absolute2DPosition, Absolute3DPosition, DataObject, LengthUnit, MemoryDataService } from '@openhps/core';
+import { Absolute2DPosition, Absolute3DPosition, DataObject, LengthUnit, MemoryDataService, ModelBuilder, MultilaterationNode } from '@openhps/core';
 import { CSVDataObjectService } from '@openhps/csv';
 import { Building, Floor, Room, SymbolicSpace, SymbolicSpaceService } from '@openhps/geospatial';
-import { BLEiBeacon, BLEObject, BLEUUID, MACAddress } from '@openhps/rf';
-import { IriString, ogc, poso, rdf, RDFBuilder, rdfs, RDFSerializer, schema, Store, xsd } from '@openhps/rdf';
+import { BLEiBeacon, BLEObject, BLEUUID, MACAddress, PropagationModel, RelativeRSSIProcessing } from '@openhps/rf';
+import { IriString, ogc, poso, rdf, RDFBuilder, RDFModelSerializer, rdfs, RDFSerializer, schema, Store, xsd } from '@openhps/rdf';
 import { SemBeacon } from './SemBeacon';
 import axios from 'axios';
 
@@ -213,21 +213,42 @@ async function loadData2() {
         }
     });
     await beaconService.emitAsync('build');
+
+    const model = await ModelBuilder.create()
+        .from()
+        .via(new RelativeRSSIProcessing({
+            defaultCalibratedRSSI: -56,
+            environmentFactor: 2,
+            propagationModel: PropagationModel.LOG_DISTANCE
+        }))
+        .via(new MultilaterationNode({
+            minReferences: 2
+        }))
+        .to()
+        .build();
+    model.uid = "ips";
+
     const beacons: BLEObject[] = await beaconService.findAll();
     data.beacons = await RDFSerializer.stringify(
-        new Store([...quads, ...await beacons.map(async beacon => {
-            const builder = RDFBuilder.fromSerialized(RDFSerializer.serialize(beacon, {
-                baseUri: BEACONS_URI
-            }));
+        new Store([
+            ...quads, 
+            ...await beacons.map(async beacon => {
+                const builder = RDFBuilder.fromSerialized(RDFSerializer.serialize(beacon, {
+                    baseUri: BEACONS_URI
+                }));
 
-            // Add information on where a beacon is placed
-            const candidates = await spaceService.findSymbolicSpaces(beacon.getPosition());
-            if (candidates.length > 0) {
-                builder.add(ogc.sfWithin, RDFSerializer.serializeToUri(candidates[0][0], BEACONS_URI));
-            }
-            builder.add("http://purl.org/sembeacon/namespace", RDFSerializer.serializeToUri(floor, BEACONS_URI));
-            return RDFSerializer.serializeToQuads(builder.build());
-        }).reduce(async (a, b) => [...await a, ...await b])]),
+                // Add information on where a beacon is placed
+                const candidates = await spaceService.findSymbolicSpaces(beacon.getPosition());
+                if (candidates.length > 0) {
+                    builder.add(ogc.sfWithin, RDFSerializer.serializeToUri(candidates[0][0], BEACONS_URI));
+                }
+                builder.add("http://purl.org/sembeacon/namespace", RDFSerializer.serializeToUri(floor, BEACONS_URI));
+                return RDFSerializer.serializeToQuads(builder.build());
+            }).reduce(async (a, b) => [...await a, ...await b]), 
+            ...RDFSerializer.serializeToQuads(RDFModelSerializer.serialize(model, {
+                baseUri: BEACONS_URI
+            }))
+        ]),
         { prettyPrint: true, baseUri: BEACONS_URI, format: 'text/turtle', prefixes: {
             sembeacon: 'http://purl.org/sembeacon/'
         } });
