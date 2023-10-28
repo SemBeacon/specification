@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/sembeacon/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/sembeacon/","name":"SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things", "headline":"Discovering smart devices in the physical world often requires some type of indoor positioning system. Bluetooth Low Energy~(BLE) beacons are a well-established technique to create scalable low-cost positioning systems for indoor navigation, tracking and location awareness. While various BLE~specifications aim to provide a generic way to uniquely identify a beacon and optionally detect its location, they are either deployment specific or do not broadcast enough information to be used without an additional database containing the locations of installed beacons. In this paper, we present a novel BLE~advertising solution and semantic ontology called SemBeacon. Our proposed specification is backwards compatible with existing specifications such as iBeacon, Eddystone and AltBeacon. With the help of a prototype application, we demonstrate how SemBeacon enables the creation of real-time positioning systems that can describe their location as well as the environment in which they are located. Other than Eddystone-URL beacons, which were originally used in the Physical Web project by Google and broadcast web pages of physical objects these beacons are attached to, SemBeacon is a specification that broadcasts semantic data about the environment and positioning systems that are available within a beacon's proximity.", "datePublished":"2023-06-23T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/sembeacon/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/sembeacon/","name":"SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things", "headline":"Discovering smart devices in the physical world often requires some type of indoor positioning system. Bluetooth Low Energy~(BLE) beacons are a well-established technique to create scalable low-cost positioning systems for indoor navigation, tracking and location awareness. While various BLE~specifications aim to provide a generic way to uniquely identify a beacon and optionally detect its location, they are either deployment specific or do not broadcast enough information to be used without an additional database containing the locations of installed beacons. In this paper, we present a novel BLE~advertising solution and semantic ontology called SemBeacon. Our proposed specification is backwards compatible with existing specifications such as iBeacon, Eddystone and AltBeacon. With the help of a prototype application, we demonstrate how SemBeacon enables the creation of real-time positioning systems that can describe their location as well as the environment in which they are located. Other than Eddystone-URL beacons, which were originally used in the Physical Web project by Google and broadcast web pages of physical objects these beacons are attached to, SemBeacon is a specification that broadcasts semantic data about the environment and positioning systems that are available within a beacon's proximity.", "datePublished":"2023-10-28T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -55,7 +55,7 @@ $(function(){
 <div class="head">
 <div style="float:right">language <a href="index-en.html"><b>en</b></a> <a href="index-nl.html"><b>nl</b></a> </div>
 <h1>SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things</h1>
-<h2>Release  2023-06-23T00:00:00</h2>
+<h2>Release  2023-10-28T00:00:00</h2>
 
 
 <dl>
@@ -102,13 +102,13 @@ Deze ontologie heeft de volgende klassen en eigenschappen.</span>
    </li>
 </ul><h4>Data-eigenschappen</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
-      <a href="#instanceId" title="http://purl.org/sembeacon/instanceId">instance ID</a>
+      <a href="#instanceId" title="http://purl.org/sembeacon/instanceId">Instance ID</a>
    </li>
    <li>
-      <a href="#namespaceId" title="http://purl.org/sembeacon/namespaceId">namespace ID</a>
+      <a href="#namespaceId" title="http://purl.org/sembeacon/namespaceId">Namespace ID</a>
    </li>
    <li>
-      <a href="#shortResourceURI" title="http://purl.org/sembeacon/shortResourceURI">short resource URI</a>
+      <a href="#shortResourceURI" title="http://purl.org/sembeacon/shortResourceURI">Short resource URI</a>
    </li>
    <li>
       <a href="#version" title="http://purl.org/sembeacon/version">version</a>
@@ -147,10 +147,8 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  SemB
          </dd>
          <dt>is in domein van</dt>
          <dd>
-            <a href="#instanceId" title="http://purl.org/sembeacon/instanceId">instance ID</a>
-            <sup class="type-dp" title="data-eigenschap">dp</sup>, <a href="#namespace" title="http://purl.org/sembeacon/namespace">namespace</a>
-            <sup class="type-op" title="objecteigenschap">op</sup>, <a href="#namespaceId" title="http://purl.org/sembeacon/namespaceId">namespace ID</a>
-            <sup class="type-dp" title="data-eigenschap">dp</sup>, <a href="#shortResourceURI" title="http://purl.org/sembeacon/shortResourceURI">short resource URI</a>
+            <a href="#instanceId" title="http://purl.org/sembeacon/instanceId">Instance ID</a>
+            <sup class="type-dp" title="data-eigenschap">dp</sup>, <a href="#shortResourceURI" title="http://purl.org/sembeacon/shortResourceURI">Short resource URI</a>
             <sup class="type-dp" title="data-eigenschap">dp</sup>, <a href="#version" title="http://purl.org/sembeacon/version">version</a>
             <sup class="type-dp" title="data-eigenschap">dp</sup>
          </dd>
@@ -177,7 +175,9 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  SemB
          <dl>
             <dt>heeft domein</dt>
             <dd>
-               <a href="#SemBeacon" title="http://purl.org/sembeacon/SemBeacon">SemBeacon</a>
+               <a href="http://purl.org/poso/BluetoothBeacon"
+                  target="_blank"
+                  title="http://purl.org/poso/BluetoothBeacon">bluetooth beacon</a>
                <sup class="type-c" title="klasse">c</sup>
             </dd>
             <dt>heeft bereik</dt>
@@ -194,20 +194,20 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  SemB
    <h3 id="dataproperties-headline" class="list">Data-eigenschappen</h3>
    <ul class="hlist">
       <li>
-         <a href="#instanceId" title="http://purl.org/sembeacon/instanceId">instance ID</a>
+         <a href="#instanceId" title="http://purl.org/sembeacon/instanceId">Instance ID</a>
       </li>
       <li>
-         <a href="#namespaceId" title="http://purl.org/sembeacon/namespaceId">namespace ID</a>
+         <a href="#namespaceId" title="http://purl.org/sembeacon/namespaceId">Namespace ID</a>
       </li>
       <li>
-         <a href="#shortResourceURI" title="http://purl.org/sembeacon/shortResourceURI">short resource URI</a>
+         <a href="#shortResourceURI" title="http://purl.org/sembeacon/shortResourceURI">Short resource URI</a>
       </li>
       <li>
          <a href="#version" title="http://purl.org/sembeacon/version">version</a>
       </li>
    </ul>
    <div class="entity" id="instanceId">
-      <h3>instance ID<sup class="type-dp" title="data-eigenschap">dp</sup>
+      <h3>Instance ID<sup class="type-dp" title="data-eigenschap">dp</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#dataproperties">Index data-eigenschappen</a>
          </span>
       </h3>
@@ -234,7 +234,7 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  SemB
       </div>
    </div>
    <div class="entity" id="namespaceId">
-      <h3>namespace ID<sup class="type-dp" title="data-eigenschap">dp</sup>
+      <h3>Namespace ID<sup class="type-dp" title="data-eigenschap">dp</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#dataproperties">Index data-eigenschappen</a>
          </span>
       </h3>
@@ -247,7 +247,9 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  SemB
          <dl>
             <dt>heeft domein</dt>
             <dd>
-               <a href="#SemBeacon" title="http://purl.org/sembeacon/SemBeacon">SemBeacon</a>
+               <a href="http://purl.org/poso/BluetoothBeacon"
+                  target="_blank"
+                  title="http://purl.org/poso/BluetoothBeacon">bluetooth beacon</a>
                <sup class="type-c" title="klasse">c</sup>
             </dd>
             <dd>
@@ -262,7 +264,7 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  SemB
       </div>
    </div>
    <div class="entity" id="shortResourceURI">
-      <h3>short resource URI<sup class="type-dp" title="data-eigenschap">dp</sup>
+      <h3>Short resource URI<sup class="type-dp" title="data-eigenschap">dp</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#dataproperties">Index data-eigenschappen</a>
          </span>
       </h3>

@@ -95,7 +95,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2023-06-23T00:00:00"
+    "@value" : "2023-10-28T00:00:00"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -148,7 +148,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "instance ID"
+    "@value" : "Instance ID"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#hexBinary"
@@ -163,7 +163,7 @@
     "@value" : "The namespace property directs to the deployment containing all sensors deployed in this namespace."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/sembeacon/SemBeacon"
+    "@id" : "http://purl.org/poso/BluetoothBeacon"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -180,13 +180,13 @@
     "@value" : "A namespace identifier is the 128-bit UUID that defines the namespace of a SemBeacon."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/sembeacon/SemBeacon"
+    "@id" : "http://purl.org/poso/BluetoothBeacon"
   }, {
     "@id" : "http://www.w3.org/ns/ssn/Deployment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "namespace ID"
+    "@value" : "Namespace ID"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid4"
@@ -203,7 +203,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "short resource URI"
+    "@value" : "Short resource URI"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"

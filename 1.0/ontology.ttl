@@ -16,7 +16,7 @@
                               <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
                               <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for describing SemBeacons." ;
                               <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> ;
-                              <http://purl.org/dc/terms/modified> "2023-06-23T00:00:00"^^xsd:dateTime ;
+                              <http://purl.org/dc/terms/modified> "2023-10-28T00:00:00"^^xsd:dateTime ;
                               <http://purl.org/dc/terms/title> "SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things"@en ;
                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "sembeacon" ;
                               <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/sembeacon/"^^xsd:anyURI .
@@ -75,7 +75,7 @@
 
 ###  http://purl.org/sembeacon/namespace
 :namespace rdf:type owl:ObjectProperty ;
-           rdfs:domain :SemBeacon ;
+           rdfs:domain <http://purl.org/poso/BluetoothBeacon> ;
            rdfs:range <http://www.w3.org/ns/ssn/Deployment> ;
            rdfs:comment "The namespace property directs to the deployment containing all sensors deployed in this namespace."@en ;
            rdfs:label "namespace"@en .
@@ -96,12 +96,12 @@
                                               )
                        ] ;
             rdfs:comment "An instance identifier is the 32-bit UUID that defines the instance of a SemBeacon within a namespace."@en ;
-            rdfs:label "instance ID"@en .
+            rdfs:label "Instance ID"@en .
 
 
 ###  http://purl.org/sembeacon/namespaceId
 :namespaceId rdf:type owl:DatatypeProperty ;
-             rdfs:domain :SemBeacon ,
+             rdfs:domain <http://purl.org/poso/BluetoothBeacon> ,
                          <http://www.w3.org/ns/ssn/Deployment> ;
              rdfs:range [ rdf:type rdfs:Datatype ;
                           owl:onDatatype xsd:hexBinary ;
@@ -110,7 +110,7 @@
                                                )
                         ] ;
              rdfs:comment "A namespace identifier is the 128-bit UUID that defines the namespace of a SemBeacon."@en ;
-             rdfs:label "namespace ID"@en .
+             rdfs:label "Namespace ID"@en .
 
 
 ###  http://purl.org/sembeacon/shortResourceURI
@@ -118,7 +118,7 @@
                   rdfs:domain :SemBeacon ;
                   rdfs:range xsd:anyURI ;
                   rdfs:comment "Shortened resource URI. The resource URI should resolve to the full resource URI of the resource that this predicate is used in."@en ;
-                  rdfs:label "short resource URI"@en ;
+                  rdfs:label "Short resource URI"@en ;
                   <http://www.w3.org/2004/02/skos/core#example> "https://tinyurl.com/5jxncuvy"@en .
 
 

@@ -8,7 +8,7 @@
 <http://purl.org/sembeacon/> <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en .
 <http://purl.org/sembeacon/> <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for describing SemBeacons." .
 <http://purl.org/sembeacon/> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> .
-<http://purl.org/sembeacon/> <http://purl.org/dc/terms/modified> "2023-06-23T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/sembeacon/> <http://purl.org/dc/terms/modified> "2023-10-28T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://purl.org/sembeacon/> <http://purl.org/dc/terms/title> "SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things"@en .
 <http://purl.org/sembeacon/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "sembeacon" .
 <http://purl.org/sembeacon/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/sembeacon/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
@@ -65,7 +65,7 @@
 # 
 # http://purl.org/sembeacon/namespace
 <http://purl.org/sembeacon/namespace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/sembeacon/namespace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/sembeacon/SemBeacon> .
+<http://purl.org/sembeacon/namespace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/BluetoothBeacon> .
 <http://purl.org/sembeacon/namespace> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/Deployment> .
 <http://purl.org/sembeacon/namespace> <http://www.w3.org/2000/01/rdf-schema#comment> "The namespace property directs to the deployment containing all sensors deployed in this namespace."@en .
 <http://purl.org/sembeacon/namespace> <http://www.w3.org/2000/01/rdf-schema#label> "namespace"@en .
@@ -92,11 +92,11 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid1 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#hexBinary> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 <http://purl.org/sembeacon/instanceId> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance identifier is the 32-bit UUID that defines the instance of a SemBeacon within a namespace."@en .
-<http://purl.org/sembeacon/instanceId> <http://www.w3.org/2000/01/rdf-schema#label> "instance ID"@en .
+<http://purl.org/sembeacon/instanceId> <http://www.w3.org/2000/01/rdf-schema#label> "Instance ID"@en .
 # 
 # http://purl.org/sembeacon/namespaceId
 <http://purl.org/sembeacon/namespaceId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://purl.org/sembeacon/namespaceId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/sembeacon/SemBeacon> .
+<http://purl.org/sembeacon/namespaceId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/BluetoothBeacon> .
 <http://purl.org/sembeacon/namespaceId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/ssn/Deployment> .
 <http://purl.org/sembeacon/namespaceId> <http://www.w3.org/2000/01/rdf-schema#range> _:genid4 .
 _:genid4 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid5 .
@@ -107,14 +107,14 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid4 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#hexBinary> .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 <http://purl.org/sembeacon/namespaceId> <http://www.w3.org/2000/01/rdf-schema#comment> "A namespace identifier is the 128-bit UUID that defines the namespace of a SemBeacon."@en .
-<http://purl.org/sembeacon/namespaceId> <http://www.w3.org/2000/01/rdf-schema#label> "namespace ID"@en .
+<http://purl.org/sembeacon/namespaceId> <http://www.w3.org/2000/01/rdf-schema#label> "Namespace ID"@en .
 # 
 # http://purl.org/sembeacon/shortResourceURI
 <http://purl.org/sembeacon/shortResourceURI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://purl.org/sembeacon/shortResourceURI> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/sembeacon/SemBeacon> .
 <http://purl.org/sembeacon/shortResourceURI> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/sembeacon/shortResourceURI> <http://www.w3.org/2000/01/rdf-schema#comment> "Shortened resource URI. The resource URI should resolve to the full resource URI of the resource that this predicate is used in."@en .
-<http://purl.org/sembeacon/shortResourceURI> <http://www.w3.org/2000/01/rdf-schema#label> "short resource URI"@en .
+<http://purl.org/sembeacon/shortResourceURI> <http://www.w3.org/2000/01/rdf-schema#label> "Short resource URI"@en .
 <http://purl.org/sembeacon/shortResourceURI> <http://www.w3.org/2004/02/skos/core#example> "https://tinyurl.com/5jxncuvy"@en .
 # 
 # http://purl.org/sembeacon/version
