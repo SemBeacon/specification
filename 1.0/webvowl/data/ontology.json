@@ -47,16 +47,16 @@
         "value" : "Discovering smart devices in the physical world often requires some type of indoor positioning system. Bluetooth Low Energy~(BLE) beacons are a well-established technique to create scalable low-cost positioning systems for indoor navigation, tracking and location awareness. While various BLE~specifications aim to provide a generic way to uniquely identify a beacon and optionally detect its location, they are either deployment specific or do not broadcast enough information to be used without an additional database containing the locations of installed beacons. In this paper, we present a novel BLE~advertising solution and semantic ontology called SemBeacon. Our proposed specification is backwards compatible with existing specifications such as iBeacon, Eddystone and AltBeacon. With the help of a prototype application, we demonstrate how SemBeacon enables the creation of real-time positioning systems that can describe their location as well as the environment in which they are located. Other than Eddystone-URL beacons, which were originally used in the Physical Web project by Google and broadcast web pages of physical objects these beacons are attached to, SemBeacon is a specification that broadcasts semantic data about the environment and positioning systems that are available within a beacon's proximity.",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "http://purl.org/sembeacon/",
-        "type" : "label"
-      } ],
       "bibliographicCitation" : [ {
         "identifier" : "bibliographicCitation",
         "language" : "undefined",
         "value" : "Maxim Van de Wynckel and Beat Signer, SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://purl.org/sembeacon/",
         "type" : "label"
       } ],
       "title" : [ {
@@ -72,211 +72,28 @@
     "id" : "0",
     "type" : "owl:Class"
   }, {
-    "id" : "2",
-    "type" : "owl:Class"
-  }, {
-    "id" : "4",
-    "type" : "owl:Class"
-  }, {
-    "id" : "6",
-    "type" : "owl:Class"
-  }, {
-    "id" : "8",
-    "type" : "owl:Class"
-  }, {
-    "id" : "10",
+    "id" : "1",
     "type" : "owl:Class"
   }, {
     "id" : "7",
     "type" : "owl:Class"
   }, {
-    "id" : "18",
+    "id" : "8",
     "type" : "owl:Class"
   }, {
-    "id" : "19",
+    "id" : "9",
     "type" : "owl:Class"
   }, {
-    "id" : "22",
+    "id" : "10",
     "type" : "owl:Class"
   }, {
-    "id" : "23",
+    "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "3",
-    "type" : "owl:Class"
-  }, {
-    "id" : "20",
-    "type" : "owl:Class"
-  }, {
-    "id" : "39",
-    "type" : "owl:Class"
-  }, {
-    "id" : "35",
-    "type" : "owl:Class"
-  }, {
-    "id" : "36",
-    "type" : "owl:Class"
-  }, {
-    "id" : "40",
-    "type" : "owl:Class"
-  }, {
-    "id" : "26",
-    "type" : "owl:Class"
-  }, {
-    "id" : "41",
-    "type" : "owl:Class"
-  }, {
-    "id" : "43",
-    "type" : "owl:Class"
-  }, {
-    "id" : "49",
-    "type" : "owl:Class"
-  }, {
-    "id" : "24",
-    "type" : "owl:Class"
-  }, {
-    "id" : "17",
-    "type" : "owl:Class"
-  }, {
-    "id" : "1",
-    "type" : "owl:Class"
-  }, {
-    "id" : "65",
-    "type" : "owl:Class"
-  }, {
-    "id" : "30",
-    "type" : "owl:Class"
-  }, {
-    "id" : "68",
-    "type" : "owl:Class"
-  }, {
-    "id" : "69",
-    "type" : "owl:Class"
-  }, {
-    "id" : "70",
-    "type" : "owl:Class"
-  }, {
-    "id" : "72",
-    "type" : "owl:Class"
-  }, {
-    "id" : "61",
-    "type" : "owl:Class"
-  }, {
-    "id" : "80",
+    "id" : "14",
     "type" : "owl:Class"
   }, {
     "id" : "15",
-    "type" : "owl:Class"
-  }, {
-    "id" : "73",
-    "type" : "owl:Class"
-  }, {
-    "id" : "46",
-    "type" : "owl:Class"
-  }, {
-    "id" : "27",
-    "type" : "owl:Class"
-  }, {
-    "id" : "28",
-    "type" : "owl:Class"
-  }, {
-    "id" : "31",
-    "type" : "owl:Class"
-  }, {
-    "id" : "88",
-    "type" : "owl:Class"
-  }, {
-    "id" : "89",
-    "type" : "owl:Class"
-  }, {
-    "id" : "91",
-    "type" : "owl:Class"
-  }, {
-    "id" : "92",
-    "type" : "owl:Class"
-  }, {
-    "id" : "93",
-    "type" : "owl:Class"
-  }, {
-    "id" : "94",
-    "type" : "owl:Class"
-  }, {
-    "id" : "85",
-    "type" : "owl:Class"
-  }, {
-    "id" : "50",
-    "type" : "owl:Class"
-  }, {
-    "id" : "99",
-    "type" : "owl:Class"
-  }, {
-    "id" : "95",
-    "type" : "owl:Class"
-  }, {
-    "id" : "57",
-    "type" : "owl:Class"
-  }, {
-    "id" : "77",
-    "type" : "owl:Class"
-  }, {
-    "id" : "101",
-    "type" : "owl:Class"
-  }, {
-    "id" : "102",
-    "type" : "owl:Class"
-  }, {
-    "id" : "51",
-    "type" : "owl:Class"
-  }, {
-    "id" : "104",
-    "type" : "owl:Class"
-  }, {
-    "id" : "83",
-    "type" : "owl:Class"
-  }, {
-    "id" : "105",
-    "type" : "owl:Class"
-  }, {
-    "id" : "54",
-    "type" : "owl:Class"
-  }, {
-    "id" : "106",
-    "type" : "owl:Class"
-  }, {
-    "id" : "25",
-    "type" : "owl:Class"
-  }, {
-    "id" : "111",
-    "type" : "owl:Class"
-  }, {
-    "id" : "75",
-    "type" : "owl:Class"
-  }, {
-    "id" : "96",
-    "type" : "owl:Class"
-  }, {
-    "id" : "113",
-    "type" : "owl:Class"
-  }, {
-    "id" : "33",
-    "type" : "owl:Class"
-  }, {
-    "id" : "114",
-    "type" : "owl:Class"
-  }, {
-    "id" : "59",
-    "type" : "owl:Class"
-  }, {
-    "id" : "13",
-    "type" : "owl:Class"
-  }, {
-    "id" : "108",
-    "type" : "owl:Class"
-  }, {
-    "id" : "58",
-    "type" : "owl:Class"
-  }, {
-    "id" : "32",
     "type" : "owl:Class"
   }, {
     "id" : "11",
@@ -285,1703 +102,211 @@
     "id" : "5",
     "type" : "owl:Class"
   }, {
-    "id" : "34",
+    "id" : "16",
     "type" : "owl:Class"
   }, {
-    "id" : "56",
+    "id" : "17",
     "type" : "owl:Class"
   }, {
     "id" : "12",
     "type" : "owl:Class"
   }, {
-    "id" : "84",
+    "id" : "6",
     "type" : "owl:Class"
   }, {
-    "id" : "53",
+    "id" : "18",
     "type" : "owl:Class"
   }, {
-    "id" : "151",
+    "id" : "19",
     "type" : "owl:Class"
   }, {
-    "id" : "152",
+    "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "42",
+    "id" : "20",
     "type" : "owl:Class"
   }, {
-    "id" : "90",
+    "id" : "22",
     "type" : "owl:Class"
   }, {
-    "id" : "109",
+    "id" : "23",
     "type" : "owl:Class"
   }, {
-    "id" : "62",
+    "id" : "24",
     "type" : "owl:Class"
   }, {
-    "id" : "29",
+    "id" : "13",
     "type" : "owl:Class"
   }, {
-    "id" : "14",
+    "id" : "25",
     "type" : "owl:Class"
   }, {
-    "id" : "162",
+    "id" : "26",
     "type" : "owl:Class"
   }, {
-    "id" : "98",
+    "id" : "27",
     "type" : "owl:Class"
   }, {
-    "id" : "169",
-    "type" : "owl:Class"
-  }, {
-    "id" : "74",
-    "type" : "owl:Class"
-  }, {
-    "id" : "144",
-    "type" : "owl:Class"
-  }, {
-    "id" : "131",
-    "type" : "owl:Class"
-  }, {
-    "id" : "183",
-    "type" : "owl:Class"
-  }, {
-    "id" : "184",
-    "type" : "owl:Class"
-  }, {
-    "id" : "185",
-    "type" : "owl:Class"
-  }, {
-    "id" : "64",
-    "type" : "owl:Class"
-  }, {
-    "id" : "186",
-    "type" : "owl:Class"
-  }, {
-    "id" : "100",
-    "type" : "owl:Class"
-  }, {
-    "id" : "103",
-    "type" : "owl:Class"
-  }, {
-    "id" : "81",
-    "type" : "owl:Class"
-  }, {
-    "id" : "130",
-    "type" : "owl:Class"
-  }, {
-    "id" : "166",
-    "type" : "owl:Class"
-  }, {
-    "id" : "112",
-    "type" : "owl:Class"
-  }, {
-    "id" : "193",
-    "type" : "owl:Class"
-  }, {
-    "id" : "16",
-    "type" : "owl:Class"
-  }, {
-    "id" : "60",
-    "type" : "owl:Class"
-  }, {
-    "id" : "202",
-    "type" : "owl:Class"
-  }, {
-    "id" : "82",
-    "type" : "owl:Class"
-  }, {
-    "id" : "63",
-    "type" : "owl:Class"
-  }, {
-    "id" : "9",
-    "type" : "owl:Class"
-  }, {
-    "id" : "197",
-    "type" : "owl:Class"
-  }, {
-    "id" : "97",
-    "type" : "owl:Class"
-  }, {
-    "id" : "66",
-    "type" : "owl:Class"
-  }, {
-    "id" : "71",
-    "type" : "owl:Class"
-  }, {
-    "id" : "45",
-    "type" : "owl:Class"
-  }, {
-    "id" : "189",
-    "type" : "owl:Class"
-  }, {
-    "id" : "165",
-    "type" : "owl:Class"
-  }, {
-    "id" : "38",
-    "type" : "owl:Class"
-  }, {
-    "id" : "21",
-    "type" : "owl:Class"
-  }, {
-    "id" : "115",
-    "type" : "owl:Class"
-  }, {
-    "id" : "52",
-    "type" : "owl:Class"
-  }, {
-    "id" : "156",
+    "id" : "3",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
-    "iri" : "http://www.w3.org/ns/ssn/systems/OperatingRange",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "id" : "0",
-    "superClasses" : [ "1" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/Resolution",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "id" : "2",
-    "superClasses" : [ "3" ]
-  }, {
-    "iri" : "http://purl.org/poso/OutdoorDeployment",
+    "iri" : "http://purl.org/poso/HighLevelFusion",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "id" : "4",
-    "superClasses" : [ "5" ]
-  }, {
-    "iri" : "http://purl.org/poso/CellIdentification",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "6",
-    "superClasses" : [ "7" ]
-  }, {
-    "iri" : "http://purl.org/poso/common/AltBeacon",
-    "baseIri" : "http://purl.org/poso/common",
-    "instances" : 0,
-    "id" : "8",
-    "superClasses" : [ "9" ]
-  }, {
-    "iri" : "http://purl.org/poso/CalibrationOffsetProcedure",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "10",
-    "superClasses" : [ "11" ]
-  }, {
-    "iri" : "http://purl.org/poso/PositioningTechnique",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "subClasses" : [ "13", "14", "15", "6", "16", "17" ],
-    "id" : "7",
-    "superClasses" : [ "12" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/Observation",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "instances" : 0,
-    "id" : "18"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/Output",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "instances" : 0,
-    "subClasses" : [ "20", "21" ],
-    "id" : "19"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/SystemCapability",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "id" : "22",
-    "superClasses" : [ "1" ]
-  }, {
-    "iri" : "http://purl.org/poso/InertialPositioningSystem",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "23",
-    "superClasses" : [ "24" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/SystemProperty",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "subClasses" : [ "25", "26", "27", "28", "29", "2", "30", "31", "32", "33", "34", "35", "36" ],
-    "id" : "3",
-    "superClasses" : [ "1" ]
-  }, {
-    "iri" : "http://purl.org/poso/MapOutput",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "20",
-    "superClasses" : [ "19" ]
-  }, {
-    "iri" : "http://purl.org/poso/CalibrationMagnitudeProcedure",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "39",
-    "superClasses" : [ "11" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/MeasurementRange",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "id" : "35",
-    "superClasses" : [ "3" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/ResponseTime",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "id" : "36",
-    "superClasses" : [ "3" ]
-  }, {
-    "iri" : "http://purl.org/vocommons/voaf#Vocabulary",
-    "baseIri" : "http://purl.org/vocommons/voaf",
-    "instances" : 0,
-    "id" : "40"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/Drift",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "id" : "26",
-    "superClasses" : [ "3" ]
-  }, {
-    "iri" : "http://purl.org/poso/BluetoothReceiver",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "41",
-    "superClasses" : [ "42" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/ActuatableProperty",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "instances" : 0,
-    "id" : "43",
-    "superClasses" : [ "1" ]
-  }, {
-    "iri" : "http://purl.org/poso/RadioPropagation",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "49",
-    "superClasses" : [ "12" ]
-  }, {
-    "iri" : "http://purl.org/poso/PositioningSystem",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "subClasses" : [ "23", "51", "52", "53", "54" ],
-    "id" : "24",
-    "superClasses" : [ "50" ]
-  }, {
-    "iri" : "http://purl.org/poso/Odometry",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "subClasses" : [ "58", "59" ],
-    "id" : "17",
-    "superClasses" : [ "7" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/Property",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "instances" : 0,
-    "subClasses" : [ "22", "60", "61", "62", "0", "3", "63", "43", "64" ],
-    "id" : "1"
-  }, {
-    "iri" : "http://purl.org/poso/AngularAcceleration",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "65",
-    "superClasses" : [ "66" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/Sensitivity",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "id" : "30",
-    "superClasses" : [ "3" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/BatteryLifetime",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "id" : "68",
-    "superClasses" : [ "62" ]
-  }, {
-    "iri" : "http://purl.org/poso/PolygonalAccuracy",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "69",
-    "superClasses" : [ "34" ]
-  }, {
-    "iri" : "http://purl.org/poso/PositioningPlatform",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "70",
-    "superClasses" : [ "71" ]
-  }, {
-    "iri" : "http://purl.org/poso/AngularVelocity",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "72",
-    "superClasses" : [ "73" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/OperatingProperty",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "subClasses" : [ "74", "75" ],
-    "id" : "61",
-    "superClasses" : [ "1" ]
-  }, {
-    "iri" : "http://purl.org/poso/LinearMovement",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "80",
-    "superClasses" : [ "81" ]
-  }, {
-    "iri" : "http://purl.org/poso/Fingerprinting",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "15",
-    "superClasses" : [ "7" ]
-  }, {
-    "iri" : "http://purl.org/poso/Velocity",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "subClasses" : [ "72", "82" ],
-    "id" : "73",
-    "superClasses" : [ "56", "60" ]
-  }, {
-    "iri" : "http://purl.org/poso/Orientation",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "subClasses" : [ "83", "84", "85" ],
-    "id" : "46",
-    "superClasses" : [ "56", "60" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/Frequency",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "id" : "27",
-    "superClasses" : [ "3" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/Precision",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "id" : "28",
-    "superClasses" : [ "3" ]
-  }, {
-    "iri" : "http://purl.org/poso/SRS",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "31",
-    "superClasses" : [ "3" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/Actuation",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "instances" : 0,
-    "id" : "88"
-  }, {
-    "iri" : "http://purl.org/poso/RelativeSignalStrength",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "89",
-    "superClasses" : [ "90" ]
-  }, {
-    "iri" : "http://purl.org/poso/AngularMovement",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "91",
-    "superClasses" : [ "81" ]
+    "id" : "0"
   }, {
     "iri" : "http://purl.org/poso/common/EddystoneBeacon",
     "baseIri" : "http://purl.org/poso/common",
     "instances" : 0,
-    "id" : "92",
-    "superClasses" : [ "9" ]
-  }, {
-    "iri" : "http://purl.org/poso/AbsolutePosition",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "attributes" : [ "equivalent" ],
-    "id" : "93",
-    "superClasses" : [ "77" ]
-  }, {
-    "iri" : "http://purl.org/poso/RelativeVelocity",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "94",
-    "superClasses" : [ "90" ]
-  }, {
-    "iri" : "http://purl.org/poso/AxisAngleOrientation",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "85",
-    "superClasses" : [ "46" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/System",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "instances" : 0,
-    "subClasses" : [ "95", "96", "24", "97", "98" ],
-    "id" : "50"
-  }, {
-    "iri" : "http://purl.org/poso/AuditoryLandmark",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "99",
-    "superClasses" : [ "100" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/Sensor",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "instances" : 0,
-    "id" : "95",
-    "superClasses" : [ "50" ]
-  }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Class",
-    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
-    "instances" : 0,
-    "id" : "57"
-  }, {
-    "iri" : "http://purl.org/poso/Position",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "subClasses" : [ "93", "90" ],
-    "id" : "77",
-    "superClasses" : [ "56", "60" ]
-  }, {
-    "iri" : "https://w3id.org/rdfp/GraphDescription",
-    "baseIri" : "https://w3id.org/rdfp",
-    "instances" : 0,
-    "id" : "101"
-  }, {
-    "iri" : "http://purl.org/poso/MidLevelFusion",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "102",
-    "superClasses" : [ "103" ]
-  }, {
-    "iri" : "http://purl.org/poso/SatellitePositioningSystem",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "51",
-    "superClasses" : [ "24" ]
-  }, {
-    "iri" : "http://purl.org/poso/VisualInput",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "104",
-    "superClasses" : [ "38" ]
-  }, {
-    "iri" : "http://purl.org/poso/QuaternionOrientation",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "83",
-    "superClasses" : [ "46" ]
-  }, {
-    "iri" : "http://www.w3.org/2006/time#TemporalEntity",
-    "baseIri" : "http://www.w3.org/2006/time",
-    "instances" : 0,
-    "id" : "105"
-  }, {
-    "iri" : "http://purl.org/poso/OpticalPositioningSystem",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "54",
-    "superClasses" : [ "24" ]
-  }, {
-    "iri" : "http://purl.org/poso/HighLevelFusion",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "106",
-    "superClasses" : [ "103" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/DetectionLimit",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "id" : "25",
-    "superClasses" : [ "3" ]
-  }, {
-    "iri" : "http://www.opengis.net/ont/geosparql#SpatialObject",
-    "baseIri" : "http://www.opengis.net/ont/geosparql",
-    "instances" : 0,
-    "subClasses" : [ "112", "100" ],
-    "id" : "111"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/MaintenanceSchedule",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "id" : "75",
-    "superClasses" : [ "61" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/Actuator",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "instances" : 0,
-    "id" : "96",
-    "superClasses" : [ "50" ]
-  }, {
-    "iri" : "http://xmlns.com/foaf/0.1/Agent",
-    "baseIri" : "http://xmlns.com/foaf/0.1",
-    "instances" : 0,
-    "id" : "113"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/ActuationRange",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "id" : "33",
-    "superClasses" : [ "3" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/Stimulus",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "instances" : 0,
-    "subClasses" : [ "115", "81" ],
-    "id" : "114"
-  }, {
-    "iri" : "http://purl.org/poso/MagneticOdometry",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "59",
-    "superClasses" : [ "17" ]
-  }, {
-    "iri" : "http://purl.org/poso/DeadReckoning",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "subClasses" : [ "130" ],
-    "id" : "13",
-    "superClasses" : [ "7" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/Sampling",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "instances" : 0,
-    "id" : "108"
-  }, {
-    "iri" : "http://purl.org/poso/VisualOdometry",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "58",
-    "superClasses" : [ "17" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/Latency",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "id" : "32",
-    "superClasses" : [ "3" ]
-  }, {
-    "iri" : "http://purl.org/poso/CalibrationProcedure",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "subClasses" : [ "10", "39" ],
-    "id" : "11",
-    "superClasses" : [ "12" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/Deployment",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "instances" : 0,
-    "subClasses" : [ "131", "4" ],
-    "id" : "5"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/Accuracy",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "subClasses" : [ "69" ],
-    "id" : "34",
-    "superClasses" : [ "3" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/Result",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "instances" : 0,
-    "subClasses" : [ "100", "77", "144", "73", "66", "46", "109" ],
-    "id" : "56"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/Procedure",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "instances" : 0,
-    "subClasses" : [ "103", "7", "11", "49" ],
-    "id" : "12"
-  }, {
-    "iri" : "http://purl.org/poso/EulerOrientation",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "84",
-    "superClasses" : [ "46" ]
-  }, {
-    "iri" : "http://purl.org/poso/IntegratedPositioningSystem",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "53",
-    "superClasses" : [ "24" ]
-  }, {
-    "iri" : "http://purl.org/poso/RelativeAngle",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "151",
-    "superClasses" : [ "90" ]
-  }, {
-    "iri" : "http://purl.org/sembeacon/SemBeacon",
-    "baseIri" : "http://purl.org/sembeacon",
-    "instances" : 0,
-    "id" : "152",
-    "superClasses" : [ "9" ]
-  }, {
-    "iri" : "http://purl.org/poso/RFLandmark",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "subClasses" : [ "41", "9" ],
-    "id" : "42",
-    "superClasses" : [ "100" ]
-  }, {
-    "iri" : "http://purl.org/poso/RelativePosition",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "subClasses" : [ "151", "156", "89", "94" ],
-    "id" : "90",
-    "superClasses" : [ "77" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/Sample",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "instances" : 0,
-    "id" : "109",
-    "superClasses" : [ "56", "45" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/SurvivalProperty",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "subClasses" : [ "162", "68" ],
-    "id" : "62",
-    "superClasses" : [ "1" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/Selectivity",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "id" : "29",
-    "superClasses" : [ "3" ]
-  }, {
-    "iri" : "http://purl.org/poso/Triangulation",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "subClasses" : [ "165", "166" ],
-    "id" : "14",
-    "superClasses" : [ "7" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/SystemLifetime",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "id" : "162",
-    "superClasses" : [ "62" ]
-  }, {
-    "iri" : "http://purl.org/poso/LocationBasedService",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "98",
-    "superClasses" : [ "50" ]
-  }, {
-    "iri" : "http://purl.org/poso/common/iBeacon",
-    "baseIri" : "http://purl.org/poso/common",
-    "instances" : 0,
-    "id" : "169",
-    "superClasses" : [ "9" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/OperatingPowerRange",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "id" : "74",
-    "superClasses" : [ "61" ]
-  }, {
-    "iri" : "http://purl.org/poso/Fingerprint",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "144",
-    "superClasses" : [ "56", "45" ]
-  }, {
-    "iri" : "http://purl.org/poso/IndoorDeployment",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "131",
-    "superClasses" : [ "5" ]
-  }, {
-    "iri" : "http://purl.org/poso/VirtualLandmark",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "183",
-    "superClasses" : [ "100" ]
-  }, {
-    "iri" : "http://purl.org/poso/VisualLandmark",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "184",
-    "superClasses" : [ "100" ]
-  }, {
-    "iri" : "http://purl.org/poso/LinearAcceleration",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "185",
-    "superClasses" : [ "66" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/Condition",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "id" : "64",
-    "superClasses" : [ "1" ]
-  }, {
-    "iri" : "http://purl.org/poso/Multilateration",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "186",
-    "superClasses" : [ "165" ]
-  }, {
-    "iri" : "http://purl.org/poso/Landmark",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "subClasses" : [ "99", "42", "183", "184" ],
-    "id" : "100",
-    "superClasses" : [ "56", "111", "45" ]
-  }, {
-    "iri" : "http://purl.org/poso/SensorFusion",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "subClasses" : [ "106", "102", "189" ],
-    "id" : "103",
-    "superClasses" : [ "12" ]
-  }, {
-    "iri" : "http://purl.org/poso/Movement",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "subClasses" : [ "80", "91" ],
-    "id" : "81",
-    "superClasses" : [ "114" ]
-  }, {
-    "iri" : "http://purl.org/poso/PDR",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "130",
-    "superClasses" : [ "13" ]
-  }, {
-    "iri" : "http://purl.org/poso/Angulation",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "166",
-    "superClasses" : [ "14" ]
-  }, {
-    "iri" : "http://purl.org/poso/TrackedFeature",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "112",
-    "superClasses" : [ "111", "45" ]
-  }, {
-    "iri" : "http://www.opengis.net/ont/geosparql#Geometry",
-    "baseIri" : "http://www.opengis.net/ont/geosparql",
-    "instances" : 0,
-    "attributes" : [ "equivalent" ],
-    "id" : "193"
-  }, {
-    "iri" : "http://purl.org/poso/SLAM",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "subClasses" : [ "197" ],
-    "id" : "16",
-    "superClasses" : [ "7" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/ObservableProperty",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "instances" : 0,
-    "subClasses" : [ "77", "73", "66", "46" ],
-    "id" : "60",
-    "superClasses" : [ "1" ]
+    "subClasses" : [ "3", "4", "5", "6" ],
+    "id" : "1",
+    "superClasses" : [ "2" ]
   }, {
     "iri" : "http://www.w3.org/ns/shacl#NodeShape",
     "baseIri" : "http://www.w3.org/ns/shacl",
     "instances" : 0,
-    "id" : "202"
+    "id" : "7"
   }, {
-    "iri" : "http://purl.org/poso/LinearVelocity",
+    "iri" : "http://purl.org/poso/OutdoorDeployment",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "id" : "82",
-    "superClasses" : [ "73" ]
+    "id" : "8"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/SurvivalRange",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
+    "iri" : "http://purl.org/poso/CellIdentification",
+    "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "id" : "63",
-    "superClasses" : [ "1" ]
+    "id" : "9"
+  }, {
+    "iri" : "http://purl.org/poso/common/AltBeacon",
+    "baseIri" : "http://purl.org/poso/common",
+    "instances" : 0,
+    "id" : "10",
+    "superClasses" : [ "2" ]
   }, {
     "iri" : "http://purl.org/poso/BluetoothBeacon",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "subClasses" : [ "92", "152", "8", "169" ],
-    "id" : "9",
-    "superClasses" : [ "42" ]
+    "subClasses" : [ "1", "11", "10", "12", "13" ],
+    "id" : "2"
   }, {
     "iri" : "http://purl.org/poso/VSLAM",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "id" : "197",
-    "superClasses" : [ "16" ]
+    "id" : "14"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/Sampler",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "instances" : 0,
-    "id" : "97",
-    "superClasses" : [ "50" ]
-  }, {
-    "iri" : "http://purl.org/poso/Acceleration",
+    "iri" : "http://purl.org/poso/RadioPropagation",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "subClasses" : [ "65", "185" ],
-    "id" : "66",
-    "superClasses" : [ "56", "60" ]
+    "id" : "15"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/Platform",
-    "baseIri" : "http://www.w3.org/ns/sosa",
+    "iri" : "http://purl.org/sembeacon/SemBeacon",
+    "baseIri" : "http://purl.org/sembeacon",
     "instances" : 0,
-    "subClasses" : [ "70" ],
-    "id" : "71"
+    "id" : "11",
+    "superClasses" : [ "2" ]
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
-    "baseIri" : "http://www.w3.org/ns/sosa",
+    "iri" : "http://purl.org/poso/common/EddystoneURL",
+    "baseIri" : "http://purl.org/poso/common",
     "instances" : 0,
-    "subClasses" : [ "112", "100", "144", "109" ],
-    "id" : "45"
+    "id" : "5",
+    "superClasses" : [ "1" ]
   }, {
-    "iri" : "http://purl.org/poso/LowLevelFusion",
+    "iri" : "http://purl.org/poso/Fingerprinting",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "id" : "189",
-    "superClasses" : [ "103" ]
+    "id" : "16"
+  }, {
+    "iri" : "http://purl.org/poso/Multilateration",
+    "baseIri" : "http://purl.org/poso",
+    "instances" : 0,
+    "id" : "17"
+  }, {
+    "iri" : "http://purl.org/poso/common/SemBeacon",
+    "baseIri" : "http://purl.org/poso/common",
+    "instances" : 0,
+    "id" : "12",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://purl.org/poso/common/EddystoneTLM",
+    "baseIri" : "http://purl.org/poso/common",
+    "instances" : 0,
+    "id" : "6",
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "http://purl.org/poso/Lateration",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "subClasses" : [ "186" ],
-    "id" : "165",
-    "superClasses" : [ "14" ]
+    "id" : "18"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/Input",
-    "baseIri" : "http://www.w3.org/ns/ssn",
+    "iri" : "http://purl.org/poso/DeadReckoning",
+    "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "subClasses" : [ "104" ],
-    "id" : "38"
+    "id" : "19"
+  }, {
+    "iri" : "http://purl.org/poso/common/EddystoneEID",
+    "baseIri" : "http://purl.org/poso/common",
+    "instances" : 0,
+    "id" : "4",
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "http://purl.org/poso/PositionOutput",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "id" : "21",
-    "superClasses" : [ "19" ]
+    "id" : "20"
   }, {
-    "iri" : "http://purl.org/poso/Proximity",
+    "iri" : "http://www.w3.org/ns/ssn/Deployment",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "instances" : 0,
+    "id" : "22"
+  }, {
+    "iri" : "http://purl.org/poso/PDR",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "id" : "115",
-    "superClasses" : [ "114" ]
+    "id" : "23"
   }, {
-    "iri" : "http://purl.org/poso/IndoorPositioningSystem",
+    "iri" : "http://purl.org/poso/LocationBasedService",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "id" : "52",
-    "superClasses" : [ "24" ]
+    "id" : "24"
   }, {
-    "iri" : "http://purl.org/poso/RelativeDistance",
+    "iri" : "http://purl.org/poso/common/iBeacon",
+    "baseIri" : "http://purl.org/poso/common",
+    "instances" : 0,
+    "id" : "13",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/rdfp/GraphDescription",
+    "baseIri" : "https://w3id.org/rdfp",
+    "instances" : 0,
+    "id" : "25"
+  }, {
+    "iri" : "http://purl.org/poso/SatellitePositioningSystem",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "id" : "156",
-    "superClasses" : [ "90" ]
+    "id" : "26"
+  }, {
+    "iri" : "http://purl.org/poso/PositioningPlatform",
+    "baseIri" : "http://purl.org/poso",
+    "instances" : 0,
+    "id" : "27"
+  }, {
+    "iri" : "http://purl.org/poso/common/EddystoneUID",
+    "baseIri" : "http://purl.org/poso/common",
+    "instances" : 0,
+    "id" : "3",
+    "superClasses" : [ "1" ]
   } ],
   "property" : [ {
-    "id" : "37",
+    "id" : "21",
     "type" : "owl:objectProperty"
-  }, {
-    "id" : "44",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "55",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "67",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "76",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "86",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "107",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "116",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "118",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "119",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "120",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "121",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "123",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "124",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "125",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "127",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "129",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "132",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "133",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "134",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "135",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "136",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "138",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "139",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "140",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "141",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "142",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "145",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "146",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "147",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "148",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "149",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "150",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "153",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "154",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "155",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "157",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "158",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "159",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "160",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "161",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "163",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "164",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "167",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "170",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "172",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "173",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "174",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "176",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "177",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "178",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "179",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "180",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "182",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "187",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "188",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "190",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "191",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "192",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "194",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "195",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "196",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "198",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "199",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "200",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "201",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "203",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "205",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "206",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "207",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "208",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "209",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "211",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "213",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "222",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "223",
-    "type" : "owl:allValuesFrom"
   } ],
   "propertyAttribute" : [ {
-    "iri" : "http://purl.org/poso/madeByProcedure",
-    "baseIri" : "http://purl.org/poso",
-    "range" : "12",
-    "domain" : "38",
-    "attributes" : [ "object" ],
-    "id" : "37"
-  }, {
-    "iri" : "http://purl.org/poso/hasOrientation",
-    "inverse" : "47",
-    "baseIri" : "http://purl.org/poso",
-    "range" : "46",
-    "superproperty" : [ "48" ],
-    "domain" : "45",
-    "attributes" : [ "object" ],
-    "id" : "44"
-  }, {
-    "iri" : "http://purl.org/poso/yAxisValue",
-    "baseIri" : "http://purl.org/poso",
-    "range" : "57",
-    "maxCardinality" : "1",
-    "domain" : "56",
-    "attributes" : [ "object", "functional" ],
-    "id" : "55"
-  }, {
     "iri" : "http://purl.org/sembeacon/namespace",
     "baseIri" : "http://purl.org/sembeacon",
-    "range" : "5",
-    "domain" : "9",
-    "attributes" : [ "object" ],
-    "id" : "67"
-  }, {
-    "iri" : "http://purl.org/poso/hasPosition",
-    "inverse" : "78",
-    "baseIri" : "http://purl.org/poso",
-    "range" : "77",
-    "superproperty" : [ "48" ],
-    "domain" : "45",
-    "subproperty" : [ "79" ],
-    "attributes" : [ "object" ],
-    "id" : "76"
-  }, {
-    "iri" : "http://purl.org/poso/observesType",
-    "baseIri" : "http://purl.org/poso",
-    "range" : "57",
-    "superproperty" : [ "87" ],
-    "domain" : "50",
-    "attributes" : [ "object" ],
-    "id" : "86"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasResult",
-    "inverse" : "110",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "109",
-    "domain" : "108",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "107"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-    "inverse" : "117",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "45",
-    "domain" : "108",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "116"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "12",
-    "domain" : "108",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "118"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/isResultOf",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "108",
-    "domain" : "109",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "119"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/isSampleOf",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "45",
-    "domain" : "109",
-    "attributes" : [ "object", "functional", "allValues" ],
-    "id" : "120"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/madeBySampler",
-    "inverse" : "122",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "97",
-    "domain" : "108",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "121"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/madeSampling",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "108",
-    "domain" : "97",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "123"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasInput",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "38",
-    "domain" : "12",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "124"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hosts",
-    "inverse" : "126",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "50",
-    "domain" : "71",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "125"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/implementedBy",
-    "inverse" : "128",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "50",
-    "domain" : "12",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "127"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasOutput",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "19",
-    "domain" : "12",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "129"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/observedProperty",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "60",
-    "domain" : "18",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "132"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "12",
-    "domain" : "18",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "133"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/inDeployment",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "5",
-    "domain" : "71",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "134"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasResult",
-    "inverse" : "110",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "56",
-    "domain" : "18",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "135"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/madeBySensor",
-    "inverse" : "137",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "95",
-    "domain" : "18",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "136"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-    "inverse" : "117",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "45",
-    "domain" : "18",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "138"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/wasOriginatedBy",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "114",
-    "domain" : "18",
-    "attributes" : [ "object", "functional", "allValues" ],
-    "id" : "139"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/observedProperty",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "18",
-    "domain" : "60",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "140"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/isProxyFor",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "114",
-    "domain" : "60",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "141"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/isObservedBy",
-    "inverse" : "143",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "95",
-    "domain" : "60",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "142"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
     "range" : "22",
-    "superproperty" : [ "48" ],
-    "domain" : "50",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "145"
-  }, {
-    "iri" : "http://purl.org/poso/inDeployment",
-    "baseIri" : "http://purl.org/poso",
-    "range" : "5",
-    "domain" : "93",
+    "domain" : "2",
     "attributes" : [ "object" ],
-    "id" : "146"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/inCondition",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "64",
-    "domain" : "0",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "147"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasOperatingProperty",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "0",
-    "superproperty" : [ "48" ],
-    "domain" : "61",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "148"
-  }, {
-    "iri" : "http://purl.org/poso/madeBySystem",
-    "baseIri" : "http://purl.org/poso",
-    "range" : "50",
-    "domain" : "18",
-    "attributes" : [ "object" ],
-    "id" : "149"
-  }, {
-    "iri" : "http://purl.org/poso/angle",
-    "baseIri" : "http://purl.org/poso",
-    "range" : "57",
-    "maxCardinality" : "1",
-    "minCardinality" : "1",
-    "domain" : "56",
-    "attributes" : [ "object", "functional" ],
-    "id" : "150"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasSubSystem",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "50",
-    "domain" : "50",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "153"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasDeployment",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "5",
-    "domain" : "50",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "154"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "0",
-    "superproperty" : [ "48" ],
-    "domain" : "50",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "155"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "63",
-    "superproperty" : [ "48" ],
-    "domain" : "50",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "157"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/isHostedBy",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "71",
-    "domain" : "50",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "158"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/wasOriginatedBy",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "18",
-    "domain" : "114",
-    "attributes" : [ "object", "functional", "allValues" ],
-    "id" : "159"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/implements",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "12",
-    "domain" : "50",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "160"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasSubSystem",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "50",
-    "domain" : "50",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "161"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/isProxyFor",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "60",
-    "domain" : "114",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "163"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/detects",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "95",
-    "domain" : "114",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "164"
-  }, {
-    "iri" : "http://purl.org/poso/hasAcceleration",
-    "inverse" : "168",
-    "baseIri" : "http://purl.org/poso",
-    "range" : "66",
-    "superproperty" : [ "48" ],
-    "domain" : "45",
-    "attributes" : [ "object" ],
-    "id" : "167"
-  }, {
-    "iri" : "http://purl.org/poso/hasVelocity",
-    "inverse" : "171",
-    "baseIri" : "http://purl.org/poso",
-    "range" : "73",
-    "superproperty" : [ "48" ],
-    "domain" : "45",
-    "attributes" : [ "object" ],
-    "id" : "170"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/isPropertyOf",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "45",
-    "domain" : "1",
-    "subproperty" : [ "171", "78", "47", "168" ],
-    "attributes" : [ "object", "allValues" ],
-    "id" : "172"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/forProperty",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "1",
-    "domain" : "5",
-    "subproperty" : [ "143", "86" ],
-    "attributes" : [ "object", "allValues" ],
-    "id" : "173"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/deployedOnPlatform",
-    "inverse" : "175",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "71",
-    "domain" : "5",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "174"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasOutput",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "12",
-    "domain" : "19",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "176"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasInput",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "12",
-    "domain" : "38",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "177"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/madeObservation",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "18",
-    "domain" : "95",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "178"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/detects",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "114",
-    "domain" : "95",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "179"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/deployedSystem",
-    "inverse" : "181",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "50",
-    "domain" : "5",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "180"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/observes",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "60",
-    "superproperty" : [ "87" ],
-    "domain" : "95",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "182"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/inCondition",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "64",
-    "domain" : "22",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "187"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/forProperty",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "1",
-    "domain" : "22",
-    "subproperty" : [ "143", "86" ],
-    "attributes" : [ "object", "allValues" ],
-    "id" : "188"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSystemProperty",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "22",
-    "superproperty" : [ "48" ],
-    "domain" : "3",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "190"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSystemProperty",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "3",
-    "superproperty" : [ "48" ],
-    "domain" : "22",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "191"
-  }, {
-    "iri" : "http://purl.org/poso/isRelativeTo",
-    "baseIri" : "http://purl.org/poso",
-    "range" : "45",
-    "domain" : "90",
-    "attributes" : [ "object" ],
-    "id" : "192"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/inCondition",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "64",
-    "domain" : "63",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "194"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "50",
-    "superproperty" : [ "48" ],
-    "domain" : "63",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "195"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "50",
-    "superproperty" : [ "48" ],
-    "domain" : "22",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "196"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasOperatingProperty",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "61",
-    "superproperty" : [ "48" ],
-    "domain" : "0",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "198"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "50",
-    "superproperty" : [ "48" ],
-    "domain" : "0",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "199"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "62",
-    "superproperty" : [ "48" ],
-    "domain" : "63",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "200"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "63",
-    "superproperty" : [ "48" ],
-    "domain" : "62",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "201"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/actsOnProperty",
-    "inverse" : "204",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "43",
-    "domain" : "88",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "203"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/madeByActuator",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "96",
-    "domain" : "88",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "205"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-    "inverse" : "117",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "45",
-    "domain" : "88",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "206"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasResult",
-    "inverse" : "110",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "56",
-    "domain" : "88",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "207"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/forProperty",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "43",
-    "domain" : "96",
-    "subproperty" : [ "143", "86" ],
-    "attributes" : [ "object", "allValues" ],
-    "id" : "208"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/madeActuation",
-    "inverse" : "210",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "88",
-    "domain" : "96",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "209"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasSample",
-    "inverse" : "212",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "109",
-    "domain" : "45",
-    "attributes" : [ "object", "inverse functional", "allValues" ],
-    "id" : "211"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasProperty",
-    "inverse" : "214",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "1",
-    "domain" : "45",
-    "subproperty" : [ "215", "76", "170", "216", "217", "218", "219", "220", "167", "44", "221" ],
-    "attributes" : [ "object", "allValues" ],
-    "id" : "213"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/isActedOnBy",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "88",
-    "domain" : "43",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "222"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "12",
-    "domain" : "88",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "223"
+    "id" : "21"
   } ]
 }
