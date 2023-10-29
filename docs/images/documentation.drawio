@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2023-10-28T21:06:10.915Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.3 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="DaVu3_JwUKnQJe6dJMIL" version="22.0.3" type="device" pages="9">
+<mxfile host="Electron" modified="2023-10-29T13:33:08.792Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.3 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="wpGCudDZZ2R9s0Yw-uex" version="22.0.3" type="device" pages="9">
   <diagram id="wbnc19FnYwm-nHu_K_rQ" name="packet">
     <mxGraphModel dx="1418" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="1" shadow="0">
       <root>
@@ -1811,7 +1811,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="Rn2Gwc3JJAJ_EYAGtfCY-42" value="&lt;span&gt;poso:hasRSS&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;fontFamily=Inconsolata;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInconsolata;fontStyle=0" vertex="1" parent="1">
-          <mxGeometry x="-1230" y="580" width="150" height="30" as="geometry" />
+          <mxGeometry x="-1080" y="580" width="90" height="30" as="geometry" />
         </mxCell>
         <mxCell id="Rn2Gwc3JJAJ_EYAGtfCY-49" value="&lt;span style=&quot;font-weight: normal&quot;&gt;posoc:minor&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;fontStyle=1;fontFamily=Inconsolata;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInconsolata;" vertex="1" parent="1">
           <mxGeometry x="-610" y="620" width="160" height="30" as="geometry" />
@@ -1882,7 +1882,7 @@
         <mxCell id="Rn2Gwc3JJAJ_EYAGtfCY-84" value="rdfs:range" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Inconsolata;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInconsolata;fontSize=12;" vertex="1" connectable="0" parent="1">
           <mxGeometry x="-959.9966666666668" y="715" as="geometry" />
         </mxCell>
-        <mxCell id="Rn2Gwc3JJAJ_EYAGtfCY-91" value="" style="group;strokeColor=none;" vertex="1" connectable="0" parent="1">
+        <mxCell id="Rn2Gwc3JJAJ_EYAGtfCY-91" value="" style="group" vertex="1" connectable="0" parent="1">
           <mxGeometry x="-1230" y="750" width="341" height="120" as="geometry" />
         </mxCell>
         <mxCell id="Rn2Gwc3JJAJ_EYAGtfCY-19" value="&lt;b style=&quot;font-size: 16px;&quot;&gt;Legend&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Inconsolata;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInconsolata;fontSize=16;" vertex="1" parent="Rn2Gwc3JJAJ_EYAGtfCY-91">
@@ -1900,7 +1900,7 @@
         <mxCell id="Rn2Gwc3JJAJ_EYAGtfCY-28" value="Class" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;fontStyle=1;fontFamily=Inconsolata;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInconsolata;" vertex="1" parent="Rn2Gwc3JJAJ_EYAGtfCY-91">
           <mxGeometry x="11" y="80" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Rn2Gwc3JJAJ_EYAGtfCY-90" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#C2C2C2;" vertex="1" parent="Rn2Gwc3JJAJ_EYAGtfCY-91">
+        <mxCell id="Rn2Gwc3JJAJ_EYAGtfCY-90" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="Rn2Gwc3JJAJ_EYAGtfCY-91">
           <mxGeometry width="341" height="120" as="geometry" />
         </mxCell>
         <mxCell id="Rn2Gwc3JJAJ_EYAGtfCY-95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;endArrow=none;endFill=0;" edge="1" parent="1" source="Rn2Gwc3JJAJ_EYAGtfCY-49">
@@ -1914,6 +1914,9 @@
         </mxCell>
         <mxCell id="Rn2Gwc3JJAJ_EYAGtfCY-97" value="rdfs:domain" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Inconsolata;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInconsolata;fontSize=12;" vertex="1" connectable="0" parent="1">
           <mxGeometry x="-670" y="635.0033333333334" as="geometry" />
+        </mxCell>
+        <mxCell id="PpBqzv_o9RehpX4qXowb-1" value="&lt;span&gt;posoc:&lt;/span&gt;hasReferenceRSSI" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;fontFamily=Inconsolata;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInconsolata;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="-1230" y="580" width="140" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
