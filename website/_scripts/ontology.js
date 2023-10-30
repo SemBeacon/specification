@@ -3,7 +3,7 @@ const axios = require('axios');
 const chalk = require('chalk');
 const { exec } = require('child_process');
 const fs = require('fs');
-const rimraf = require('rimraf');
+const { rimraf } = require('rimraf');
 const fse = require('fs-extra');
 
 /**
@@ -25,7 +25,7 @@ async function buildOntology(version = '1.0') {
     await rewriteLanguagePaths(path.join(__dirname, `../_site/${version}`));
 }
 
-async function downloadWidoco(version = "1.4.17") {
+async function downloadWidoco(version = "1.4.20") {
     return new Promise((resolve, reject) => {
         const file = path.join(__dirname, `widoco-${version}.jar`);
         if (fs.existsSync(file)) {
@@ -33,7 +33,7 @@ async function downloadWidoco(version = "1.4.17") {
         }
         console.log(chalk.yellow(`Downloading ${file} ...`));
         axios({
-            url: `https://github.com/dgarijo/Widoco/releases/download/v${version}/java-17-widoco-${version}-jar-with-dependencies.jar`,
+            url: `https://github.com/dgarijo/Widoco/releases/download/v${version}/widoco-${version}-jar-with-dependencies_JDK-17.jar`,
             method: 'GET',
             responseType: "stream"
         }).then(async (response) => {
@@ -66,12 +66,11 @@ async function executeWidoco(file, ontologyFile, outputFolder) {
 
 async function rmdir(dir) {
     return new Promise((resolve, reject) => {
-        rimraf(dir, (err) => {
-            if (err) {
-                console.error(chalk.red("\t" + err));
-                reject();
-            }
+        rimraf(dir).then(() => {
             resolve();
+        }).catch((err) => {
+            console.error(chalk.red("\t" + err));
+            reject();
         });
     });
 }
