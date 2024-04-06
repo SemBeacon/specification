@@ -45,6 +45,14 @@ The full documentation can be found [here](https://sembeacon.org/terms/1.0/). Th
 @prefix sembeacon : <http://purl.org/sembeacon/> .
 ```
 
+### Resource
+
+#### Beacon
+The resource URI can lead to an individual described beacon using the `sembeacon:SemBeacon` class. This is a `sosa:FeatureOfInterest` that is a subclass of `poso:BluetoothBeacon`.
+
+#### Person
+SemBeacons can be directed to broadcast a person described using `foaf:Person`, `vcard.Individual` or `schema.Person`.
+
 ### Classes
 
 #### `sembeacon:SemBeacon`
