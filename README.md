@@ -31,6 +31,7 @@ needs to be shortened to fit in the advertisement data.
 #### URI Shorteners
 - tinyurl.com
 - bitly.com
+- s.sembeacon.org (only via the SemBeacon app)
 
 ## BLE 4.x Specification
 ![SemBeacon Bluetooth 4.x specification](./docs/images/sembeacon_specification_v4_2.svg)
@@ -46,9 +47,14 @@ The full documentation can be found [here](https://sembeacon.org/terms/1.0/). Th
 ```
 
 ### Resource
+The resource URI should lead to a semantic linked data document.
+Example HTTP request:
+`GET Accept=text/turtle;q=1.0 , text/n3;q=0.8 , application/rdf+xml;q=0.5`
 
 #### Beacon
 The resource URI can lead to an individual described beacon using the `sembeacon:SemBeacon` class. This is a `sosa:FeatureOfInterest` that is a subclass of `poso:BluetoothBeacon`.
+
+If this beacon describes another resource, the `rdfs:seeAlso` predicate can be used to reference this resource.
 
 #### Person
 SemBeacons can be directed to broadcast a person described using `foaf:Person`, `vcard.Individual` or `schema.Person`.
@@ -94,7 +100,7 @@ The semantic flags specified in the advertisement data need to indicate that dat
 A hardware MAC address should be stored if possible.
 
 ## License and Usage
-Copyright (C) 2022-2023 Maxim Van de Wynckel & Vrije Universiteit Brussel
+Copyright (C) 2022-2024 Maxim Van de Wynckel & Vrije Universiteit Brussel
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
