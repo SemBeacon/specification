@@ -13,7 +13,7 @@ other information relevant to this location.
 
 ### SemBeacon Flags
 The specification provisions 1-byte for flags. These flags provide more context to the installation of the beacon
-so applications scanning for a beacon can decide wether or not they want to retrieve the semantic data for these beacons.
+so applications scanning for a beacon can decide whether or not they want to retrieve the semantic data for these beacons.
 
 | **Bit (MSB)**  | **Description** | **Example** |
 |---|---|---|
