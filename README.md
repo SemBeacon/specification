@@ -1,13 +1,18 @@
 <div style="margin-left: auto; margin-right: auto; width: 80%">
-    <img src="https://raw.githubusercontent.com/SemBeacon/sembeacon.org/main/src/site/images/logo.svg?token=GHSAT0AAAAAAB526A7MZ4FWKZQ3BOID7QNSY6O6UWA" width="100%">
+    <img alt="SemBeacon" src="https://sembeacon.org/images/logo.svg" width="50%" /><br />
 </div>
 
 # SemBeacon Specification
+**Version: 1.1**
 
 ## Definition
 A SemBeacon is a Bluetooth Low Energy transmitter that advertises a namespace and instance identifier and
 a Uniform Resource Indicator (URI) linking to a RDF resource on the web describing the beacon's location and
 other information relevant to this location.
+
+## History
+- **Version 1.1**: Current
+- **Version 1.0**: https://github.com/SemBeacon/specification/releases/tag/1.0
 
 ## Bluetooth Specification
 
@@ -21,8 +26,9 @@ so applications scanning for a beacon can decide whether or not they want to ret
 | 1 | Indicates if the beacon is private. | 0 = Public, 1 = Private |
 | 2 | Indicates if the beacon is attached to a moving object. | 0 = No, 1 = Yes |
 | 3 | Indicates if the beacon has a positioning system. | 0 = No, 1 = Yes |
-| 4 | Indicates if the beacon has telemetry data. | 0 = No, 1 = Yes |
-| 5 - 7 | *Reserved for future use.* ||
+| 4 | Indicates if the beacon has obserable data. | 0 = No, 1 = Yes |
+| 5 | Indicates if the beacon has actuators. | 0 = No, 1 = Yes |
+| 6 - 7 | *Reserved for future use.* ||
 
 ### Resource URI
 The resource URI should resolve to a semantic description of the beacon. Depending on the BLE version this resource URI
@@ -91,8 +97,9 @@ The semantic flags specified in the advertisement data need to indicate that dat
 | 1 | N.a. |
 | 2 | N.a. |
 | 3 | `poso:inDeployment` **min** 1 `ssn:Deployment` |
-| 4 | N.a. |
-| 5 - 7 | *Reserved for future use.* |
+| 4 | `ssn:hasProperty` **min** 1 `sosa:ObserableProperty` |
+| 5 | `ssn:hasProperty` **min** 1 `sosa:ActuatableProperty` |
+| 6 - 7 | *Reserved for future use.* |
 
 ### Vocabulary Uses
 
@@ -100,7 +107,7 @@ The semantic flags specified in the advertisement data need to indicate that dat
 A hardware MAC address should be stored if possible.
 
 ## License and Usage
-Copyright (C) 2022-2024 Maxim Van de Wynckel & Vrije Universiteit Brussel
+Copyright (C) 2022-2025 Maxim Van de Wynckel & Vrije Universiteit Brussel
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
