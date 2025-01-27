@@ -38,13 +38,13 @@
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2023-10-28T00:00:00",
+        "value" : "2025-01-27T00:00:00",
         "type" : "label"
       } ],
-      "abstract" : [ {
-        "identifier" : "abstract",
-        "language" : "en",
-        "value" : "Discovering smart devices in the physical world often requires some type of indoor positioning system. Bluetooth Low Energy~(BLE) beacons are a well-established technique to create scalable low-cost positioning systems for indoor navigation, tracking and location awareness. While various BLE~specifications aim to provide a generic way to uniquely identify a beacon and optionally detect its location, they are either deployment specific or do not broadcast enough information to be used without an additional database containing the locations of installed beacons. In this paper, we present a novel BLE~advertising solution and semantic ontology called SemBeacon. Our proposed specification is backwards compatible with existing specifications such as iBeacon, Eddystone and AltBeacon. With the help of a prototype application, we demonstrate how SemBeacon enables the creation of real-time positioning systems that can describe their location as well as the environment in which they are located. Other than Eddystone-URL beacons, which were originally used in the Physical Web project by Google and broadcast web pages of physical objects these beacons are attached to, SemBeacon is a specification that broadcasts semantic data about the environment and positioning systems that are available within a beacon's proximity.",
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "undefined",
+        "value" : "Maxim Van de Wynckel and Beat Signer, SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
@@ -53,10 +53,10 @@
         "value" : "http://purl.org/sembeacon/",
         "type" : "label"
       } ],
-      "bibliographicCitation" : [ {
-        "identifier" : "bibliographicCitation",
-        "language" : "undefined",
-        "value" : "Maxim Van de Wynckel and Beat Signer, SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things",
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "Discovering devices or environments in the physical world often requires some type of indoor positioning system. Bluetooth Low Energy (BLE) beacons are a well-established technique to create scalable low-cost positioning systems for indoor navigation, tracking and location awareness. While various BLE specifications aim to provide a generic way to uniquely identify a beacon and optionally detect its location, they are either deployment specific or do not broadcast enough information to be used without an additional database containing the locations of installed beacons. In this ontology, we present a solution and semantic ontology called SemBeacon. Our proposed specification is backwards compatible with existing specifications such as iBeacon, Eddystone and AltBeacon. With the help of a prototype application, we demonstrate how SemBeacon enables the creation of real-time positioning systems that can describe their location as well as the environment in which they are located. Other than Eddystone-URL beacons, which were originally used in the Physical Web project by Google and broadcast web pages of physical objects these beacons are attached to, SemBeacon is a specification that broadcasts semantic data about the environment and positioning systems that are available within a beacon's proximity.",
         "type" : "label"
       } ],
       "title" : [ {
@@ -90,10 +90,10 @@
     "id" : "12",
     "type" : "owl:Class"
   }, {
-    "id" : "9",
+    "id" : "14",
     "type" : "owl:Class"
   }, {
-    "id" : "19",
+    "id" : "9",
     "type" : "owl:Class"
   }, {
     "id" : "20",
@@ -114,10 +114,10 @@
     "id" : "41",
     "type" : "owl:Class"
   }, {
-    "id" : "37",
+    "id" : "38",
     "type" : "owl:Class"
   }, {
-    "id" : "38",
+    "id" : "37",
     "type" : "owl:Class"
   }, {
     "id" : "42",
@@ -240,10 +240,10 @@
     "id" : "117",
     "type" : "owl:Class"
   }, {
-    "id" : "57",
+    "id" : "118",
     "type" : "owl:Class"
   }, {
-    "id" : "118",
+    "id" : "57",
     "type" : "owl:Class"
   }, {
     "id" : "55",
@@ -294,7 +294,7 @@
     "id" : "68",
     "type" : "owl:Class"
   }, {
-    "id" : "16",
+    "id" : "17",
     "type" : "owl:Class"
   }, {
     "id" : "123",
@@ -318,7 +318,7 @@
     "id" : "63",
     "type" : "owl:Class"
   }, {
-    "id" : "14",
+    "id" : "15",
     "type" : "owl:Class"
   }, {
     "id" : "116",
@@ -345,7 +345,7 @@
     "id" : "46",
     "type" : "owl:Class"
   }, {
-    "id" : "131",
+    "id" : "130",
     "type" : "owl:Class"
   }, {
     "id" : "71",
@@ -402,7 +402,7 @@
     "id" : "145",
     "type" : "owl:Class"
   }, {
-    "id" : "18",
+    "id" : "19",
     "type" : "owl:Class"
   }, {
     "id" : "126",
@@ -417,7 +417,7 @@
     "id" : "101",
     "type" : "owl:Class"
   }, {
-    "id" : "17",
+    "id" : "18",
     "type" : "owl:Class"
   }, {
     "id" : "69",
@@ -453,7 +453,7 @@
     "id" : "204",
     "type" : "owl:Class"
   }, {
-    "id" : "15",
+    "id" : "16",
     "type" : "owl:Class"
   }, {
     "id" : "40",
@@ -517,17 +517,17 @@
     "id" : "12",
     "superClasses" : [ "13" ]
   }, {
-    "iri" : "http://purl.org/poso/PositioningTechnique",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "subClasses" : [ "15", "16", "1", "8", "17", "18" ],
-    "id" : "9",
-    "superClasses" : [ "14" ]
-  }, {
     "iri" : "http://www.w3.org/ns/sosa/Observation",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "instances" : 0,
-    "id" : "19"
+    "id" : "14"
+  }, {
+    "iri" : "http://purl.org/poso/PositioningTechnique",
+    "baseIri" : "http://purl.org/poso",
+    "instances" : 0,
+    "subClasses" : [ "16", "17", "1", "8", "18", "19" ],
+    "id" : "9",
+    "superClasses" : [ "15" ]
   }, {
     "iri" : "http://www.w3.org/ns/ssn/Output",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -566,16 +566,16 @@
     "id" : "41",
     "superClasses" : [ "13" ]
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/MeasurementRange",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "id" : "37",
-    "superClasses" : [ "5" ]
-  }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/ResponseTime",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
     "instances" : 0,
     "id" : "38",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/systems/MeasurementRange",
+    "baseIri" : "http://www.w3.org/ns/ssn/systems",
+    "instances" : 0,
+    "id" : "37",
     "superClasses" : [ "5" ]
   }, {
     "iri" : "http://purl.org/vocommons/voaf#Vocabulary",
@@ -611,7 +611,7 @@
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
     "id" : "53",
-    "superClasses" : [ "14" ]
+    "superClasses" : [ "15" ]
   }, {
     "iri" : "http://purl.org/poso/SensorInput",
     "baseIri" : "http://purl.org/poso",
@@ -638,7 +638,7 @@
     "instances" : 0,
     "subClasses" : [ "67", "68" ],
     "id" : "66",
-    "superClasses" : [ "16" ]
+    "superClasses" : [ "17" ]
   }, {
     "iri" : "http://www.w3.org/ns/ssn/Property",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -693,7 +693,7 @@
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
     "id" : "89",
-    "superClasses" : [ "15" ]
+    "superClasses" : [ "16" ]
   }, {
     "iri" : "http://purl.org/poso/Fingerprinting",
     "baseIri" : "http://purl.org/poso",
@@ -825,17 +825,17 @@
     "instances" : 0,
     "id" : "117"
   }, {
-    "iri" : "http://purl.org/poso/SatellitePositioningSystem",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "57",
-    "superClasses" : [ "26" ]
-  }, {
     "iri" : "http://purl.org/poso/MidLevelFusion",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
     "id" : "118",
     "superClasses" : [ "119" ]
+  }, {
+    "iri" : "http://purl.org/poso/SatellitePositioningSystem",
+    "baseIri" : "http://purl.org/poso",
+    "instances" : 0,
+    "id" : "57",
+    "superClasses" : [ "26" ]
   }, {
     "iri" : "http://purl.org/poso/VisualInput",
     "baseIri" : "http://purl.org/poso",
@@ -922,7 +922,7 @@
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
     "id" : "133",
-    "superClasses" : [ "18" ]
+    "superClasses" : [ "19" ]
   }, {
     "iri" : "http://purl.org/poso/MagneticOdometry",
     "baseIri" : "http://purl.org/poso",
@@ -934,7 +934,7 @@
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
     "subClasses" : [ "145", "66" ],
-    "id" : "16",
+    "id" : "17",
     "superClasses" : [ "9" ]
   }, {
     "iri" : "http://www.w3.org/ns/sosa/Sampling",
@@ -959,7 +959,7 @@
     "instances" : 0,
     "subClasses" : [ "12", "41" ],
     "id" : "13",
-    "superClasses" : [ "14" ]
+    "superClasses" : [ "15" ]
   }, {
     "iri" : "http://www.w3.org/ns/ssn/Deployment",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -977,14 +977,14 @@
     "iri" : "http://www.w3.org/ns/sosa/Result",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "instances" : 0,
-    "subClasses" : [ "112", "86", "160", "82", "75", "50", "131" ],
+    "subClasses" : [ "112", "86", "160", "82", "75", "50", "130" ],
     "id" : "63"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/Procedure",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "instances" : 0,
     "subClasses" : [ "119", "9", "13", "53" ],
-    "id" : "14"
+    "id" : "15"
   }, {
     "iri" : "http://purl.org/poso/LinearMotion",
     "baseIri" : "http://purl.org/poso",
@@ -1039,7 +1039,7 @@
     "iri" : "http://www.w3.org/ns/sosa/Sample",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "instances" : 0,
-    "id" : "131",
+    "id" : "130",
     "superClasses" : [ "63", "49" ]
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/SurvivalProperty",
@@ -1059,7 +1059,7 @@
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
     "id" : "181",
-    "superClasses" : [ "18" ]
+    "superClasses" : [ "19" ]
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/SystemLifetime",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
@@ -1125,7 +1125,7 @@
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
     "id" : "201",
-    "superClasses" : [ "15" ]
+    "superClasses" : [ "16" ]
   }, {
     "iri" : "http://purl.org/poso/Landmark",
     "baseIri" : "http://purl.org/poso",
@@ -1139,7 +1139,7 @@
     "instances" : 0,
     "subClasses" : [ "121", "118", "204" ],
     "id" : "119",
-    "superClasses" : [ "14" ]
+    "superClasses" : [ "15" ]
   }, {
     "iri" : "http://purl.org/poso/common/EddystoneEID",
     "baseIri" : "http://purl.org/poso/common",
@@ -1151,13 +1151,13 @@
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
     "id" : "145",
-    "superClasses" : [ "16" ]
+    "superClasses" : [ "17" ]
   }, {
     "iri" : "http://purl.org/poso/Angulation",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
     "subClasses" : [ "133", "181" ],
-    "id" : "18",
+    "id" : "19",
     "superClasses" : [ "9" ]
   }, {
     "iri" : "http://purl.org/poso/TrackedFeature",
@@ -1188,7 +1188,7 @@
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
     "subClasses" : [ "212" ],
-    "id" : "17",
+    "id" : "18",
     "superClasses" : [ "9" ]
   }, {
     "iri" : "http://www.w3.org/ns/sosa/ObservableProperty",
@@ -1226,7 +1226,7 @@
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
     "id" : "212",
-    "superClasses" : [ "17" ]
+    "superClasses" : [ "18" ]
   }, {
     "iri" : "http://www.w3.org/ns/sosa/Sampler",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -1250,7 +1250,7 @@
     "iri" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "instances" : 0,
-    "subClasses" : [ "126", "112", "160", "131" ],
+    "subClasses" : [ "126", "112", "160", "130" ],
     "id" : "49"
   }, {
     "iri" : "http://purl.org/poso/LowLevelFusion",
@@ -1263,7 +1263,7 @@
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
     "subClasses" : [ "89", "201" ],
-    "id" : "15",
+    "id" : "16",
     "superClasses" : [ "9" ]
   }, {
     "iri" : "http://www.w3.org/ns/ssn/Input",
@@ -1330,7 +1330,7 @@
     "id" : "129",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "130",
+    "id" : "132",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "134",
@@ -1369,7 +1369,7 @@
     "id" : "151",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "153",
+    "id" : "152",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "154",
@@ -1450,9 +1450,6 @@
     "id" : "190",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "191",
-    "type" : "owl:allValuesFrom"
-  }, {
     "id" : "192",
     "type" : "owl:allValuesFrom"
   }, {
@@ -1463,6 +1460,9 @@
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "195",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "196",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "197",
@@ -1504,25 +1504,25 @@
     "id" : "218",
     "type" : "owl:allValuesFrom"
   }, {
+    "id" : "219",
+    "type" : "owl:allValuesFrom"
+  }, {
     "id" : "220",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "221",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "222",
-    "type" : "owl:allValuesFrom"
-  }, {
     "id" : "223",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "225",
+    "id" : "224",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "226",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "235",
+    "id" : "228",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "237",
@@ -1534,7 +1534,7 @@
   "propertyAttribute" : [ {
     "iri" : "http://purl.org/poso/madeByProcedure",
     "baseIri" : "http://purl.org/poso",
-    "range" : "14",
+    "range" : "15",
     "domain" : "40",
     "attributes" : [ "object" ],
     "id" : "39"
@@ -1588,47 +1588,47 @@
     "attributes" : [ "object" ],
     "id" : "96"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/madeBySampler",
+    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
     "inverse" : "124",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "109",
+    "range" : "49",
     "domain" : "123",
     "attributes" : [ "allValues", "object" ],
     "id" : "122"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
+    "iri" : "http://www.w3.org/ns/sosa/hasResult",
+    "inverse" : "131",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "14",
+    "range" : "130",
     "domain" : "123",
     "attributes" : [ "allValues", "object" ],
     "id" : "129"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasResult",
-    "inverse" : "132",
+    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "131",
+    "range" : "15",
     "domain" : "123",
     "attributes" : [ "allValues", "object" ],
-    "id" : "130"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/isSampleOf",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "49",
-    "domain" : "131",
-    "attributes" : [ "allValues", "functional", "object" ],
-    "id" : "134"
+    "id" : "132"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/isResultOf",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "range" : "123",
-    "domain" : "131",
+    "domain" : "130",
     "attributes" : [ "allValues", "object" ],
-    "id" : "135"
+    "id" : "134"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-    "inverse" : "137",
+    "iri" : "http://www.w3.org/ns/sosa/isSampleOf",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "range" : "49",
+    "domain" : "130",
+    "attributes" : [ "allValues", "functional", "object" ],
+    "id" : "135"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeBySampler",
+    "inverse" : "137",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "109",
     "domain" : "123",
     "attributes" : [ "allValues", "object" ],
     "id" : "136"
@@ -1640,10 +1640,10 @@
     "attributes" : [ "allValues", "object" ],
     "id" : "138"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasInput",
+    "iri" : "http://www.w3.org/ns/ssn/hasOutput",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "40",
-    "domain" : "14",
+    "range" : "20",
+    "domain" : "15",
     "attributes" : [ "allValues", "object" ],
     "id" : "139"
   }, {
@@ -1655,10 +1655,10 @@
     "attributes" : [ "allValues", "object" ],
     "id" : "140"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasOutput",
+    "iri" : "http://www.w3.org/ns/ssn/hasInput",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "20",
-    "domain" : "14",
+    "range" : "40",
+    "domain" : "15",
     "attributes" : [ "allValues", "object" ],
     "id" : "142"
   }, {
@@ -1666,23 +1666,21 @@
     "inverse" : "144",
     "baseIri" : "http://www.w3.org/ns/ssn",
     "range" : "56",
-    "domain" : "14",
+    "domain" : "15",
     "attributes" : [ "allValues", "object" ],
     "id" : "143"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-    "inverse" : "137",
+    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "49",
-    "domain" : "19",
+    "range" : "15",
+    "domain" : "14",
     "attributes" : [ "allValues", "object" ],
     "id" : "148"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasResult",
-    "inverse" : "132",
+    "iri" : "http://www.w3.org/ns/sosa/observedProperty",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "63",
-    "domain" : "19",
+    "range" : "69",
+    "domain" : "14",
     "attributes" : [ "allValues", "object" ],
     "id" : "149"
   }, {
@@ -1693,32 +1691,34 @@
     "attributes" : [ "allValues", "object" ],
     "id" : "150"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/madeBySensor",
-    "inverse" : "152",
+    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+    "inverse" : "124",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "107",
-    "domain" : "19",
+    "range" : "49",
+    "domain" : "14",
     "attributes" : [ "allValues", "object" ],
     "id" : "151"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
+    "iri" : "http://www.w3.org/ns/sosa/madeBySensor",
+    "inverse" : "153",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "14",
-    "domain" : "19",
+    "range" : "107",
+    "domain" : "14",
     "attributes" : [ "allValues", "object" ],
-    "id" : "153"
+    "id" : "152"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/observedProperty",
+    "iri" : "http://www.w3.org/ns/sosa/hasResult",
+    "inverse" : "131",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "69",
-    "domain" : "19",
+    "range" : "63",
+    "domain" : "14",
     "attributes" : [ "allValues", "object" ],
     "id" : "154"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/wasOriginatedBy",
     "baseIri" : "http://www.w3.org/ns/ssn",
     "range" : "114",
-    "domain" : "19",
+    "domain" : "14",
     "attributes" : [ "allValues", "functional", "object" ],
     "id" : "155"
   }, {
@@ -1739,14 +1739,14 @@
   }, {
     "iri" : "http://www.w3.org/ns/sosa/observedProperty",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "19",
+    "range" : "14",
     "domain" : "69",
     "attributes" : [ "allValues", "object" ],
     "id" : "159"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
+    "iri" : "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "72",
+    "range" : "2",
     "superproperty" : [ "52" ],
     "domain" : "56",
     "attributes" : [ "allValues", "object" ],
@@ -1778,7 +1778,7 @@
     "iri" : "http://purl.org/poso/madeBySystem",
     "baseIri" : "http://purl.org/poso",
     "range" : "56",
-    "domain" : "19",
+    "domain" : "14",
     "attributes" : [ "object" ],
     "id" : "165"
   }, {
@@ -1791,31 +1791,31 @@
     "attributes" : [ "functional", "object" ],
     "id" : "166"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/implements",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "14",
-    "domain" : "56",
-    "attributes" : [ "allValues", "object" ],
-    "id" : "169"
-  }, {
     "iri" : "http://www.w3.org/ns/ssn/hasDeployment",
     "baseIri" : "http://www.w3.org/ns/ssn",
     "range" : "7",
     "domain" : "56",
     "attributes" : [ "allValues", "object" ],
+    "id" : "169"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/implements",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "15",
+    "domain" : "56",
+    "attributes" : [ "allValues", "object" ],
     "id" : "170"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
+    "iri" : "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "2",
+    "range" : "24",
     "superproperty" : [ "52" ],
     "domain" : "56",
     "attributes" : [ "allValues", "object" ],
     "id" : "171"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
+    "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "24",
+    "range" : "72",
     "superproperty" : [ "52" ],
     "domain" : "56",
     "attributes" : [ "allValues", "object" ],
@@ -1828,11 +1828,11 @@
     "attributes" : [ "allValues", "object" ],
     "id" : "174"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/wasOriginatedBy",
+    "iri" : "http://www.w3.org/ns/ssn/isProxyFor",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "19",
+    "range" : "69",
     "domain" : "114",
-    "attributes" : [ "allValues", "functional", "object" ],
+    "attributes" : [ "allValues", "object" ],
     "id" : "175"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/isHostedBy",
@@ -1849,18 +1849,18 @@
     "attributes" : [ "allValues", "object" ],
     "id" : "177"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/isProxyFor",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "69",
-    "domain" : "114",
-    "attributes" : [ "allValues", "object" ],
-    "id" : "179"
-  }, {
     "iri" : "http://www.w3.org/ns/ssn/detects",
     "baseIri" : "http://www.w3.org/ns/ssn",
     "range" : "107",
     "domain" : "114",
     "attributes" : [ "allValues", "object" ],
+    "id" : "179"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/wasOriginatedBy",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "14",
+    "domain" : "114",
+    "attributes" : [ "allValues", "functional", "object" ],
     "id" : "180"
   }, {
     "iri" : "http://purl.org/poso/hasAcceleration",
@@ -1889,35 +1889,42 @@
     "attributes" : [ "allValues", "object" ],
     "id" : "187"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/deployedSystem",
+    "iri" : "http://www.w3.org/ns/ssn/deployedOnPlatform",
     "inverse" : "189",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "56",
+    "range" : "80",
     "domain" : "7",
     "attributes" : [ "allValues", "object" ],
     "id" : "188"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/forProperty",
+    "iri" : "http://www.w3.org/ns/ssn/deployedSystem",
+    "inverse" : "191",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "3",
+    "range" : "56",
     "domain" : "7",
-    "subproperty" : [ "158", "96" ],
     "attributes" : [ "allValues", "object" ],
     "id" : "190"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/hasOutput",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "14",
+    "range" : "15",
     "domain" : "20",
     "attributes" : [ "allValues", "object" ],
-    "id" : "191"
+    "id" : "192"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/hasInput",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "14",
+    "range" : "15",
     "domain" : "40",
     "attributes" : [ "allValues", "object" ],
-    "id" : "192"
+    "id" : "193"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeObservation",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "14",
+    "domain" : "107",
+    "attributes" : [ "allValues", "object" ],
+    "id" : "194"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/observes",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -1925,26 +1932,19 @@
     "superproperty" : [ "97" ],
     "domain" : "107",
     "attributes" : [ "allValues", "object" ],
-    "id" : "193"
+    "id" : "195"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/forProperty",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "3",
+    "domain" : "7",
+    "subproperty" : [ "158", "96" ],
+    "attributes" : [ "allValues", "object" ],
+    "id" : "196"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/detects",
     "baseIri" : "http://www.w3.org/ns/ssn",
     "range" : "114",
-    "domain" : "107",
-    "attributes" : [ "allValues", "object" ],
-    "id" : "194"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/deployedOnPlatform",
-    "inverse" : "196",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "80",
-    "domain" : "7",
-    "attributes" : [ "allValues", "object" ],
-    "id" : "195"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/madeObservation",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "19",
     "domain" : "107",
     "attributes" : [ "allValues", "object" ],
     "id" : "197"
@@ -1957,10 +1957,9 @@
     "attributes" : [ "allValues", "object" ],
     "id" : "202"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
+    "iri" : "http://www.w3.org/ns/ssn/systems/inCondition",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "56",
-    "superproperty" : [ "52" ],
+    "range" : "73",
     "domain" : "24",
     "attributes" : [ "allValues", "object" ],
     "id" : "203"
@@ -1973,12 +1972,20 @@
     "attributes" : [ "allValues", "object" ],
     "id" : "205"
   }, {
+    "iri" : "http://www.w3.org/ns/ssn/forProperty",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "3",
+    "domain" : "24",
+    "subproperty" : [ "158", "96" ],
+    "attributes" : [ "allValues", "object" ],
+    "id" : "206"
+  }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/inCondition",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
     "range" : "73",
-    "domain" : "24",
+    "domain" : "72",
     "attributes" : [ "allValues", "object" ],
-    "id" : "206"
+    "id" : "209"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
@@ -1986,23 +1993,22 @@
     "superproperty" : [ "52" ],
     "domain" : "72",
     "attributes" : [ "allValues", "object" ],
-    "id" : "209"
+    "id" : "210"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
+    "iri" : "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
     "range" : "56",
     "superproperty" : [ "52" ],
-    "domain" : "72",
-    "attributes" : [ "allValues", "object" ],
-    "id" : "210"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/forProperty",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "3",
     "domain" : "24",
-    "subproperty" : [ "158", "96" ],
     "attributes" : [ "allValues", "object" ],
     "id" : "211"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/systems/inCondition",
+    "baseIri" : "http://www.w3.org/ns/ssn/systems",
+    "range" : "73",
+    "domain" : "2",
+    "attributes" : [ "allValues", "object" ],
+    "id" : "213"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
@@ -2010,18 +2016,12 @@
     "superproperty" : [ "52" ],
     "domain" : "2",
     "attributes" : [ "allValues", "object" ],
-    "id" : "213"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/inCondition",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "73",
-    "domain" : "2",
-    "attributes" : [ "allValues", "object" ],
     "id" : "214"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/inCondition",
+    "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "73",
+    "range" : "56",
+    "superproperty" : [ "52" ],
     "domain" : "72",
     "attributes" : [ "allValues", "object" ],
     "id" : "215"
@@ -2034,44 +2034,35 @@
     "attributes" : [ "allValues", "object" ],
     "id" : "216"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/actsOnProperty",
-    "inverse" : "219",
+    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "47",
+    "range" : "15",
     "domain" : "98",
     "attributes" : [ "allValues", "object" ],
     "id" : "218"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "14",
-    "domain" : "98",
-    "attributes" : [ "allValues", "object" ],
-    "id" : "220"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasResult",
-    "inverse" : "132",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "63",
-    "domain" : "98",
-    "attributes" : [ "allValues", "object" ],
-    "id" : "221"
-  }, {
     "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-    "inverse" : "137",
+    "inverse" : "124",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "range" : "49",
     "domain" : "98",
     "attributes" : [ "allValues", "object" ],
-    "id" : "222"
+    "id" : "219"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/madeActuation",
-    "inverse" : "224",
+    "iri" : "http://www.w3.org/ns/sosa/madeByActuator",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "98",
-    "domain" : "108",
+    "range" : "108",
+    "domain" : "98",
     "attributes" : [ "allValues", "object" ],
-    "id" : "223"
+    "id" : "220"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/actsOnProperty",
+    "inverse" : "222",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "47",
+    "domain" : "98",
+    "attributes" : [ "allValues", "object" ],
+    "id" : "221"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/forProperty",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -2079,24 +2070,32 @@
     "domain" : "108",
     "subproperty" : [ "158", "96" ],
     "attributes" : [ "allValues", "object" ],
-    "id" : "225"
+    "id" : "223"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeActuation",
+    "inverse" : "225",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "98",
+    "domain" : "108",
+    "attributes" : [ "allValues", "object" ],
+    "id" : "224"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasSample",
+    "inverse" : "227",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "130",
+    "domain" : "49",
+    "attributes" : [ "allValues", "object", "inverse functional" ],
+    "id" : "226"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/hasProperty",
-    "inverse" : "227",
+    "inverse" : "229",
     "baseIri" : "http://www.w3.org/ns/ssn",
     "range" : "3",
     "domain" : "49",
-    "subproperty" : [ "228", "85", "185", "229", "230", "231", "232", "233", "182", "48", "234" ],
+    "subproperty" : [ "230", "85", "185", "231", "232", "233", "234", "235", "182", "48", "236" ],
     "attributes" : [ "allValues", "object" ],
-    "id" : "226"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasSample",
-    "inverse" : "236",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "131",
-    "domain" : "49",
-    "attributes" : [ "allValues", "inverse functional", "object" ],
-    "id" : "235"
+    "id" : "228"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/isActedOnBy",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -2105,9 +2104,10 @@
     "attributes" : [ "allValues", "object" ],
     "id" : "237"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/madeByActuator",
+    "iri" : "http://www.w3.org/ns/sosa/hasResult",
+    "inverse" : "131",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "108",
+    "range" : "63",
     "domain" : "98",
     "attributes" : [ "allValues", "object" ],
     "id" : "238"
